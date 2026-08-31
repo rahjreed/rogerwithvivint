@@ -785,14 +785,8 @@ export default function App() {
           </button>
         </div>
 
-        {/* Main Hero Video Player with Top-Left Name Overlay */}
+        {/* Main Hero Video Player */}
         <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-[#0D111A] aspect-video max-w-3xl mx-auto group">
-          {/* Overlay Text in Top-Left Corner */}
-          <div className="absolute top-3.5 left-3.5 bg-[#05080E]/85 backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-full flex items-center space-x-2 pointer-events-none z-10 shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-[#00D2B4]"></span>
-            <span className="text-xs font-bold text-white tracking-wide">Roger Reed, Vivint SHX</span>
-          </div>
-
           <iframe 
             src="https://player.mediadelivery.net/embed/587199/86db6eb7-5583-4bd9-a701-1fa49be85227?autoplay=false&loop=false&muted=false&preload=none" 
             className="w-full h-full object-cover border-none" 
