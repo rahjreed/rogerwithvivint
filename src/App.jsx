@@ -34,8 +34,8 @@ import {
 
 // --- Configuration ---
 const CONTACT_EMAIL = "rahj@techrahj.com";
-const PHONE_NUMBER = "463-281-3435"; 
-const RAW_SMS_NUMBER = "14632813435";
+const PHONE_NUMBER = "463-281-3454"; 
+const RAW_SMS_NUMBER = "14632813454";
 const VIVINT_CORPORATE_SERVICE = "800-216-5232";
 const PARTNER_PASSWORD = "wecare26";
 const OFFER_ACCESS_CODE = "INDY2026";
