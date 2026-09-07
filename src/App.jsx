@@ -38,6 +38,9 @@ const RAW_SMS_NUMBER = "14632813454";
 const VIVINT_CORPORATE_SERVICE = "800-216-5232";
 const PARTNER_PASSWORD = "wecare26";
 const OFFER_ACCESS_CODE = "INDY2026";
+const INSTAGRAM_URL = "https://www.instagram.com/rogerwithvivint";
+const TIKTOK_URL = "https://www.tiktok.com/@rogerwithvivint";
+const SOCIAL_HANDLE = "@rogerwithvivint";
 
 // --- Imagery Assets ---
 const IMG_PRO_INSTALL = "https://www.vivint.com/sites/default/files/styles/desktop_1600_hq/public/image/2024-01/ProInstall-1-Full-1600.jpg.webp?itok=FY9zy1nT";
@@ -82,6 +85,20 @@ const VivintLogo = ({ className = "h-6 text-white" }) => (
     <path d="M110.5 25.4H117.8V17.8L110.5 25.4Z" fill="#FF5900" />
     <path d="M110.5 13.9C110.5 13.9 113.6 14.1 115.5 16L117.8 13.7C115.1 11 110.5 10.8 110.5 10.8V13.9Z" fill="#FF5900" />
     <path d="M110.5 6.9C110.5 6.9 116.1 7.2 119.5 10.6L121.8 8.3C117.4 3.9 110.5 3.8 110.5 3.8V6.9Z" fill="#FF5900" />
+  </svg>
+);
+
+const InstagramIcon = ({ className = "w-4 h-4" }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
+const TikTokIcon = ({ className = "w-4 h-4" }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743 2.89 2.89 0 0 1 2.31-4.646c.307 0 .604.05.882.138V9.373a6.34 6.34 0 0 0-.882-.063C5.975 9.31 3 12.284 3 15.792 3 19.3 5.975 22.274 9.483 22.274c3.509 0 6.484-2.974 6.484-6.482V8.92a8.18 8.18 0 0 0 4.757 1.503v-3.47a4.83 4.83 0 0 1-1.135-.267z" />
   </svg>
 );
 
@@ -736,6 +753,30 @@ export default function App() {
 
           {/* Quick Contact & Partner Portal */}
           <div className="flex items-center space-x-3">
+            {/* Social Follow Links (Desktop & Tablet) */}
+            <div className="hidden lg:flex items-center space-x-1.5 border-r border-white/15 pr-3">
+              <a 
+                href={INSTAGRAM_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Roger with Vivint on Instagram"
+                className="w-8 h-8 rounded-full bg-[#0D111A] hover:bg-pink-600/20 text-slate-300 hover:text-pink-400 border border-slate-700 flex items-center justify-center transition-all"
+                title="Follow on Instagram (@rogerwithvivint)"
+              >
+                <InstagramIcon className="w-3.5 h-3.5" />
+              </a>
+              <a 
+                href={TIKTOK_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Roger with Vivint on TikTok"
+                className="w-8 h-8 rounded-full bg-[#0D111A] hover:bg-[#00D2B4]/20 text-slate-300 hover:text-[#00D2B4] border border-slate-700 flex items-center justify-center transition-all"
+                title="Follow on TikTok (@rogerwithvivint)"
+              >
+                <TikTokIcon className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
             <button 
               onClick={() => setOfferModalOpen(true)}
               className="hidden md:inline-flex items-center space-x-1.5 text-xs font-bold text-amber-300 hover:text-white bg-gradient-to-r from-emerald-950 to-[#0D111A] border border-amber-400/40 px-3.5 py-1.5 rounded-full transition-colors shadow-sm"
@@ -949,6 +990,38 @@ export default function App() {
               <div className="bg-white border border-slate-200 p-4 rounded-xl text-center shadow-sm">
                 <div className="text-sm font-bold text-slate-900">3,000+ Systems Installed</div>
                 <div className="text-xs text-slate-500 mt-0.5">Certified Vivint Smart Home Expert</div>
+              </div>
+
+              {/* Social Channels Card */}
+              <div className="bg-white border border-slate-200 p-3.5 rounded-xl shadow-sm space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                    Follow Roger on Social
+                  </span>
+                  <span className="text-[11px] font-semibold text-[#007A48]">
+                    {SOCIAL_HANDLE}
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-2 pt-1">
+                  <a 
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-1.5 py-2 px-3 rounded-lg bg-pink-50 hover:bg-pink-100 text-pink-700 font-bold text-xs transition-colors border border-pink-200/60"
+                  >
+                    <InstagramIcon className="w-4 h-4 shrink-0" />
+                    <span>Instagram</span>
+                  </a>
+                  <a 
+                    href={TIKTOK_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center space-x-1.5 py-2 px-3 rounded-lg bg-slate-900 hover:bg-black text-white font-bold text-xs transition-colors shadow-sm"
+                  >
+                    <TikTokIcon className="w-4 h-4 shrink-0 text-[#00D2B4]" />
+                    <span>TikTok</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -1222,6 +1295,29 @@ export default function App() {
           <div className="flex justify-center items-center space-x-2 text-white cursor-pointer" onClick={() => triggerTextMsg("Footer Click")}>
             <VivintLogo className="h-5 text-white" />
             <span className="text-xs font-bold tracking-tight border-l border-white/20 pl-2">Roger Reed • Smart Home Expert</span>
+          </div>
+
+          {/* Social Channels Strip */}
+          <div className="flex flex-wrap justify-center items-center gap-3 pt-1">
+            <span className="text-[11px] text-slate-400">Connect with Roger:</span>
+            <a 
+              href={INSTAGRAM_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center space-x-1.5 bg-[#0D111A] hover:bg-pink-950/40 text-slate-300 hover:text-pink-400 px-3 py-1.5 rounded-full border border-slate-800 transition-colors"
+            >
+              <InstagramIcon className="w-3.5 h-3.5 text-pink-400" />
+              <span className="text-[11px] font-medium">Instagram ({SOCIAL_HANDLE})</span>
+            </a>
+            <a 
+              href={TIKTOK_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="inline-flex items-center space-x-1.5 bg-[#0D111A] hover:bg-slate-800 text-slate-300 hover:text-[#00D2B4] px-3 py-1.5 rounded-full border border-slate-800 transition-colors"
+            >
+              <TikTokIcon className="w-3.5 h-3.5 text-[#00D2B4]" />
+              <span className="text-[11px] font-medium">TikTok ({SOCIAL_HANDLE})</span>
+            </a>
           </div>
 
           <div className="flex justify-center items-center space-x-4 text-xs font-medium">
