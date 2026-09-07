@@ -32,7 +32,6 @@ import {
   BadgePercent
 } from 'lucide-react';
 
-// --- Configuration ---
 const CONTACT_EMAIL = "rahj@techrahj.com";
 const PHONE_NUMBER = "463-281-3454"; 
 const RAW_SMS_NUMBER = "14632813454";
@@ -44,7 +43,6 @@ const OFFER_ACCESS_CODE = "INDY2026";
 const IMG_PRO_INSTALL = "https://www.vivint.com/sites/default/files/styles/desktop_1600_hq/public/image/2024-01/ProInstall-1-Full-1600.jpg.webp?itok=FY9zy1nT";
 const IMG_RAHJ_PROFILE = "https://images.travelprox.com/techrahj/Rahjvivint.png";
 
-// --- Automated SMS Trigger Helper ---
 const triggerTextMsg = (customNote = "") => {
   const baseMessage = "I saw your website";
   const fullText = customNote 
@@ -55,7 +53,24 @@ const triggerTextMsg = (customNote = "") => {
   window.location.href = smsUrl;
 };
 
-// --- Official Vivint Logo SVG Component ---
+const copySafeText = (text) => {
+  try {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    textArea.style.position = "fixed";
+    textArea.style.left = "-999999px";
+    textArea.style.top = "-999999px";
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    document.execCommand("copy");
+    textArea.remove();
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
 const VivintLogo = ({ className = "h-6 text-white" }) => (
   <svg viewBox="0 0 118 30" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
     <path d="M12.8 19.8L7.4 5.2H2.2L10.3 24.8H15.3L23.4 5.2H18.2L12.8 19.8Z" />
@@ -70,7 +85,6 @@ const VivintLogo = ({ className = "h-6 text-white" }) => (
   </svg>
 );
 
-// --- Hardware Items ---
 const PRODUCTS = [
   { 
     name: "Outdoor Camera Pro (Version 3)", 
@@ -124,7 +138,6 @@ const NEXTDOOR_REVIEWS = [
   "https://images.travelprox.com/techrahj/nd5.png"
 ];
 
-// --- Pre-Approved Offer Modal (Passcode Protected) ---
 const PreApprovedOfferModal = ({ isOpen, onClose }) => {
   const [passcode, setPasscode] = useState('');
   const [isUnlocked, setIsUnlocked] = useState(false);
@@ -252,7 +265,7 @@ const PreApprovedOfferModal = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {/* Package Items Grid (Version 2 Cameras Only) */}
+            {/* Package Items Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               
               <div className="bg-[#05080E] border border-slate-800 rounded-2xl p-4 flex items-start space-x-3.5">
@@ -347,7 +360,6 @@ const PreApprovedOfferModal = ({ isOpen, onClose }) => {
   );
 };
 
-// --- Expandable Review Modal ---
 const ReviewExpandModal = ({ reviewUrl, onClose }) => {
   if (!reviewUrl) return null;
 
@@ -387,13 +399,13 @@ const ReviewExpandModal = ({ reviewUrl, onClose }) => {
   );
 };
 
-// --- Partner Portal Modal ---
 const PartnerPortalModal = ({ isOpen, onClose }) => {
   const [inputPassword, setInputPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [activeTab, setActiveTab] = useState('submitLead');
   const [copiedLink, setCopiedLink] = useState(false);
+  const [assetNotice, setAssetNotice] = useState('');
   const [referral, setReferral] = useState({ clientName: '', clientPhone: '', partnerName: '', notes: '' });
 
   if (!isOpen) return null;
@@ -409,9 +421,14 @@ const PartnerPortalModal = ({ isOpen, onClose }) => {
   };
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(window.location.href);
+    copySafeText(window.location.href);
     setCopiedLink(true);
     setTimeout(() => setCopiedLink(false), 2500);
+  };
+
+  const handleAssetDownload = (itemName) => {
+    setAssetNotice(`Preparing download for "${itemName}"...`);
+    setTimeout(() => setAssetNotice(''), 3000);
   };
 
   const handleReferralSubmit = (e) => {
@@ -443,8 +460,8 @@ const PartnerPortalModal = ({ isOpen, onClose }) => {
               <div>
                 <label className="block text-xs font-medium text-slate-200 mb-1">Passcode</label>
                 <input 
-                  type="password"
-                  required
+                  type="password" 
+                  required 
                   placeholder="Enter passcode"
                   value={inputPassword}
                   onChange={e => setInputPassword(e.target.value)}
@@ -509,6 +526,13 @@ const PartnerPortalModal = ({ isOpen, onClose }) => {
                 );
               })}
             </div>
+
+            {assetNotice && (
+              <div className="mb-4 bg-emerald-500/10 border border-emerald-400/40 text-emerald-300 text-xs px-3.5 py-2 rounded-xl flex items-center space-x-2">
+                <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400" />
+                <span>{assetNotice}</span>
+              </div>
+            )}
 
             {activeTab === 'submitLead' && (
               <form onSubmit={handleReferralSubmit} className="space-y-3">
@@ -600,7 +624,7 @@ const PartnerPortalModal = ({ isOpen, onClose }) => {
                       <span className="text-[9px] font-semibold text-[#00D2B4] block uppercase">{item.type}</span>
                       <h5 className="text-xs font-semibold text-white mt-0.5">{item.name}</h5>
                     </div>
-                    <button onClick={() => alert("Downloading asset...")} className="p-1.5 bg-slate-800 hover:bg-[#005A36] text-white rounded-lg transition-colors">
+                    <button onClick={() => handleAssetDownload(item.name)} className="p-1.5 bg-slate-800 hover:bg-[#005A36] text-white rounded-lg transition-colors" title={`Download ${item.name}`}>
                       <Download className="w-3.5 h-3.5" />
                     </button>
                   </div>
@@ -630,7 +654,6 @@ const PartnerPortalModal = ({ isOpen, onClose }) => {
   );
 };
 
-// --- Hardware Spec Modal ---
 const HardwareModal = ({ product, onClose }) => {
   if (!product) return null;
   return (
@@ -671,7 +694,6 @@ const HardwareModal = ({ product, onClose }) => {
   );
 };
 
-// --- MAIN LANDING PAGE ---
 export default function App() {
   const [partnerModalOpen, setPartnerModalOpen] = useState(false);
   const [offerModalOpen, setOfferModalOpen] = useState(false);
@@ -743,7 +765,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* --- HERO SECTION (MATCHES VIVINT VERIFICATION BANNER AESTHETIC) --- */}
+      {/* --- HERO SECTION --- */}
       <section className="relative pt-16 pb-20 px-6 max-w-5xl mx-auto text-center overflow-hidden">
         
         {/* Subtle Ambient Glow */}
@@ -765,7 +787,7 @@ export default function App() {
           Roger is Vivint's elite field specialist—handling custom system design, professional installation, and direct personal after-the-sale support.
         </p>
 
-        {/* Primary Action Buttons: Setup Quote & View Promo Offer */}
+        {/* Primary Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <button 
             onClick={() => triggerTextMsg("Hero Setup Quote")} 
@@ -775,7 +797,6 @@ export default function App() {
             <span>GET MY SETUP QUOTE VIA TEXT</span>
           </button>
 
-          {/* View Promo Offer Button */}
           <button 
             onClick={() => setOfferModalOpen(true)}
             className="w-full sm:w-auto px-8 py-4 bg-[#0D111A] hover:bg-[#161f2e] text-[#00D2B4] hover:text-white rounded-full font-bold text-xs uppercase tracking-widest transition-all border border-[#00D2B4]/40 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-950/20 animate-wobble"
@@ -798,7 +819,7 @@ export default function App() {
 
       </section>
 
-      {/* --- BLOCK 1: WHITE PANEL (TRADITIONAL PHONE-BASED VS OFFICIAL SMART HOME EXPERT) --- */}
+      {/* --- BLOCK 1: WHITE PANEL (PHONE-BASED VS SMART HOME EXPERT) --- */}
       <section className="py-20 px-6 bg-white text-slate-900 border-y border-slate-200">
         <div className="max-w-5xl mx-auto">
           
@@ -864,7 +885,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- VIDEO FEATURETTE: PROACTIVE DEFENSE (ABOVE HARDWARE SECTION) --- */}
+      {/* --- VIDEO FEATURETTE: PROACTIVE DEFENSE --- */}
       <section className="py-20 px-6 bg-[#05080E] border-b border-slate-800">
         <div className="max-w-4xl mx-auto text-center mb-10">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#00D2B4]">SYSTEM OVERVIEW</span>
@@ -884,7 +905,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- BLOCK 2: DARK SLATE PANEL (HARDWARE LINEUP) --- */}
+      {/* --- BLOCK 2: HARDWARE LINEUP --- */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <div className="text-center max-w-xl mx-auto mb-12">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#00D2B4]">EQUIPMENT SPECIFICATIONS</span>
@@ -915,7 +936,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- BLOCK 3: WHITE PANEL (ABOUT ROGER & DAYCARE HEROICS VIDEO) --- */}
+      {/* --- BLOCK 3: ABOUT ROGER & COMMUNITY BRAVERY --- */}
       <section className="py-20 px-6 bg-slate-50 text-slate-900 border-y border-slate-200">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
@@ -948,7 +969,7 @@ export default function App() {
                 </p>
               </div>
 
-              {/* Daycare News Video (Autoplay disabled) */}
+              {/* Daycare News Video */}
               <div className="space-y-2 pt-1">
                 <span className="text-[11px] font-bold uppercase text-slate-500 tracking-wider block">Indiana News Archive Footage</span>
                 <div className="rounded-xl overflow-hidden shadow-lg aspect-video border border-slate-300 bg-black">
@@ -976,7 +997,96 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- BLOCK 4: DARK SLATE PANEL (VERIFIED NEXTDOOR PROOF) --- */}
+      {}
+      {/* --- VIDEO TESTIMONIAL SECTION --- */}
+      <section className="py-20 px-6 bg-[#05080E] border-b border-white/10 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto text-center mb-10 relative z-10">
+          <div className="inline-flex items-center space-x-1 text-amber-400 mb-2">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+            ))}
+          </div>
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#00D2B4] block">
+            CLIENT TESTIMONIALS
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mt-1">
+            Real Homeowner Experiences
+          </h2>
+          <p className="text-slate-400 text-xs sm:text-sm mt-2 max-w-xl mx-auto">
+            Hear directly from homeowners about working with Roger for personalized home security design, seamless installation, and ongoing direct support.
+          </p>
+        </div>
+
+        {}
+        {/* Video Players - Vertical Stack */}
+        <div className="flex flex-col space-y-10 max-w-3xl mx-auto z-10 relative">
+          {/* Testimonial 1 */}
+          <div className="space-y-2">
+            <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-[#0D111A] aspect-video group">
+              <iframe 
+                src="https://player.mediadelivery.net/embed/587199/8aee0ac3-34c4-454b-a882-c59e23a0596e?autoplay=false&loop=false&muted=false&preload=none" 
+                className="w-full h-full object-cover border-none" 
+                allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;" 
+                allowFullScreen={true}
+                title="Roger Vivint Smart Home Client Testimonial 1" 
+              />
+            </div>
+            <div className="flex items-center justify-between px-1 text-xs text-slate-400">
+              <span className="font-semibold text-slate-300">Verified Client Review</span>
+              <span className="text-[#00D2B4] text-[11px] font-medium">Smart Home Setup</span>
+            </div>
+          </div>
+
+          {/* Testimonial 2 */}
+          <div className="space-y-2">
+            <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-[#0D111A] aspect-video group">
+              <iframe 
+                src="https://player.mediadelivery.net/embed/587199/62f0c727-1a39-4914-b522-3e5b45e17d65?autoplay=false&loop=false&muted=false&preload=none" 
+                className="w-full h-full object-cover border-none" 
+                allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;" 
+                allowFullScreen={true}
+                title="Roger Vivint Smart Home Client Testimonial 2" 
+              />
+            </div>
+            <div className="flex items-center justify-between px-1 text-xs text-slate-400">
+              <span className="font-semibold text-slate-300">Verified Client Review</span>
+              <span className="text-[#00D2B4] text-[11px] font-medium">Pro Installation & Service</span>
+            </div>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div className="space-y-2">
+            <div className="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-[#0D111A] aspect-video group">
+              <iframe 
+                src="https://player.mediadelivery.net/embed/587199/6df3c479-7d2e-4f13-8bf5-d458d9348474?autoplay=false&loop=false&muted=false&preload=none" 
+                className="w-full h-full object-cover border-none" 
+                allow="accelerometer; gyroscope; encrypted-media; picture-in-picture;" 
+                allowFullScreen={true}
+                title="Roger Vivint Smart Home Client Testimonial 3" 
+              />
+            </div>
+            <div className="flex items-center justify-between px-1 text-xs text-slate-400">
+              <span className="font-semibold text-slate-300">Verified Client Review</span>
+              <span className="text-[#00D2B4] text-[11px] font-medium">Customer Care & Support</span>
+            </div>
+          </div>
+        </div>
+
+        {/* References Inquire Button */}
+        <div className="text-center mt-8 relative z-10">
+          <button 
+            onClick={() => triggerTextMsg("Video Testimonials Inquiry")}
+            className="inline-flex items-center space-x-2 text-xs font-bold text-slate-300 hover:text-white bg-[#0D111A] hover:bg-[#151c29] border border-slate-700 px-6 py-2.5 rounded-full transition-colors animate-wobble"
+          >
+            <MessageSquare className="w-3.5 h-3.5 text-[#00D2B4]" />
+            <span>ASK ROGER ABOUT CLIENT REFERENCES</span>
+          </button>
+        </div>
+      </section>
+
+      {/* --- BLOCK 4: NEXTDOOR PROOF GALLERY --- */}
       <section className="py-16 px-6 bg-[#05080E] border-b border-white/10">
         <div className="max-w-4xl mx-auto text-center mb-8">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#00D2B4]">VERIFIED PROOF</span>
@@ -984,7 +1094,6 @@ export default function App() {
           <p className="text-slate-400 text-xs mt-1">Click any testimonial card to view in full resolution.</p>
         </div>
 
-        {/* Compact Grid Layout for Nextdoor Reviews */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 max-w-4xl mx-auto">
           {NEXTDOOR_REVIEWS.map((url, i) => (
             <div 
@@ -1005,7 +1114,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- BLOCK 5: WHITE PANEL (FINAL CTA) --- */}
+      {/* --- BLOCK 5: FINAL CTA PANEL --- */}
       <section className="py-20 px-6 bg-white text-slate-900 text-center">
         <div className="max-w-xl mx-auto space-y-4">
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#007A48]">GET STARTED</span>
@@ -1037,7 +1146,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* --- STICKY BOTTOM VIVINT CALL BAR --- */}
+      {/* --- STICKY BOTTOM CALL BAR --- */}
       {showBottomBar && (
         <div className="fixed bottom-0 inset-x-0 bg-[#005A36] text-white px-4 py-3 z-[500] shadow-2xl border-t border-emerald-400/30">
           <div className="max-w-md mx-auto relative flex flex-col items-center text-center">
@@ -1066,13 +1175,12 @@ export default function App() {
         </div>
       )}
 
-      {/* --- PRE-APPROVED OFFER MODAL --- */}
+      {/* --- MODAL INSTANCES --- */}
       <PreApprovedOfferModal 
         isOpen={offerModalOpen} 
         onClose={() => setOfferModalOpen(false)} 
       />
 
-      {/* --- VIDEO POPUP MODAL --- */}
       {showVideoModal && (
         <div className="fixed inset-0 z-[650] flex items-center justify-center p-4">
           <div className="fixed inset-0 bg-[#05080E]/90 backdrop-blur-sm" onClick={() => setShowVideoModal(false)} />
