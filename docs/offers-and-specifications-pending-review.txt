@@ -1,0 +1,270 @@
+ARCHIVED REFERENCE ONLY — NOT IMPORTED OR PUBLICLY ACTIVE
+Confirm current terms, inventory, specifications and approval before restoring.
+
+const PRODUCTS = [
+  {
+    name: "Outdoor Camera Pro (Version 3)",
+    desc: "AI Active Deterrence • Version 3",
+    img: "https://www.vivint.com/sites/default/files/styles/square_hq_280x280/public/image/2026-02/Image_4.png.webp?itok=PQmCh1nt",
+    longDesc: "Version 3 Outdoor Camera Pro spots lurkers in real-time and proactively wards them off with a 140dB siren and strobe light before they step foot inside.",
+    features: ["Version 3 Hardware Architecture", "4K HDR Sensor", "AI Lurker Deterrence", "140dB Active Siren", "2-Way HD Voice"]
+  },
+  {
+    name: "Doorbell Camera Pro (Version 2)",
+    desc: "180° Porch Guard • Version 2",
+    img: "https://www.vivint.com/sites/default/files/styles/square_hq_280x280/public/image/2022-07/Carousel-DBC-Desktop.png.webp?itok=Sbl-kZmg",
+    longDesc: "Version 2 Doorbell Camera Pro offers the widest view on the market with proactive package protection and automatic thief deterrence.",
+    features: ["Version 2 Hardware Architecture", "180° x 180° Ultra-Wide View", "Package Protection AI", "Night Vision HDR", "Hands-Free Voice"]
+  },
+  {
+    name: "Smart Lock",
+    desc: "Keyless Access",
+    img: "https://www.vivint.com/sites/default/files/styles/square_hq_280x280/public/image/2023-12/Carousel-lock.png.webp?itok=QqCU9qG3",
+    longDesc: "Lock/unlock anywhere. Issue custom codes for family or contractors with auto-arm triggers.",
+    features: ["Remote Smartphone Control", "Unique Guest PINs", "Auto-Arm Synergy", "Tamper Sensor"]
+  },
+  {
+    name: "Vivint Smart Hub",
+    desc: "Command Center",
+    img: "https://www.vivint.com/sites/default/files/styles/square_hq_280x280/public/image/2023-12/Carousel_smartcontrol.png.webp?itok=08uMPQGz",
+    longDesc: "7-inch touchscreen command center connecting all cameras and sensors with cellular backup.",
+    features: ["7-Inch Touchscreen", "Dedicated Cellular Link", "1-Touch Emergency Dispatch", "Battery Backup"]
+  },
+  {
+    name: "Smart Thermostat",
+    desc: "AI Climate Control",
+    img: "https://www.vivint.com/sites/default/files/styles/square_hq_280x280/public/image/2023-07/Thermostat-Carousel.png.webp?itok=WPdRZrNu",
+    longDesc: "Auto-adjusts energy use and automatically cuts HVAC airflow during fire emergencies.",
+    features: ["Smart Auto-Adjust", "Fire Safety Shutdown", "Mobile Remote Access", "Voice Assistant Sync"]
+  },
+  {
+    name: "Water & Freeze Sensor",
+    desc: "Flood Prevention",
+    img: "https://www.vivint.com/sites/default/files/image/2024-07/productViewAll_water_sensor.png",
+    longDesc: "Detects leaks and freezing temps near appliances before costly structural water damage hits.",
+    features: ["Instant Leak Alerts", "Freeze Warning", "10-Year Battery Life", "Sub-Floor Sensing"]
+  }
+];
+
+
+const PreApprovedOfferModal = ({ isOpen, onClose }) => {
+  const [passcode, setPasscode] = useState('');
+  const [isUnlocked, setIsUnlocked] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+
+  if (!isOpen) return null;
+
+  const handleUnlock = (e) => {
+    e.preventDefault();
+    if (passcode.trim().toUpperCase() === OFFER_ACCESS_CODE) {
+      setIsUnlocked(true);
+      setErrorMsg('');
+    } else {
+      setErrorMsg('Invalid access code. Please enter a valid Smart Home Expert code.');
+    }
+  };
+
+  const handleClaimOffer = () => {
+    const offerDetails = `SHX Promo Offer (${OFFER_ACCESS_CODE}) - 1 Version 2 Doorbell Camera Pro, 2 Version 2 Outdoor Cameras Pro w/ Garage Spotlight Attachment, 50% Off Pro Installation + 4 Months Free Service`;
+    triggerTextMsg(offerDetails);
+    onClose();
+  };
+
+  return (
+    <div className="fixed inset-0 z-[650] flex items-center justify-center p-4 overflow-y-auto">
+      <div className="fixed inset-0 bg-[#05080E]/90 backdrop-blur-md" onClick={onClose} />
+      <div className="relative w-full max-w-2xl bg-[#0D111A] border-2 border-emerald-500/40 text-white rounded-3xl p-6 sm:p-8 z-[660] shadow-2xl my-8 animate-in zoom-in-95 duration-200">
+
+        <button
+          onClick={onClose}
+          className="absolute top-5 right-5 text-slate-400 hover:text-white bg-[#05080E] p-2 rounded-full border border-slate-800 transition-colors z-10"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {!isUnlocked ? (
+          <div className="text-center max-w-md mx-auto py-6">
+            <div className="w-16 h-16 bg-[#005A36] border border-emerald-400/40 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg shadow-emerald-950/40">
+              <Lock className="w-8 h-8 text-[#00D2B4]" />
+            </div>
+
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#00D2B4] block mb-2">
+              EXCLUSIVE SHX SPECIAL OFFER
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+              Unlock Promo Offer
+            </h3>
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+              Enter your access code to reveal the exclusive equipment bundle and promotional savings.
+            </p>
+
+            {/* Crucial SHX & Inventory Notice */}
+            <div className="bg-[#05080E] border border-amber-500/30 rounded-xl p-3.5 text-left text-xs space-y-1 mb-6">
+              <div className="flex items-center space-x-2 text-amber-300 font-bold">
+                <AlertTriangle className="w-4 h-4 shrink-0 text-amber-400" />
+                <span>Smart Home Expert (SHX) Exclusive</span>
+              </div>
+              <p className="text-slate-300 leading-relaxed text-[11px]">
+                This offer is only available directly through a certified Smart Home Expert. You cannot get this offer by calling Vivint Corporate or phone sales. Strictly limited availability while Version 2 equipment stock lasts.
+              </p>
+            </div>
+
+            <form onSubmit={handleUnlock} className="space-y-4 text-left">
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                  Access Code
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter Access Code"
+                  value={passcode}
+                  onChange={(e) => setPasscode(e.target.value)}
+                  className="w-full bg-[#05080E] border border-slate-700 rounded-xl px-4 py-3.5 text-base font-bold text-white tracking-widest uppercase focus:outline-none focus:border-[#00D2B4] transition-colors"
+                />
+              </div>
+
+              {errorMsg && (
+                <div className="flex items-center space-x-2 text-rose-400 text-xs bg-rose-500/10 p-3 rounded-xl border border-rose-500/20">
+                  <AlertCircle className="w-4 h-4 shrink-0" />
+                  <span>{errorMsg}</span>
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="w-full py-4 bg-[#005A36] hover:bg-[#007A48] text-white rounded-full font-bold text-xs uppercase tracking-widest transition-all shadow-xl shadow-emerald-950/40 border border-emerald-400/40 flex items-center justify-center space-x-2 animate-wobble"
+              >
+                <Unlock className="w-4 h-4" />
+                <span>REVEAL PROMO OFFER</span>
+              </button>
+            </form>
+
+            <p className="text-[11px] text-slate-500 mt-5">
+              Access code provided directly by Smart Home Expert Roger Reed.
+            </p>
+          </div>
+        ) : (
+          <div className="space-y-6 pt-2">
+
+            {/* Unlocked Header */}
+            <div className="text-center pb-4 border-b border-slate-800">
+              <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-400/30 px-3.5 py-1 rounded-full text-xs text-[#00D2B4] font-bold uppercase tracking-wider mb-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Exclusive SHX Promotion Unlocked</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-black text-white mt-1">
+                Your Promo Equipment Package
+              </h3>
+              <p className="text-slate-300 text-xs sm:text-sm mt-1">
+                Exclusive direct technician package designed and installed by Roger Reed.
+              </p>
+            </div>
+
+            {/* Limited Availability & SHX Direct Callout */}
+            <div className="bg-[#05080E] border-2 border-amber-500/40 rounded-2xl p-3.5 flex items-start space-x-3 text-xs bg-gradient-to-r from-[#05080E] to-amber-950/20">
+              <BadgePercent className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+              <div>
+                <strong className="text-amber-300 font-bold block mb-0.5 uppercase tracking-wide">
+                  Exclusive SHX Direct Deal • Limited Version 2 Stock
+                </strong>
+                <p className="text-slate-300 leading-relaxed text-[11px]">
+                  This offer is exclusive to Roger Reed (Smart Home Expert) and <strong>cannot be redeemed by calling Vivint directly</strong>. Availability is strictly limited until Version 2 hardware inventory is gone.
+                </p>
+              </div>
+            </div>
+
+            {/* Package Items Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+
+              <div className="bg-[#05080E] border border-slate-800 rounded-2xl p-4 flex items-start space-x-3.5">
+                <div className="w-10 h-10 rounded-xl bg-[#005A36] flex items-center justify-center shrink-0">
+                  <Camera className="w-5 h-5 text-[#00D2B4]" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#00D2B4] block">Included Camera</span>
+                  <h4 className="text-sm font-bold text-white">1x Doorbell Camera Pro (Version 2)</h4>
+                  <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                    180° x 180° ultra-wide field of view with smart package thief deterrence.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#05080E] border border-slate-800 rounded-2xl p-4 flex items-start space-x-3.5">
+                <div className="w-10 h-10 rounded-xl bg-[#005A36] flex items-center justify-center shrink-0">
+                  <Camera className="w-5 h-5 text-[#00D2B4]" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#00D2B4] block">Included Cameras</span>
+                  <h4 className="text-sm font-bold text-white">2x Outdoor Cameras Pro (Version 2)</h4>
+                  <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                    4K HDR sensor, AI person detection, and 140dB warning deterrence.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#05080E] border border-slate-800 rounded-2xl p-4 flex items-start space-x-3.5">
+                <div className="w-10 h-10 rounded-xl bg-[#005A36] flex items-center justify-center shrink-0">
+                  <Sun className="w-5 h-5 text-[#00D2B4]" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#00D2B4] block">Included Hardware</span>
+                  <h4 className="text-sm font-bold text-white">Garage Spotlight Attachment</h4>
+                  <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">
+                    High-output LED floodlight integrated with automated motion triggers.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-[#05080E] border border-emerald-500/40 rounded-2xl p-4 flex items-start space-x-3.5 bg-gradient-to-br from-[#05080E] to-[#005A36]/30">
+                <div className="w-10 h-10 rounded-xl bg-[#007A48] flex items-center justify-center shrink-0 shadow-md">
+                  <Gift className="w-5 h-5 text-amber-300" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-amber-300 block">Bonus Promotion</span>
+                  <h4 className="text-sm font-bold text-white">4 Months Free Service</h4>
+                  <p className="text-slate-300 text-xs mt-0.5 leading-relaxed">
+                    24/7 continuous professional monitoring and cellular backup at $0 cost.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+            {/* Additional Value Highlights */}
+            <div className="bg-[#05080E] border border-slate-800 rounded-2xl p-4 flex flex-wrap items-center justify-around gap-3 text-xs">
+              <div className="flex items-center space-x-2 text-slate-300">
+                <Check className="w-4 h-4 text-[#00D2B4]" />
+                <span>$0 Activation Fee</span>
+              </div>
+              <div className="flex items-center space-x-2 text-slate-300">
+                <Check className="w-4 h-4 text-[#00D2B4]" />
+                <span>50% Off Pro Installation</span>
+              </div>
+              <div className="flex items-center space-x-2 text-slate-300">
+                <Check className="w-4 h-4 text-[#00D2B4]" />
+                <span>Personal After-Sale Service</span>
+              </div>
+            </div>
+
+            {/* Claim CTA */}
+            <div className="space-y-2 pt-2">
+              <button
+                onClick={handleClaimOffer}
+                className="w-full py-4 bg-[#005A36] hover:bg-[#007A48] text-white rounded-full font-bold text-xs uppercase tracking-widest transition-all shadow-xl shadow-emerald-950/40 border border-emerald-400/40 flex items-center justify-center space-x-2 animate-wobble"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>CLAIM PROMO OFFER VIA TEXT</span>
+              </button>
+              <p className="text-center text-[11px] text-slate-400">
+                Sends a direct text to Roger to lock in this limited Version 2 inventory bundle.
+              </p>
+            </div>
+
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
+};

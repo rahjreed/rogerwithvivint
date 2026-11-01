@@ -1,0 +1,170 @@
+.truck-page { background: #05080e; color: #f3f6f4; padding-bottom: 0; }
+.truck-width { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+.truck-header { border-bottom: 1px solid #ffffff14; background: #080e14f5; position: sticky; top: 0; z-index: 50; backdrop-filter: blur(16px); }
+.truck-header-inner { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.truck-brand { display: inline-flex; align-items: center; gap: 22px; }
+.truck-brand > span { border-left: 1px solid #ffffff20; padding-left: 22px; font-size: 11px; font-weight: 700; letter-spacing: .09em; }
+.truck-brand small { display: block; color: #93b5a6; font-size: 8px; margin-top: 4px; }
+.truck-header nav { display: flex; align-items: center; gap: 28px; }
+.truck-header nav > a { min-height: 44px; display: flex; align-items: center; color: #b4c8be; font-size: 12px; }
+.truck-call { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; font-size: 12px; color: #b0e1c8; border: 1px solid #3d5d4e; border-radius: 24px; padding: 11px 16px; }
+.truck-hero { display: grid; grid-template-columns: 1.2fr .85fr; gap: 68px; align-items: center; padding-block: 64px 60px; }
+.truck-eyebrow { display: flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; color: #81dcb7; letter-spacing: .15em; line-height: 1.7; margin-bottom: 20px; }
+.truck-live-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #74ddb0; box-shadow: 0 0 18px #74ddb080; }
+.truck-hero h1 { font-size: clamp(36px, 4.3vw, 59px); font-weight: 650; letter-spacing: -.045em; line-height: 1.09; margin-bottom: 24px; }
+.truck-hero h1 > span { color: #85e2b6; }
+.truck-hero-copy > h2 { font-size: 20px; line-height: 1.4; letter-spacing: -.01em; color: #d4e7de; margin-bottom: 16px; }
+.truck-hero-copy > p { color: #a9bdc1; font-size: 14px; line-height: 1.85; }
+.truck-hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; margin-block: 26px 18px; }
+.truck-hero-actions > .primary-button { min-height: 56px; font-size: 11px; padding-inline: 22px; letter-spacing: .04em; }
+.truck-meet-link { display: inline-flex; gap: 12px; min-height: 44px; align-items: center; font-size: 10px; font-weight: 600; color: #add7c2; letter-spacing: .05em; }
+.truck-hero-copy > p.truck-discovery { font-size: 12px; color: #95afa5; }
+.truck-personal-note { display: flex; align-items: center; gap: 7px; font-size: 11px; color: #8fafa0; margin-top: 15px; }
+.truck-mobile-identity { display: none; }
+.truck-portrait { border: 1px solid #3c674d; border-radius: 24px; overflow: hidden; background: radial-gradient(ellipse at 50% 42%, #30623e, #10271e 65%, #0a1b16); position: relative; }
+.truck-portrait-label { display: flex; gap: 8px; align-items: center; justify-content: center; padding: 24px 14px 0; color: #b3d1bd; letter-spacing: .15em; font-size: 9px; font-weight: 700; }
+.truck-portrait > img { display: block; width: 100%; height: 370px; object-fit: contain; object-position: bottom; padding: 20px 24px 0; }
+.truck-portrait-caption { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 28px; border-top: 1px solid #78a28a2e; background: #081710cc; }
+.truck-portrait-caption span { font-size: 8px; letter-spacing: .14em; color: #a8bcaf; }
+.truck-portrait-caption h2 { font-size: 28px; font-weight: 600; margin-top: 6px; }
+.truck-install-stat { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 22px; background: #133221; border-top: 1px solid #5c866532; }
+.truck-install-stat strong { font-size: 35px; font-weight: 600; color: #a8e9bf; letter-spacing: -.035em; }
+.truck-install-stat > span { font-size: 9px; letter-spacing: .07em; line-height: 1.8; color: #b3c9ba; }
+.truck-section-heading { max-width: 800px; margin-bottom: 32px; }
+.truck-section-heading h2 { font-size: clamp(28px, 3.3vw, 42px); font-weight: 600; line-height: 1.18; letter-spacing: -.03em; margin-bottom: 18px; }
+.truck-section-heading p { color: #a4b9bb; font-size: 15px; line-height: 1.8; max-width: 660px; }
+.truck-difference { padding-block: 50px 64px; border-top: 1px solid #ffffff16; }
+.truck-difference-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.truck-difference-grid > article { border: 1px solid #293b34; border-radius: 16px; padding: 26px; background: #0d171c; }
+.truck-benefit-number { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 22px; color: #81cba9; }
+.truck-benefit-number > span { font-size: 10px; color: #668276; letter-spacing: .1em; }
+.truck-difference-grid h3 { font-size: 18px; line-height: 1.4; font-weight: 600; margin-bottom: 14px; }
+.truck-difference-grid p { font-size: 13px; line-height: 1.85; color: #a4b5b9; }
+.truck-options { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; padding: 44px; border: 1px solid #477a52; border-radius: 24px; background: radial-gradient(ellipse at 15% 0%, #173c28, #0a1c16 75%); margin-bottom: 68px; }
+.truck-options-copy > h2 { font-size: clamp(29px, 3.3vw, 40px); font-weight: 600; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 20px; }
+.truck-options-copy p { color: #bad1c3; font-size: 14px; line-height: 1.85; margin-bottom: 16px; }
+.truck-options-copy > .primary-button { font-size: 10px; gap: 8px; margin-block: 10px 16px; }
+.truck-options-copy > small { display: block; font-size: 11px; color: #9aba9f; line-height: 1.8; }
+.truck-options-card { padding: 30px; border: 1px solid #9bc2a340; border-radius: 20px; background: #040f0b73; box-shadow: 0 18px 40px #0002; }
+.truck-options-icon { display: flex; width: 66px; height: 66px; align-items: center; justify-content: center; background: #244c30; color: #a2e7b4; border-radius: 16px; margin-bottom: 24px; }
+.truck-options-card .truck-eyebrow { font-size: 8px; margin-bottom: 12px; }
+.truck-options-card h3 { font-size: 31px; letter-spacing: -.035em; margin-bottom: 24px; font-weight: 600; }
+.truck-options-card ul { padding: 0; list-style: none; }
+.truck-options-card li { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: #c4ddc9; line-height: 1.8; margin-bottom: 15px; }
+.truck-options-card li > svg { width: 17px; height: 17px; margin-top: 2px; color: #7bcea0; }
+.truck-options-card-footer { padding-top: 20px; border-top: 1px solid #ffffff15; color: #92ae9c; font-size: 11px; line-height: 1.9; }
+.truck-options-card-footer strong { color: #d3e7d8; font-weight: 500; }
+.truck-advantage { padding-block: 0 66px; }
+.truck-advantage-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.truck-advantage-grid > article { display: flex; flex-direction: column; align-items: flex-start; border: 1px solid #2e4136; background: #0e181f; border-radius: 18px; padding: 30px; }
+.truck-advantage-grid article.truck-independent { border-color: #63543e; background: #1b1c1a; }
+.truck-advantage-grid article > svg { color: #87d4ae; margin-bottom: 22px; }
+.truck-independent > svg { color: #d4b982 !important; }
+.truck-card-label { display: block; color: #9fbbad; font-size: 8px; letter-spacing: .13em; line-height: 1.8; margin-bottom: 10px; }
+.truck-independent .truck-card-label { color: #cfb889; }
+.truck-advantage-grid h3 { font-size: 23px; font-weight: 600; line-height: 1.3; margin-bottom: 16px; }
+.truck-advantage-grid p { color: #aebebc; font-size: 14px; line-height: 1.8; margin-bottom: 16px; }
+.truck-advantage-grid p.truck-perk-note { font-size: 11px; color: #c1b594; }
+.truck-advantage-grid a { margin-top: auto; display: inline-flex; gap: 8px; min-height: 44px; align-items: center; font-size: 12px; color: #b2dec6; }
+.truck-advantage-note { color: #9aafa6; font-size: 12px; line-height: 1.8; margin-top: 22px; }
+.truck-advantage-note a { text-decoration: underline; }
+.truck-story-lead { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: center; padding-block: 34px 44px; }
+.truck-story-lead .truck-section-heading { margin: 0; }
+.truck-video { width: 100%; aspect-ratio: 16 / 9; background: #020605; border: 1px solid #3c5946; border-radius: 16px; overflow: hidden; }
+.truck-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+.truck-credibility > section { padding-block: 48px; }
+.truck-credibility .space-y-10 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; max-width: 1100px; }
+.truck-credibility .space-y-10 > :not([hidden]) ~ :not([hidden]) { margin-block: 0; }
+.truck-credibility a[target="_blank"] { min-height: 44px; }
+.truck-equipment { padding-block: 56px; }
+.truck-equipment-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; align-items: center; margin-bottom: 32px; }
+.truck-equipment-intro .truck-section-heading { margin: 0; }
+.truck-equipment .product-gallery { gap: 16px; }
+.truck-equipment .product-gallery > button { text-align: left; padding: 20px; }
+.truck-equipment .product-gallery > button > div:first-child { aspect-ratio: 2 / 1; }
+.truck-equipment .product-gallery img { max-height: 105px; }
+.truck-equipment-note { color: #94aaa0; font-size: 12px; line-height: 1.8; margin-top: 20px; }
+.truck-final { text-align: center; background: radial-gradient(ellipse at top, #1a422c, #0b1d15); border: 1px solid #426f4d; border-radius: 24px; padding: 50px; margin-block: 8px 58px; }
+.truck-final > .truck-eyebrow { justify-content: center; }
+.truck-final h2 { font-size: clamp(30px, 3.6vw, 46px); line-height: 1.15; font-weight: 600; letter-spacing: -.035em; margin-bottom: 24px; }
+.truck-final h2 > span { color: #91ddae; }
+.truck-final > p { max-width: 760px; margin-inline: auto; color: #bad0c5; font-size: 15px; line-height: 1.85; margin-bottom: 24px; }
+.truck-final-actions { display: flex; gap: 16px; justify-content: center; margin-block: 26px 18px; }
+.truck-direct-number { font-size: 18px; letter-spacing: .06em; color: #d6e7da; display: inline-flex; min-height: 44px; align-items: center; }
+.truck-final > p.truck-send-note { margin: 4px auto 0; font-size: 11px; color: #a0b6a6; }
+.truck-final > p.truck-contact-status { font-size: 12px; color: #abdac1; margin-block: 14px 0; }
+.truck-contact-status:empty { display: none; }
+.truck-copy-fallback { width: 100%; max-width: 640px; padding: 16px; border-radius: 12px; border: 1px solid #639070; background: #06130e; color: white; font-size: 16px; line-height: 1.8; margin-top: 14px; }
+.truck-footer { padding-block: 32px; border-top: 1px solid #ffffff16; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 26px; }
+.truck-footer > div { display: flex; align-items: center; gap: 20px; font-size: 11px; color: #a7c0b2; }
+.truck-footer nav { display: flex; flex-wrap: wrap; gap: 20px; }
+.truck-footer nav a { display: inline-flex; align-items: center; min-height: 44px; gap: 8px; font-size: 12px; color: #adc7b9; }
+.truck-footer > p { width: 100%; max-width: 900px; font-size: 11px; color: #8da79b; line-height: 1.8; }
+.truck-footer > p a { color: #bcdfcb; text-decoration: underline; }
+.truck-footer > small { font-size: 9px; color: #7e9a8a; line-height: 1.8; }
+.truck-mobile-bar { display: none; }
+.truck-page section[id], .truck-page main[id] { scroll-margin-top: 105px; }
+@media (max-width: 960px) {
+  .truck-hero { gap: 32px; grid-template-columns: 1.2fr .8fr; }
+  .truck-portrait > img { height: 300px; padding-inline: 12px; }
+  .truck-portrait-caption { padding: 18px; }
+  .truck-install-stat { gap: 12px; padding: 18px; }
+  .truck-difference-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .truck-options { gap: 28px; padding: 30px; }
+  .truck-options-card { padding: 22px; }
+  .truck-hero-actions > .primary-button { font-size: 10px; padding-inline: 16px; gap: 8px; }
+}
+@media (max-width: 680px) {
+  .truck-width { width: calc(100% - 40px); }
+  .truck-header-inner { min-height: 66px; gap: 10px; }
+  .truck-brand > span, .truck-header nav { display: none; }
+  .truck-call { font-size: 11px; gap: 7px; padding: 10px 12px; }
+  .truck-hero { grid-template-columns: 1fr; padding-block: 28px 36px; gap: 0; }
+  .truck-hero .truck-eyebrow { font-size: 8px; letter-spacing: .09em; gap: 7px; margin-bottom: 16px; }
+  .truck-mobile-identity { display: flex; gap: 12px; align-items: center; padding: 12px; border: 1px solid #304c3b; background: #112319; border-radius: 14px; margin-bottom: 22px; }
+  .truck-mobile-identity img { width: 45px; height: 58px; object-fit: contain; object-position: bottom; }
+  .truck-mobile-identity > div { flex: 1; }
+  .truck-mobile-identity strong { display: block; font-size: 15px; color: #e3efdf; }
+  .truck-mobile-identity span { display: block; font-size: 10px; margin-top: 3px; color: #b4cdbf; }
+  .truck-mobile-identity small { display: block; font-size: 10px; color: #8bd0a9; margin-top: 4px; }
+  .truck-mobile-identity > svg { color: #8acfa6; }
+  .truck-hero h1 { font-size: clamp(32px, 9.3vw, 40px); margin-bottom: 20px; }
+  .truck-hero-copy > h2 { font-size: 18px; }
+  .truck-hero-copy > p { font-size: 13px; line-height: 1.8; }
+  .truck-hero-actions { gap: 8px; margin-block: 20px 14px; }
+  .truck-hero-actions > .primary-button { width: 100%; font-size: 9px; gap: 8px; padding-inline: 12px; min-height: 52px; }
+  .truck-meet-link { align-self: center; font-size: 9px; gap: 8px; }
+  .truck-portrait { display: none; }
+  .truck-personal-note { font-size: 10px; }
+  .truck-difference { padding-block: 32px 40px; }
+  .truck-section-heading .truck-eyebrow { font-size: 8px; letter-spacing: .1em; }
+  .truck-section-heading p { font-size: 14px; }
+  .truck-difference-grid { gap: 14px; grid-template-columns: 1fr; }
+  .truck-difference-grid > article { padding: 22px; }
+  .truck-benefit-number { margin-bottom: 16px; }
+  .truck-options { grid-template-columns: 1fr; padding: 24px; gap: 28px; margin-bottom: 42px; }
+  .truck-options-copy > .truck-eyebrow { font-size: 8px; }
+  .truck-options-copy > .primary-button { width: 100%; font-size: 9px; padding-inline: 12px; }
+  .truck-options-copy > p { font-size: 13px; }
+  .truck-advantage { padding-bottom: 32px; }
+  .truck-advantage-grid { grid-template-columns: 1fr; gap: 16px; }
+  .truck-advantage-grid > article { padding: 24px; }
+  .truck-story-lead { grid-template-columns: 1fr; padding-block: 20px 30px; gap: 24px; }
+  .truck-credibility > section { padding-block: 32px; }
+  .truck-credibility .space-y-10 { grid-template-columns: 1fr; gap: 26px; }
+  .truck-equipment { padding-block: 36px; }
+  .truck-equipment-intro { grid-template-columns: 1fr; gap: 24px; }
+  .truck-equipment .product-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .truck-equipment .product-gallery > button { padding: 14px; }
+  .truck-equipment .product-gallery > button > div:first-child { aspect-ratio: 1; }
+  .truck-equipment .product-gallery img { max-height: 78px; max-width: 100%; }
+  .truck-equipment .product-gallery .text-xs { font-size: 10px; line-height: 1.6; }
+  .truck-final { padding: 30px 22px; margin-bottom: 36px; }
+  .truck-final .truck-eyebrow { font-size: 8px; }
+  .truck-final > p { font-size: 13px; }
+  .truck-final-actions { flex-direction: column; gap: 12px; }
+  .truck-footer { padding-bottom: calc(100px + env(safe-area-inset-bottom)); gap: 18px; }
+  .truck-footer > div { flex-wrap: wrap; gap: 14px; }
+  .truck-mobile-bar { display: block; position: fixed; bottom: 0; inset-inline: 0; background: #091a12f5; border-top: 1px solid #477455; z-index: 40; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
+  .truck-mobile-bar .primary-button { width: 100%; min-height: 48px; font-size: 10px; gap: 12px; }
+}
