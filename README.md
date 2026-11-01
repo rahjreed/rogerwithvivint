@@ -1,5 +1,7 @@
 # Roger With Vivint — Customer Hub
 
+Progressive Web App support is documented in [docs/pwa.md](docs/pwa.md): a customer-home launch manifest, branded icons, Download App/Safari guidance, static-only caching with a neutral offline guide, and explicit updates that protect in-progress forms. It includes current PWA verification results and physical-device/live-release checks.
+
 The dedicated **`/truck` QR sales page** is documented in [docs/truck-landing-page.md](docs/truck-landing-page.md), including routing/build output, preserved hub behavior, and current verification results. `src/App.jsx` now chooses between the separately loaded customer hub and truck page; the build produces static truck HTML for both clean-URL and directory-index hosting conventions.
 
 The follow-up resources/travel/rewards/insurance implementation and its current verification results are recorded in [docs/customer-updates.md](docs/customer-updates.md). It adds How It Works and Roger's panel tutorial, six independent travel inquiries, the requested referral rewards messaging, and an email-based home insurance savings request. The original redesign notes below describe the earlier baseline; see that update for current promotional review requirements.
