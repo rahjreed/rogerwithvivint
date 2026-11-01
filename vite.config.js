@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "node:url";
+import { VitePWA } from 'vite-plugin-pwa';
+import { pwaOptions } from './src/pwa-config.js';
 
 export default defineConfig({
   plugins: [react(), {
@@ -24,7 +26,7 @@ export default defineConfig({
         }
       },
     },
-  }],
+  }, VitePWA(pwaOptions)],
   build: {
     rollupOptions: {
       input: {

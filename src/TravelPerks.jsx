@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Copy, MessageSquare, Plane } from 'lucide-react';
 import { DESTINATIONS, travelMessage, travelSmsUrl } from './travel.js';
 import { copyText } from './clipboard.js';
+import { usePwaState } from './usePwaState.js';
 
 function DestinationCard({ destination }) {
   const [notice, setNotice] = useState('');
@@ -18,6 +19,9 @@ function DestinationCard({ destination }) {
 }
 
 export default function TravelPerks() {
+  const { online, contentOutdated } = usePwaState();
+  if (!online) return <section className="content-width pwa-unavailable"><h2>Customer Travel Perks</h2><p>Reconnect to view current travel opportunities, fees, availability, and terms.</p></section>;
+  if (contentOutdated) return <section className="content-width pwa-unavailable"><h2>Customer Travel Perks</h2><p>A newer version is available. Finish or copy any open entries, then reload the app to view current travel opportunities and terms.</p></section>;
   return <section className="travel-section content-width" aria-labelledby="travel-heading"><div className="travel-heading"><span className="eyebrow"><Plane size={18} /> INDEPENDENT PERKS FROM ROGER</span><h2 id="travel-heading">Customer Travel Perks</h2><p>Explore promotional vacation opportunities personally arranged by Roger Reed.</p></div>
     <div className="travel-disclosure"><strong>This is an independent Roger With Vivint promotional offer arranged by Roger Reed. It is not sponsored, administered, fulfilled, or guaranteed by Vivint corporate.</strong><p>Promotional travel packages require payment of applicable taxes and fees. Package availability, inclusions, eligibility, and additional terms must be confirmed before booking.</p><p>Request details only. Dates, accommodation, total costs, restrictions, and any required presentations must be confirmed in written terms. Airfare, meals, transfers, and other expenses are not represented as included. Destination photos are illustrative and do not show a promised accommodation or itinerary.</p></div>
     <div className="destination-grid">{DESTINATIONS.map(destination => <DestinationCard key={destination.id} destination={destination} />)}</div>
