@@ -1,11 +1,11 @@
 # Roger With Vivint companion PWA
 
-Implemented on `codex-development`. These changes are uncommitted and have not been pushed, merged, or deployed.
+Implemented on `codex-development` in commit `a80c96b`. The subsequent installation UX fix is documented in [pwa-installation-fix.md](pwa-installation-fix.md) and remains uncommitted and undeployed.
 
 ## Customer experience
 
 - The customer homepage has a branded **Download App** card explaining quick access to referrals, guidance, and contacts.
-- On a supporting browser, a retained `beforeinstallprompt` event is invoked only by the customer's button click. Dismissal and errors have truthful fallback guidance; accepting a prompt is not itself treated as proof of installation.
+- On Chromium browsers, **Download App** appears when a retained `beforeinstallprompt` event is available, and invokes it directly from the customer's click. Before that, only a compact, optional **Installation options** link appears. Dismissal/errors never automatically expand manual help; accepting a prompt is not itself treated as proof of installation.
 - iPhone/iPad visitors receive Safari Share → Add to Home Screen instructions, including Open as Web App if shown. No native Chromium prompt is claimed on iOS.
 - Standalone display mode, Safari's standalone flag, and the current session's `appinstalled` event replace the download invitation with an installed-state message. Installation cannot be detected reliably from every ordinary browser tab on every platform; no persistent installed marker is written.
 - Manifest identity is **Roger With Vivint**, short name **Roger**, ID `/`, scope `/`, standalone display, and start URL **`/#home`**. Installing from any public page still launches the customer homepage rather than `/truck`.
@@ -34,7 +34,7 @@ Offline support is intentionally informational. Live offers, videos, and new for
 
 The existing static truck entries and clean-URL alias remain. New **`vercel.json`** keeps real files ahead of the app fallback, explicitly maps `/truck` to its dedicated truck HTML, and applies correct worker/manifest headers. Missing static files such as `missing.js` return 404 rather than homepage HTML. The root worker has `Service-Worker-Allowed: /` and no-store/revalidation headers; the manifest has its proper MIME type and revalidation policy. HTML uses a no-store policy.
 
-The route contract was exercised against the built artifacts in a local test server implementing this file's rule order, as well as the existing production preview tests. **This is not a Vercel cloud deployment test.** The Vercel documentation connector was unavailable, so official documentation and local package source were consulted. Live HTTPS headers and routing must be checked after a separately authorized deployment.
+The route contract was exercised against built artifacts in a local test server implementing this file's rule order, as well as existing production preview tests. The subsequent read-only live audit confirmed HTTPS, manifest/icon/worker headers, worker control, and `/truck` HTTP 200 on the deployed site. No new deployment was made. See the installation-fix report for the exact evidence and device limitations.
 
 ## File inventory
 
@@ -55,12 +55,12 @@ The route contract was exercised against the built artifacts in a local test ser
 - **23 unit tests passed**, including all previous tests and new manifest/icon dimensions, install lifecycle, iOS/iPad handling, and installed-state tests.
 - **Production build passed**, generating the manifest, custom worker, icon/offline assets, and both truck HTML variants. The worker is about 17 KiB before gzip.
 - A real browser registered and was controlled by the production worker; Chromium's manifest and installability diagnostics returned no errors in a disposable, non-incognito profile.
-- Native-prompt UI tests confirm no invocation before a user click, one invocation after the click, truthful dismissal handling, and installed-state replacement. Prompt events are synthetic; no real OS app installation occurred.
+- Deterministic UI tests use synthetic choices for no-event, delayed-event, dismissal, error, and installed-state handling. The separate Chrome mobile-emulation test now observes a genuine browser event and verifies `prompt()` is called once during active user activation. No OS app installation occurred.
 - A genuine waiting-worker update was produced by changing the locally served worker bytes. **Later**, explicit reload, and cross-tab activation were tested with independent synthetic form entries; another tab could not erase those entries.
 - CacheStorage was inspected after entering synthetic referral/insurance details and requesting a sensitive-query URL. Only the allowed public static files were present; no entered values or customer query keys were stored.
 - Offline tests verify current offers disappear, open entries remain in memory, fresh hub/truck requests receive the neutral guide, and reconnecting returns to the customer homepage.
 - Production `/truck`, `/truck/`, `/truck/index.html`, and `/truck.html` direct visits and refreshes passed under the local Vercel routing contract. Worker/manifest MIME types and cache headers passed. Missing JS returned 404 and the page fallback preserved the hub.
-- Android-style mobile Chromium emulation passed installability diagnostics, worker control, manifest/maskable icons, and install-card layout. Safari/iPhone emulation showed the correct Add to Home Screen guide. The installed-state UI was also verified.
+- Android-style mobile Chrome emulation passed installability diagnostics, worker control, manifest/maskable icons, genuine install-event delivery, direct-click prompt invocation, and install-card layout. Safari/iPhone emulation showed opt-in Add to Home Screen guidance. The installed-state UI was also verified.
 - Existing browser regression suites passed for referrals (including 10 entries), insurance, all six travel messages/photos, actual tutorial playback, truck calls/texts, product/review dialogs, and responsive layouts at small phone through desktop widths.
 - No uncaught browser page errors were observed. Screenshots of the icons and mobile install guidance/card were visually reviewed. No email, text, phone call, or real app installation was initiated by the tests.
 
@@ -76,11 +76,11 @@ node tests/pwa-browser.mjs
 node tests/pwa-android.mjs
 ```
 
-The two PWA browser scripts need an available Playwright installation (`PLAYWRIGHT_MODULE` may point to its `index.mjs`) and Edge. They start their own local production-artifact server and use isolated test profiles, never the user's normal browser profile. Generated profiles/screenshots remain under ignored `test-results/`. The existing browser suites still use the development server on port 5173 and preview on 4173; run suites sequentially when they use the system clipboard.
+The PWA browser scripts need an available Playwright installation (`PLAYWRIGHT_MODULE` may point to its `index.mjs`). The deterministic browser suite defaults to Edge; the Android-emulation suite defaults to Chrome (`PWA_BROWSER` can select a different installed channel). They start their own local production-artifact server and use isolated test profiles, never the user's normal profile. The separate read-only `tests/pwa-live.mjs` audits the deployed site (`PWA_LIVE_URL` can override it). Generated profiles, reports, and screenshots remain under ignored `test-results/`. Existing browser suites use the development server on port 5173 and preview on 4173; run suites sequentially when they use the system clipboard.
 
 ## Limits and release checks
 
-No physical Android or iOS device was available. Emulated layouts, installability diagnostics, and synthetic install events do not establish a completed Android WebAPK install or Safari Home Screen launch. After an authorized HTTPS release, verify actual install/remove/reinstall, Home Screen icon/masking, customer-home launch, offline recovery, update prompts, and live Vercel headers plus `/truck` refresh on supported devices. No commit, push, merge, or deployment was performed.
+No physical Android or iOS device was available. Emulated layouts, installability diagnostics, and a genuine desktop Chrome install event do not establish a completed Android WebAPK install or Safari Home Screen launch. After an authorized release of the installation fix, verify actual install/remove/reinstall, icon/masking, customer-home launch, offline recovery, updates, and `/truck` refresh on supported devices. The fix has not been committed, pushed, merged, or deployed.
 
 The existing unverified reward/travel/company data-handling publication checks remain unchanged; PWA support does not establish approval for those programs or email workflows.
 
