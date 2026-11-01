@@ -8,6 +8,13 @@ await mkdir('test-results', { recursive: true });
 // A disposable profile avoids Chromium's intentional incognito install restriction.
 // Never open the user's normal browser profile or actually accept an OS install.
 const context = await chromium.launchPersistentContext(`test-results/pwa-profile-${Date.now()}`, { channel: 'msedge', headless: true, viewport: { width: 390, height: 844 }, permissions: ['clipboard-read', 'clipboard-write'] });
+// Deterministic no-prompt/delayed-prompt UI coverage. The separate mobile suite
+// observes the browser's real event; this suite supplies synthetic choices.
+await context.addInitScript(() => {
+  addEventListener('beforeinstallprompt', event => {
+    if (event.isTrusted) { event.preventDefault(); event.stopImmediatePropagation(); }
+  });
+});
 const browser = context.browser();
 const page = await context.newPage();
 page.setDefaultTimeout(15000);
@@ -28,7 +35,7 @@ const cacheSnapshot = () => page.evaluate(async () => {
 });
 try {
   await page.goto(server.origin, { waitUntil: 'domcontentloaded' });
-  await page.getByRole('button', { name: 'Download App', exact: true }).waitFor();
+  await page.locator('.install-card').waitFor();
   await page.waitForFunction(() => !!navigator.serviceWorker.controller, { timeout: 30000 });
   const sw = await page.evaluate(async () => { const registration = await navigator.serviceWorker.getRegistration(); return { scope: registration.scope, script: registration.active.scriptURL }; });
   assert.equal(sw.scope, `${server.origin}/`);
@@ -55,6 +62,13 @@ try {
   assert.deepEqual(installability.installabilityErrors, [], 'Chromium installability checks');
   console.log('PASS: production manifest, icons, Apple metadata, worker scope/headers/control, and Chromium installability checks.');
 
+  assert.equal(await page.getByRole('button', { name: 'Download App', exact: true }).count(), 0, 'do not offer a native install button before the event');
+  assert.equal(await page.locator('.install-guide').count(), 0, 'manual instructions hidden by default');
+  await page.locator('.install-card').screenshot({ path: 'test-results/pwa-compact-fallback.png' });
+  await page.getByRole('button', { name: 'Installation options', exact: true }).click();
+  await page.locator('.install-guide').waitFor();
+  assert.equal(await page.getByRole('button', { name: 'Hide installation options' }).getAttribute('aria-expanded'), 'true');
+
   // This synthetic event tests the UI/user-activation contract, not a real OS installation.
   await page.evaluate(() => {
     window.promptCalls = 0;
@@ -64,9 +78,20 @@ try {
     dispatchEvent(event);
   });
   assert.equal(await page.evaluate(() => window.promptCalls), 0);
+  assert.equal(await page.locator('.install-guide').count(), 0, 'late native event takes precedence over manual help');
   await page.getByRole('button', { name: 'Download App', exact: true }).click();
   assert.equal(await page.evaluate(() => window.promptCalls), 1);
   await page.getByText('Installation canceled.', { exact: false }).waitFor();
+  assert.equal(await page.locator('.install-guide').count(), 0, 'dismissal must not automatically expand instructions');
+  assert.equal(await page.getByRole('button', { name: 'Download App', exact: true }).count(), 0, 'consumed event cannot be offered again');
+  await page.evaluate(() => {
+    const event = new Event('beforeinstallprompt', { cancelable: true });
+    event.prompt = async () => { throw new Error('Test prompt failure'); };
+    dispatchEvent(event);
+  });
+  await page.getByRole('button', { name: 'Download App', exact: true }).click();
+  await page.getByText('The install prompt could not open.', { exact: false }).waitFor();
+  assert.equal(await page.locator('.install-guide').count(), 0);
   await page.evaluate(() => dispatchEvent(new Event('appinstalled')));
   await page.getByText('App installed — look for Roger on your Home Screen.').waitFor();
   assert.equal(await page.getByRole('button', { name: 'Download App', exact: true }).count(), 0);
@@ -162,6 +187,8 @@ try {
   const ios = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 Version/18.0 Mobile/15E148 Safari/604.1' });
   const iphone = await ios.newPage();
   await iphone.goto(server.origin, { waitUntil: 'domcontentloaded' });
+  await iphone.locator('.install-card').waitFor();
+  assert.equal(await iphone.locator('.install-guide').count(), 0, 'Safari steps are also opt-in');
   await iphone.getByRole('button', { name: 'Download App', exact: true }).click();
   await iphone.getByRole('heading', { name: 'Add Roger with Safari' }).waitFor();
   await iphone.getByText('Add to Home Screen', { exact: true }).waitFor();
@@ -176,6 +203,7 @@ try {
   await installedPage.goto(server.origin, { waitUntil: 'domcontentloaded' });
   await installedPage.getByText('App installed — look for Roger on your Home Screen.').waitFor();
   assert.equal(await installedPage.getByRole('button', { name: 'Download App', exact: true }).count(), 0);
+  assert.equal(await installedPage.getByRole('button', { name: 'Installation options', exact: true }).count(), 0);
   await installed.close();
   assert.deepEqual(errors, []);
   console.log('PASS: install prompt interaction, installed-state UI, iPhone/Safari guidance, and no uncaught page errors. Real device installation is not simulated as success.');

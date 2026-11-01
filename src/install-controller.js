@@ -34,9 +34,9 @@ export function createInstallController(windowObject, navigatorObject) {
         // Keep this call synchronous with the customer's click/user activation.
         await promptEvent.prompt();
         const choice = await promptEvent.userChoice;
-        if (!snapshot.installed) publish({ busy: false, notice: choice.outcome === 'accepted' ? 'Installation requested. Follow your browser’s instructions to finish adding Roger.' : 'Installation canceled. You can try again from your browser’s install menu.' });
+        if (!snapshot.installed) publish({ busy: false, notice: choice.outcome === 'accepted' ? 'Installation requested. Finish in your browser to add Roger.' : 'Installation canceled. You can still use the website.' });
       } catch {
-        publish({ busy: false, notice: 'The install prompt could not open. Use the browser’s installation menu or the instructions below.' });
+        publish({ busy: false, notice: 'The install prompt could not open. Try Installation options.' });
       }
     },
     destroy() {
