@@ -64,8 +64,49 @@ export default function Hub() {
     </header>
     <main id="main-content" ref={main} tabIndex={-1}>
       <div hidden={area !== 'home'}>
-        <section className="welcome-section content-width"><div className="welcome-copy"><span className="welcome-badge"><span /> INSTALLED WITH CARE. CONNECTED FOR GOOD.</span><h1>Welcome to your<br /><span>smart home.</span></h1><p>Your personal connection to Roger Reed, your Vivint Smart Home Expert. Get helpful resources, stay connected, and introduce friends and family to the benefits of smart home protection.</p><a href="#refer" className="primary-button hero-button"><Users size={20} /> REFER FRIENDS & FAMILY <ArrowRight size={20} /></a><div className="hero-footnote"><ShieldCheck size={16} /> A personal introduction. A trusted connection.</div></div>
-          <div className="welcome-visual"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="home-symbol"><Home size={96} strokeWidth={1} /><span className="home-check"><Check size={20} /></span></div><div className="roger-card"><img src={IMG_RAHJ_PROFILE} alt="Roger Reed, your Vivint Smart Home Expert" /><div><span>YOUR SMART HOME EXPERT</span><h2>Roger Reed</h2><p><span className="online-dot" /> One familiar face. One direct line.</p></div><a href="#meet" className="icon-button" aria-label="Meet Roger"><ArrowUpRight /></a></div><div className="visual-caption">HOME IS MORE THAN A PLACE.<br /><strong>It’s the people you share it with.</strong></div></div>
+        <section className="welcome-section content-width">
+          <div className="welcome-copy">
+            <span className="welcome-badge"><span /> 🇨🇷 A PERSONAL FAVOR FROM ROGER</span>
+            <h1>Help me reach Costa Rica.<br /><span>Let's see how much you could save.</span></h1>
+            <p>I'm working to earn a company trip to Costa Rica, and I'd really appreciate your support! You can help by requesting a free home insurance review, exploring security options, or introducing me to someone who might benefit.</p>
+            <div className="campaign-hero-actions">
+              <a href="#insurance" className="primary-button hero-button"><ShieldCheck size={20} /> FREE INSURANCE REVIEW <ArrowRight size={20} /></a>
+              <a href="#explore" className="secondary-button">Explore security options <ArrowUpRight size={18} /></a>
+            </div>
+            <div className="hero-footnote"><Check size={16} /> No security purchase needed to request an insurance review.</div>
+          </div>
+          <div className="welcome-visual"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="home-symbol"><Home size={96} strokeWidth={1} /><span className="home-check"><Check size={20} /></span></div><div className="roger-card"><img src={IMG_RAHJ_PROFILE} alt="Roger Reed, your Vivint Smart Home Expert" /><div><span>YOUR SMART HOME EXPERT</span><h2>Roger Reed</h2><p><span className="online-dot" /> One familiar face. One direct line.</p></div><a href="#meet" className="icon-button" aria-label="Meet Roger"><ArrowUpRight /></a></div><div className="visual-caption">A LITTLE SUPPORT. A POSSIBLE SAVINGS OPPORTUNITY.<br /><strong>Thanks for helping me pursue Costa Rica. 🇨🇷</strong></div></div>
+        </section>
+        <section className="campaign-section content-width" aria-labelledby="campaign-heading">
+          <div className="campaign-intro">
+            <span className="eyebrow">CHOOSE WHAT WORKS FOR YOU</span>
+            <h2 id="campaign-heading">Three easy ways to help</h2>
+            <p>No pressure, and you don't need to buy a security system just to request an insurance review.</p>
+          </div>
+          <div className="campaign-grid">
+            <a className="campaign-way campaign-insurance" href="#insurance">
+              <span className="campaign-number">01 / NO PURCHASE NEEDED</span>
+              <ShieldCheck size={28} />
+              <h3>See if your insurance could cost less</h3>
+              <p>Request a free home insurance review. A licensed professional can compare options, and any savings might help offset your monthly security costs.</p>
+              <span className="campaign-link">Request a free review <ArrowRight size={18} /></span>
+            </a>
+            <a className="campaign-way campaign-security" href="#explore">
+              <span className="campaign-number">02 / SECURITY OPTIONS</span>
+              <Home size={28} />
+              <h3>Ask about $3.65/month for six months</h3>
+              <p>Already have an alarm? Ask if you qualify for introductory Vivint monitoring. Regular rates apply afterward; equipment charges, fees, and terms may apply.</p>
+              <span className="campaign-link">Explore security options <ArrowRight size={18} /></span>
+            </a>
+            <a className="campaign-way campaign-referrals" href="#refer">
+              <span className="campaign-number">03 / PERSONAL INTRODUCTIONS</span>
+              <Users size={28} />
+              <h3>Know someone I could help?</h3>
+              <p>If a friend or family member is interested in home security, connect us with their permission. I can personally take it from there.</p>
+              <span className="campaign-link">Introduce a friend <ArrowRight size={18} /></span>
+            </a>
+          </div>
+          <p className="campaign-disclosure">Insurance quotes are provided by appropriately licensed professionals, not Vivint. Insurance savings and security offer eligibility are not guaranteed. Roger will confirm current rates and complete terms before any purchase.</p>
         </section>
         <InstallApp />
         <section className="intro-banner content-width"><div><span className="eyebrow">PASS ON THE PEACE OF MIND</span><h2>Someone come to mind?</h2><p>Friends, family, a neighbor down the street. Make an introduction and Roger can take it from there.</p></div><a href="#refer" className="secondary-button">Introduce a friend <ArrowRight size={18} /></a></section>
