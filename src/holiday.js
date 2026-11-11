@@ -5,7 +5,7 @@ export const HOLIDAY_SMS_MESSAGE = "Hey Roger! I saw your holiday special at Rog
 export const HOLIDAY_SMS_URL = `sms:14632813454?body=${encodeURIComponent(HOLIDAY_SMS_MESSAGE)}`;
 
 export function isHolidayPath(pathname) {
-  return /^\\/holiday(?:\\.html|\\/(?:index\\.html)?)?$/.test(pathname);
+  return /^\/holiday(?:\.html|\/(?:index\.html)?)?$/.test(pathname);
 }
 
 export function getHolidayCountdown(now = Date.now()) {
