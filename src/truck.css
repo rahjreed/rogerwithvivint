@@ -169,3 +169,13 @@
   .truck-mobile-bar { display: block; position: fixed; bottom: 0; inset-inline: 0; background: #173426f5; border-top: 1px solid #477455; z-index: 40; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
   .truck-mobile-bar .primary-button { width: 100%; min-height: 48px; font-size: 10px; gap: 12px; }
 }
+
+/* Holiday campaign uses the truck layout, with a distinctive countdown. */
+.holiday-countdown { margin-top: 24px; padding: 20px; border: 1px solid #6b9874; border-radius: 18px; background: linear-gradient(135deg, #214b37, #1b3341); box-shadow: 0 14px 36px #06120f42; }
+.holiday-countdown-label { display: block; color: #b6edcb; font-size: 10px; font-weight: 750; letter-spacing: .1em; line-height: 1.5; margin-bottom: 12px; }
+.holiday-countdown-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.holiday-countdown-grid > div { padding: 12px 6px; background: #10241de8; border: 1px solid #53785b; border-radius: 10px; text-align: center; }
+.holiday-countdown-grid strong { display: block; font-size: clamp(23px, 2.5vw, 34px); font-variant-numeric: tabular-nums; letter-spacing: -.03em; color: #fff; }
+.holiday-countdown-grid span { display: block; color: #c1d9c8; font-size: 9px; font-weight: 700; letter-spacing: .09em; }
+.holiday-countdown > p { color: #c9e0d1; font-size: 11px; line-height: 1.7; margin: 12px 0 0; }
+@media (max-width: 680px) { .holiday-countdown { padding: 16px; } .holiday-countdown-grid strong { font-size: 25px; } }
