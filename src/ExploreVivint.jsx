@@ -34,6 +34,13 @@ return <>
         </div>
       </section>
 
+      <section className="content-width section-padding" aria-labelledby="prospect-offers-heading">
+        <div className="section-intro">
+          <span className="eyebrow">NEW-CUSTOMER OPTIONS</span>
+          <h2 id="prospect-offers-heading">Ask about introductory offers</h2>
+          <p>Some prospective customers may be eligible for introductory monitoring as low as $3.65 per month for six months. This is not a universal price or an offer available to every installation. Regular monitoring rates apply afterward; equipment, installation, fees, and other terms may apply. Contact Roger to confirm whether the offer is currently available and whether you qualify.</p>
+        </div>
+      </section>
       {/* --- BLOCK 2: HARDWARE LINEUP --- */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <div className="text-center max-w-xl mx-auto mb-12">
