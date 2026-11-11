@@ -44,6 +44,7 @@
 .truck-options-copy > h2 { font-size: clamp(29px, 3.3vw, 40px); font-weight: 600; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 20px; }
 .truck-options-copy p { color: #bad1c3; font-size: 14px; line-height: 1.85; margin-bottom: 16px; }
 .truck-options-copy > .primary-button { font-size: 10px; gap: 8px; margin-block: 10px 16px; }
+.truck-options-copy p.truck-promo-highlight { font-size: clamp(17px, 2vw, 21px); font-weight: 650; line-height: 1.5; color: #e4f8ed; border-left: 3px solid #80dfb0; padding-left: 16px; margin-block: 20px; }
 .truck-options-copy > small { display: block; font-size: 11px; color: #9aba9f; line-height: 1.8; }
 .truck-options-card { padding: 30px; border: 1px solid #9bc2a340; border-radius: 20px; background: #102c207e; box-shadow: 0 18px 40px #0002; }
 .truck-options-icon { display: flex; width: 66px; height: 66px; align-items: center; justify-content: center; background: #244c30; color: #a2e7b4; border-radius: 16px; margin-bottom: 24px; }
