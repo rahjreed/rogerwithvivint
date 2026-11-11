@@ -1,4 +1,4 @@
-.install-card { border: 1px solid #3d7558; background: linear-gradient(120deg, #102f22, #0c1d20); border-radius: 20px; padding: 28px; margin-bottom: 36px; }
+.install-card { border: 1px solid #3d7558; background: linear-gradient(120deg, #1f4935, #1a333d); border-radius: 20px; padding: 28px; margin-bottom: 36px; }
 .install-card-main { display: flex; align-items: center; gap: 22px; }
 .install-card-main > img { width: 72px; height: 72px; border-radius: 17px; flex-shrink: 0; }
 .install-card-main > div { flex: 1; min-width: 0; }
@@ -7,19 +7,19 @@
 .install-card-main > button { flex-shrink: 0; min-width: 155px; }
 .install-card-main > button:disabled { opacity: .7; cursor: wait; }
 .install-fallback { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 16px; margin-top: 12px; }
-.install-card p.install-platform-note { font-size: 12px; color: #a6c6b4; }
+.install-card p.install-platform-note { font-size: 12px; color: #c1ddcc; }
 .install-fallback .text-button { font-size: 12px; padding: 8px 0; }
 .install-status:empty { display: none; }
 .install-card p.install-status { margin-top: 12px; color: #c0eccf; }
 .installed-label { display: flex; gap: 10px; align-items: center; max-width: 210px; }
 .install-guide { border-top: 1px solid #41644f; padding-top: 12px; margin-top: 12px; }
 .install-guide h3 { display: flex; gap: 9px; align-items: center; font-size: 15px; margin-bottom: 6px; }
-.pwa-network-note, .pwa-update { padding: 18px 24px; background: #142c23; color: #d2e6d9; border-bottom: 1px solid #47654d; font-size: 13px; line-height: 1.8; }
+.pwa-network-note, .pwa-update { padding: 18px 24px; background: #234536; color: #d2e6d9; border-bottom: 1px solid #47654d; font-size: 13px; line-height: 1.8; }
 .pwa-update { display: flex; gap: 20px; align-items: center; }
 .pwa-update > div { flex: 1; }
 .pwa-update p { font-size: 12px; color: #c0d5c8; }
 .pwa-update button { flex-shrink: 0; }
-.pwa-unavailable { padding: 24px; border: 1px solid #395545; border-radius: 16px; margin-bottom: 32px; background: #101e18; color: #c7ddd0; font-size: 14px; line-height: 1.8; }
+.pwa-unavailable { padding: 24px; border: 1px solid #395545; border-radius: 16px; margin-bottom: 32px; background: #1d382a; color: #c7ddd0; font-size: 14px; line-height: 1.8; }
 .pwa-unavailable h2 { font-size: 24px; margin-bottom: 10px; }
 @media (max-width: 680px) {
   .install-card { padding: 22px; }

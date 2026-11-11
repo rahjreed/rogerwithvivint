@@ -66,47 +66,25 @@ export default function Hub() {
       <div hidden={area !== 'home'}>
         <section className="welcome-section content-width">
           <div className="welcome-copy">
-            <span className="welcome-badge"><span /> 🇨🇷 A PERSONAL FAVOR FROM ROGER</span>
-            <h1>Help me reach Costa Rica.<br /><span>Let's see how much you could save.</span></h1>
-            <p>I'm working to earn a company trip to Costa Rica, and I'd really appreciate your support! You can help by requesting a free home insurance review, exploring security options, or introducing me to someone who might benefit.</p>
+            <span className="welcome-badge"><span /> YOUR HOME. YOUR BENEFITS.</span>
+            <h1>Make More of Your Smart Home.<br /><span>Discover Rewards and Savings.</span></h1>
+            <p>Your system is installed, but your connection with Roger doesn't end there. Explore eligible referral rewards, see if you can save on home insurance, and keep helpful resources close whenever you need them.</p>
             <div className="campaign-hero-actions">
-              <a href="#insurance" className="primary-button hero-button"><ShieldCheck size={20} /> FREE INSURANCE REVIEW <ArrowRight size={20} /></a>
-              <a href="#explore" className="secondary-button">Explore security options <ArrowUpRight size={18} /></a>
+              <a href="#refer" className="primary-button hero-button"><Users size={20} /> EXPLORE REFERRAL REWARDS <ArrowRight size={20} /></a>
+              <a href="#insurance" className="secondary-button"><ShieldCheck size={20} /> Check insurance savings <ArrowUpRight size={18} /></a>
             </div>
-            <div className="hero-footnote"><Check size={16} /> No security purchase needed to request an insurance review.</div>
+            <div className="hero-footnote"><Check size={16} /> Referral credits and insurance savings depend on eligibility; neither is guaranteed.</div>
           </div>
-          <div className="welcome-visual"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="home-symbol"><Home size={96} strokeWidth={1} /><span className="home-check"><Check size={20} /></span></div><div className="roger-card"><img src={IMG_RAHJ_PROFILE} alt="Roger Reed, your Vivint Smart Home Expert" /><div><span>YOUR SMART HOME EXPERT</span><h2>Roger Reed</h2><p><span className="online-dot" /> One familiar face. One direct line.</p></div><a href="#meet" className="icon-button" aria-label="Meet Roger"><ArrowUpRight /></a></div><div className="visual-caption">A LITTLE SUPPORT. A POSSIBLE SAVINGS OPPORTUNITY.<br /><strong>Thanks for helping me pursue Costa Rica. 🇨🇷</strong></div></div>
+          <div className="welcome-visual"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="home-symbol"><Home size={96} strokeWidth={1} /><span className="home-check"><Check size={20} /></span></div><div className="roger-card"><img src={IMG_RAHJ_PROFILE} alt="Roger Reed, your Vivint Smart Home Expert" /><div><span>YOUR SMART HOME EXPERT</span><h2>Roger Reed</h2><p><span className="online-dot" /> One familiar face. One direct line.</p></div><a href="#meet" className="icon-button" aria-label="Meet Roger"><ArrowUpRight /></a></div><div className="visual-caption">A LITTLE MORE VALUE, RIGHT AT YOUR FINGERTIPS.<br /><strong>Keep this app handy for rewards, savings and support.</strong></div></div>
         </section>
         <section className="campaign-section content-width" aria-labelledby="campaign-heading">
-          <div className="campaign-intro">
-            <span className="eyebrow">CHOOSE WHAT WORKS FOR YOU</span>
-            <h2 id="campaign-heading">Three easy ways to help</h2>
-            <p>No pressure, and you don't need to buy a security system just to request an insurance review.</p>
-          </div>
+          <div className="campaign-intro"><span className="eyebrow">GOOD REASONS TO KEEP COMING BACK</span><h2 id="campaign-heading">Three ways your customer hub works for you</h2><p>Your shortcuts to potential savings, eligible credits, and the help you need after installation.</p></div>
           <div className="campaign-grid">
-            <a className="campaign-way campaign-insurance" href="#insurance">
-              <span className="campaign-number">01 / NO PURCHASE NEEDED</span>
-              <ShieldCheck size={28} />
-              <h3>See if your insurance could cost less</h3>
-              <p>Request a free home insurance review. A licensed professional can compare options, and any savings might help offset your monthly security costs.</p>
-              <span className="campaign-link">Request a free review <ArrowRight size={18} /></span>
-            </a>
-            <a className="campaign-way campaign-security" href="#explore">
-              <span className="campaign-number">02 / SECURITY OPTIONS</span>
-              <Home size={28} />
-              <h3>Explore your home security options</h3>
-              <p>Considering a new system or helping someone else explore security? Roger can explain suitable equipment, installation, and currently available offers.</p>
-              <span className="campaign-link">Explore security options <ArrowRight size={18} /></span>
-            </a>
-            <a className="campaign-way campaign-referrals" href="#refer">
-              <span className="campaign-number">03 / PERSONAL INTRODUCTIONS</span>
-              <Users size={28} />
-              <h3>Know someone I could help?</h3>
-              <p>If a friend or family member is interested in home security, connect us with their permission. I can personally take it from there.</p>
-              <span className="campaign-link">Introduce a friend <ArrowRight size={18} /></span>
-            </a>
+            <a className="campaign-way campaign-referrals" href="#refer"><span className="campaign-number">01 / ELIGIBLE REFERRAL REWARDS</span><Users size={28}/><h3>Get credit for spreading the word</h3><p>Know someone who might benefit from Vivint? Introduce them with permission and ask Roger how official referral credits may reduce your service bill.</p><span className="campaign-link">Explore referral rewards <ArrowRight size={18}/></span></a>
+            <a className="campaign-way campaign-insurance" href="#insurance"><span className="campaign-number">02 / POTENTIAL HOMEOWNER SAVINGS</span><ShieldCheck size={28}/><h3>Keep more of your money</h3><p>A free home insurance review through a licensed professional may uncover savings. Compare options without needing to buy a security system.</p><span className="campaign-link">Request an insurance review <ArrowRight size={18}/></span></a>
+            <a className="campaign-way campaign-security" href="#resources"><span className="campaign-number">03 / SUPPORT IN YOUR POCKET</span><BookOpen size={28}/><h3>Get more from your system</h3><p>Revisit the panel walkthrough, find helpful setup tips, and keep important support links in one convenient place.</p><span className="campaign-link">Open how-it-works resources <ArrowRight size={18}/></span></a>
           </div>
-          <p className="campaign-disclosure">Insurance quotes are provided by appropriately licensed professionals, not Vivint. Insurance savings and security offer eligibility are not guaranteed. Roger will confirm current rates and complete terms before any purchase.</p>
+          <p className="campaign-disclosure">Referral rewards are subject to Vivint program rules and approval and are typically credits rather than cash payments. Insurance quotes are arranged through independent, appropriately licensed professionals, not Vivint. Actual savings are not guaranteed.</p>
         </section>
         <InstallApp />
         <section className="intro-banner content-width"><div><span className="eyebrow">PASS ON THE PEACE OF MIND</span><h2>Someone come to mind?</h2><p>Friends, family, a neighbor down the street. Make an introduction and Roger can take it from there.</p></div><a href="#refer" className="secondary-button">Introduce a friend <ArrowRight size={18} /></a></section>

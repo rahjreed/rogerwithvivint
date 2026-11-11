@@ -10,15 +10,15 @@
 .home-resource-grid .shortcut { padding: 30px; }
 .home-resource-grid .shortcut h2 { font-size: 23px; }
 .home-resource-grid .shortcut p { font-size: 14px; }
-.insurance-shortcut { background: linear-gradient(135deg, #0c2620, #0c171e); border-color: #315344; }
-.tutorial-shortcut { background: linear-gradient(135deg, #131e2b, #0d151e); }
-.panel-tutorial { padding: 28px; margin-block: 32px; background: #0d1c22; border: 1px solid #315448; border-radius: 20px; }
+.insurance-shortcut { background: linear-gradient(135deg, #1a4033, #192b37); border-color: #315344; }
+.tutorial-shortcut { background: linear-gradient(135deg, #203448, #192b38); }
+.panel-tutorial { padding: 28px; margin-block: 32px; background: #1b3440; border: 1px solid #315448; border-radius: 20px; }
 .panel-tutorial h2 { font-size: clamp(23px, 3vw, 30px); font-weight: 600; margin-bottom: 12px; }
 .panel-tutorial p { color: #b1c6bf; font-size: 15px; line-height: 1.8; max-width: 760px; }
 .tutorial-player { aspect-ratio: 16 / 9; width: 100%; margin-top: 24px; background: #030806; border-radius: 14px; overflow: hidden; border: 1px solid #375443; }
 .tutorial-player iframe { width: 100%; height: 100%; display: block; border: 0; }
 .panel-tutorial > a { margin-top: 12px; }
-.travel-section { border: 1px solid #554932; border-radius: 24px; background: linear-gradient(150deg, #201d19, #11151c 50%); padding: 36px; margin-bottom: 54px; }
+.travel-section { border: 1px solid #554932; border-radius: 24px; background: linear-gradient(150deg, #302b26, #1c2a35 50%); padding: 36px; margin-bottom: 54px; }
 .travel-heading .eyebrow, .insurance-workspace .eyebrow { display: flex; align-items: center; gap: 10px; }
 .travel-heading .eyebrow { color: #e9c991; }
 .travel-heading > h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.3; font-weight: 600; margin-bottom: 12px; letter-spacing: -.035em; }
@@ -27,25 +27,25 @@
 .travel-disclosure strong { display: block; font-size: 14px; color: #eedcb9; line-height: 1.8; font-weight: 600; }
 .travel-disclosure p { color: #cbbfa8; font-size: 12px; line-height: 1.8; margin-top: 12px; }
 .destination-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-.destination-card { background: #0d151e; border: 1px solid #39413d; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
+.destination-card { background: #192b38; border: 1px solid #39413d; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; }
 .destination-photo { position: relative; aspect-ratio: 3 / 2; background: #1b3130; }
 .destination-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .destination-photo > span { position: absolute; top: 14px; right: 14px; border-radius: 20px; padding: 6px 12px; font-size: 11px; background: #09130ee8; color: #e6f4e6; border: 1px solid #ffffff40; }
 .destination-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
 .destination-region { text-transform: uppercase; letter-spacing: .15em; font-size: 10px; color: #c9b48f; }
 .destination-content h3 { font-size: 25px; font-weight: 600; margin-block: 6px 10px; }
-.destination-content > p:not(.travel-status) { color: #adbbb8; font-size: 12px; line-height: 1.8; margin-bottom: 20px; flex: 1; }
+.destination-content > p:not(.travel-status) { color: #c0cfce; font-size: 12px; line-height: 1.8; margin-bottom: 20px; flex: 1; }
 .destination-content .primary-button { width: 100%; font-size: 9px; padding-inline: 10px; gap: 6px; }
 .destination-content .text-button { align-self: flex-start; margin-top: 3px; }
 .travel-status { font-size: 11px; color: #b2ddc8; line-height: 1.8; }
 .travel-status:empty { display: none; }
 .travel-help { margin-block: 24px 12px; }
-.photo-credits { border-top: 1px solid #ffffff16; padding-top: 12px; color: #b4b8b1; font-size: 11px; line-height: 1.9; }
+.photo-credits { border-top: 1px solid #ffffff16; padding-top: 12px; color: #d0d1cb; font-size: 11px; line-height: 1.9; }
 .photo-credits summary { cursor: pointer; min-height: 44px; display: list-item; padding-block: 10px; }
 .photo-credits ul { list-style: disc; padding-left: 18px; }
 .photo-credits a { text-decoration: underline; }
 .manual-travel-copy { width: 100%; resize: vertical; background: #050c11; color: white; font-size: 16px; padding: 10px; border: 1px solid #426652; border-radius: 8px; margin-top: 10px; }
-.insurance-disclosure { background: #10251c; border: 1px solid #345841; padding: 22px; border-radius: 16px; margin-top: 24px; }
+.insurance-disclosure { background: #1d3c2c; border: 1px solid #345841; padding: 22px; border-radius: 16px; margin-top: 24px; }
 .insurance-disclosure p { font-size: 13px; color: #bfdbc9; line-height: 1.8; }
 .insurance-disclosure p + p { margin-top: 12px; }
 .insurance-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; margin-block: 28px 18px; }
@@ -83,16 +83,16 @@
 .campaign-intro h2 { font-size: clamp(27px, 3.4vw, 38px); font-weight: 650; letter-spacing: -.035em; line-height: 1.2; margin-bottom: 10px; }
 .campaign-intro p { font-size: 14px; line-height: 1.7; color: #a9bdb2; max-width: 690px; }
 .campaign-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.campaign-way { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid #315344; border-radius: 18px; background: linear-gradient(145deg, #12251d, #0c151a 80%); padding: 27px 24px 24px; transition: border-color .15s, transform .15s; }
+.campaign-way { min-width: 0; display: flex; flex-direction: column; align-items: flex-start; border: 1px solid #315344; border-radius: 18px; background: linear-gradient(145deg, #203f30, #182a34 80%); padding: 27px 24px 24px; transition: border-color .15s, transform .15s; }
 .campaign-way:hover { border-color: #75d8a8; transform: translateY(-2px); }
 .campaign-way > svg { color: #8fe7ba; margin: 14px 0 4px; }
 .campaign-way h3 { font-size: clamp(19px, 2vw, 23px); line-height: 1.3; font-weight: 650; letter-spacing: -.02em; margin: 10px 0; }
-.campaign-way p { color: #acbcb5; font-size: 13px; line-height: 1.75; flex: 1; margin-bottom: 22px; }
+.campaign-way p { color: #c3d1ca; font-size: 13px; line-height: 1.75; flex: 1; margin-bottom: 22px; }
 .campaign-number { font-size: 10px; letter-spacing: .09em; font-weight: 700; color: #a4d0b9; }
 .campaign-link { display: inline-flex; align-items: center; gap: 8px; color: #b7efd0; font-size: 12px; font-weight: 700; }
-.campaign-security { background: linear-gradient(145deg, #14272b, #0c151a 80%); }
-.campaign-referrals { background: linear-gradient(145deg, #1d2225, #0d151a 80%); }
-.campaign-disclosure { color: #899f95; line-height: 1.65; font-size: 11px; margin-top: 15px; }
+.campaign-security { background: linear-gradient(145deg, #22414a, #182a34 80%); }
+.campaign-referrals { background: linear-gradient(145deg, #2a3540, #0d151a 80%); }
+.campaign-disclosure { color: #a9c0b5; line-height: 1.65; font-size: 11px; margin-top: 15px; }
 @media (max-width: 960px) {
   .campaign-grid { grid-template-columns: 1fr; gap: 13px; }
   .campaign-way { padding: 23px; }
@@ -109,3 +109,35 @@
   .campaign-way h3 { font-size: 20px; }
   .campaign-way p { font-size: 12px; }
 }
+
+/* Single-destination Las Vegas customer reward feature */
+.vegas-feature { background: linear-gradient(145deg,#243443,#1d332f 72%); border-color:#627d66; }
+.vegas-feature .travel-heading h2 { font-size:clamp(30px,4vw,46px); }
+.vegas-feature-layout { display:grid; grid-template-columns:1fr 1.1fr; gap:26px; margin:26px 0 24px; align-items:stretch; }
+.vegas-image { min-height:320px; position:relative; overflow:hidden; border-radius:18px; background:#163c46; border:1px solid #516c71; }
+.vegas-image img { display:block; width:100%; height:100%; position:absolute; inset:0; object-fit:cover; }
+.vegas-image>span { display:flex; align-items:center; gap:7px; position:absolute; left:16px; bottom:16px; padding:9px 13px; border-radius:25px; background:#0c1b21e6; color:#e9f5ef; font-size:12px; }
+.vegas-offer { padding:8px 2px; }
+.vegas-offer h3 { font-size:clamp(25px,2.8vw,33px); line-height:1.25; font-weight:700; margin-bottom:13px; color:#e4f8eb; }
+.vegas-offer>p { color:#cedbd1; font-size:14px; line-height:1.8; margin-bottom:16px; }
+.vegas-inclusions { display:grid; gap:12px; margin-bottom:18px; }
+.vegas-inclusions>div { display:flex; align-items:flex-start; gap:10px; color:#e5f0e8; font-size:13px; line-height:1.6; }
+.vegas-inclusions svg { color:#96e6b2; margin-top:2px; width:18px; height:18px; }
+.vegas-offer>p.vegas-terms-short { font-size:11px; color:#bacdc4; }
+.vegas-countdown { border:1px solid #73ae87; background:linear-gradient(120deg,#1c4433,#173a39); border-radius:18px; padding:25px; text-align:center; }
+.vegas-timer-title { display:flex; justify-content:center; gap:9px; align-items:center; color:#c2f2d3; font-size:12px; font-weight:750; letter-spacing:.07em; margin-bottom:17px; }
+.vegas-time-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; max-width:580px; margin:auto; }
+.vegas-time-grid>div { border:1px solid #638f72; border-radius:11px; background:#102d26; padding:12px; }
+.vegas-time-grid strong { display:block; color:#fff; font-size:clamp(27px,4vw,44px); font-variant-numeric:tabular-nums; line-height:1.2; }
+.vegas-time-grid span { color:#bfe4c8; font-size:9px; letter-spacing:.13em; font-weight:700; }
+.vegas-countdown p { color:#c0d8c9; font-size:11px; line-height:1.7; margin-top:14px; }
+.vegas-ended { display:flex; gap:14px; align-items:flex-start; background:#334038; border:1px solid #857e54; padding:22px; border-radius:16px; }
+.vegas-ended h3 { font-size:21px; font-weight:700; margin-bottom:8px; }
+.vegas-ended p { font-size:13px; line-height:1.7; color:#d1d7c8; }
+.vegas-actions { display:flex; align-items:stretch; gap:12px; flex-wrap:wrap; margin:20px 0 25px; }
+.vegas-actions a { flex:1 1 240px; min-height:52px; font-size:11px; }
+.vegas-feature .travel-disclosure { margin:20px 0 0; }
+.vegas-feature .travel-disclosure strong { color:#fff0ce; }
+.vegas-feature .travel-disclosure a { color:#e4d0a7; text-decoration:underline; }
+@media(max-width:800px) { .vegas-feature-layout { grid-template-columns:1fr; } .vegas-image { min-height:270px; } }
+@media(max-width:680px) { .vegas-feature { padding:22px 18px; } .vegas-time-grid { gap:6px; } .vegas-time-grid>div { padding:12px 4px; } .vegas-time-grid strong { font-size:27px; } .vegas-timer-title { font-size:10px; } .vegas-actions { flex-direction:column; } .vegas-actions a { flex:auto; } }

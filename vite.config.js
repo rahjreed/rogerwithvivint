@@ -10,8 +10,8 @@ export default defineConfig({
     enforce: 'post',
     configureServer(server) {
       server.middlewares.use((request, _response, next) => {
-        if (/^\/truck(?:\?|$)/.test(request.url || '')) {
-          request.url = request.url.replace(/^\/truck/, '/truck/index.html');
+        if (/^\/(truck|holiday|costa-rica)(?:\?|$)/.test(request.url || '')) {
+          request.url = request.url.replace(/^\/(truck|holiday|costa-rica)/, '/$1/index.html');
         }
         next();
       });
@@ -32,6 +32,8 @@ export default defineConfig({
       input: {
         hub: fileURLToPath(new URL('./index.html', import.meta.url)),
         truck: fileURLToPath(new URL('./truck/index.html', import.meta.url)),
+        holiday: fileURLToPath(new URL('./holiday/index.html', import.meta.url)),
+        costa: fileURLToPath(new URL('./costa-rica/index.html', import.meta.url)),
       },
     },
   },

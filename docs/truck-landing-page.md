@@ -8,7 +8,7 @@ Implemented on `codex-development` for the requested canonical path `https://rog
 - Six practical benefits of working directly with Roger, without claims that corporate representatives are unqualified or that Roger overrides company policy.
 - Current-options inquiry section inspired by the original premium offer treatment, with no revived discounts, invented urgency, exclusive entitlement, or corporate price-match claim.
 - Personal expertise, independent insurance, independent travel, and official referral-program previews. Travel lists all six destinations and explains taxes/fees, conditions, and independence from Vivint corporate. Insurance directs visitors to the existing hub review request and explains licensed-provider responsibility and uncertain savings/approval.
-- No $200 or $600 claim on the truck page: a current applicable reward amount remains unconfirmed. Existing customer-hub rewards copy was not changed by this task.
+- No $300 or $600 claim on the truck page: a current applicable reward amount remains unconfirmed. Existing customer-hub rewards copy was not changed by this task.
 - Reused biography, credentials, daycare news feature, all three customer testimonials, five enlargable Nextdoor reviews, professional overview video, product demonstration video, product data/images/details, and social links.
 - Compact six-product gallery with native accessible product dialogs. Quotes, hero/options/final CTAs, and the reused Meet Roger contact buttons use the exact truck QR starter message.
 - Final direct call/text actions at 463-281-3454, optional copy/manual-selection fallback, mobile sticky text action hidden when a dialog is open, and the original official-support disclaimer/phone.
