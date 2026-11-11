@@ -94,8 +94,8 @@ export default function Hub() {
             <a className="campaign-way campaign-security" href="#explore">
               <span className="campaign-number">02 / SECURITY OPTIONS</span>
               <Home size={28} />
-              <h3>Ask about $3.65/month for six months</h3>
-              <p>Already have an alarm? Ask if you qualify for introductory Vivint monitoring. Regular rates apply afterward; equipment charges, fees, and terms may apply.</p>
+              <h3>Explore your home security options</h3>
+              <p>Considering a new system or helping someone else explore security? Roger can explain suitable equipment, installation, and currently available offers.</p>
               <span className="campaign-link">Explore security options <ArrowRight size={18} /></span>
             </a>
             <a className="campaign-way campaign-referrals" href="#refer">
