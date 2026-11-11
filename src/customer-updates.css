@@ -109,3 +109,35 @@
   .campaign-way h3 { font-size: 20px; }
   .campaign-way p { font-size: 12px; }
 }
+
+/* Single-destination Las Vegas customer reward feature */
+.vegas-feature { background: linear-gradient(145deg,#243443,#1d332f 72%); border-color:#627d66; }
+.vegas-feature .travel-heading h2 { font-size:clamp(30px,4vw,46px); }
+.vegas-feature-layout { display:grid; grid-template-columns:1fr 1.1fr; gap:26px; margin:26px 0 24px; align-items:stretch; }
+.vegas-image { min-height:320px; position:relative; overflow:hidden; border-radius:18px; background:#163c46; border:1px solid #516c71; }
+.vegas-image img { display:block; width:100%; height:100%; position:absolute; inset:0; object-fit:cover; }
+.vegas-image>span { display:flex; align-items:center; gap:7px; position:absolute; left:16px; bottom:16px; padding:9px 13px; border-radius:25px; background:#0c1b21e6; color:#e9f5ef; font-size:12px; }
+.vegas-offer { padding:8px 2px; }
+.vegas-offer h3 { font-size:clamp(25px,2.8vw,33px); line-height:1.25; font-weight:700; margin-bottom:13px; color:#e4f8eb; }
+.vegas-offer>p { color:#cedbd1; font-size:14px; line-height:1.8; margin-bottom:16px; }
+.vegas-inclusions { display:grid; gap:12px; margin-bottom:18px; }
+.vegas-inclusions>div { display:flex; align-items:flex-start; gap:10px; color:#e5f0e8; font-size:13px; line-height:1.6; }
+.vegas-inclusions svg { color:#96e6b2; margin-top:2px; width:18px; height:18px; }
+.vegas-offer>p.vegas-terms-short { font-size:11px; color:#bacdc4; }
+.vegas-countdown { border:1px solid #73ae87; background:linear-gradient(120deg,#1c4433,#173a39); border-radius:18px; padding:25px; text-align:center; }
+.vegas-timer-title { display:flex; justify-content:center; gap:9px; align-items:center; color:#c2f2d3; font-size:12px; font-weight:750; letter-spacing:.07em; margin-bottom:17px; }
+.vegas-time-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; max-width:580px; margin:auto; }
+.vegas-time-grid>div { border:1px solid #638f72; border-radius:11px; background:#102d26; padding:12px; }
+.vegas-time-grid strong { display:block; color:#fff; font-size:clamp(27px,4vw,44px); font-variant-numeric:tabular-nums; line-height:1.2; }
+.vegas-time-grid span { color:#bfe4c8; font-size:9px; letter-spacing:.13em; font-weight:700; }
+.vegas-countdown p { color:#c0d8c9; font-size:11px; line-height:1.7; margin-top:14px; }
+.vegas-ended { display:flex; gap:14px; align-items:flex-start; background:#334038; border:1px solid #857e54; padding:22px; border-radius:16px; }
+.vegas-ended h3 { font-size:21px; font-weight:700; margin-bottom:8px; }
+.vegas-ended p { font-size:13px; line-height:1.7; color:#d1d7c8; }
+.vegas-actions { display:flex; align-items:stretch; gap:12px; flex-wrap:wrap; margin:20px 0 25px; }
+.vegas-actions a { flex:1 1 240px; min-height:52px; font-size:11px; }
+.vegas-feature .travel-disclosure { margin:20px 0 0; }
+.vegas-feature .travel-disclosure strong { color:#fff0ce; }
+.vegas-feature .travel-disclosure a { color:#e4d0a7; text-decoration:underline; }
+@media(max-width:800px) { .vegas-feature-layout { grid-template-columns:1fr; } .vegas-image { min-height:270px; } }
+@media(max-width:680px) { .vegas-feature { padding:22px 18px; } .vegas-time-grid { gap:6px; } .vegas-time-grid>div { padding:12px 4px; } .vegas-time-grid strong { font-size:27px; } .vegas-timer-title { font-size:10px; } .vegas-actions { flex-direction:column; } .vegas-actions a { flex:auto; } }
