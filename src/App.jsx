@@ -5,10 +5,11 @@ import PwaStatus from './PwaStatus.jsx';
 
 const Hub = lazy(() => import('./Hub.jsx'));
 const TruckLanding = lazy(() => import('./TruckLanding.jsx'));
+const TikTokPromo = lazy(() => import('./TikTokPromo.jsx'));
 const CostaRica = lazy(() => import('./CostaRica.jsx'));
 
 export default function App() {
   return <><PwaStatus /><Suspense fallback={<p role="status" style={{ padding: 24 }}>Loading Roger With Vivint…</p>}>
-    {/^\/costa-rica\/?$/.test(window.location.pathname) ? <CostaRica /> : isHolidayPath(window.location.pathname) ? <TruckLanding holiday /> : isTruckPath(window.location.pathname) ? <TruckLanding /> : <Hub />}
+    {/^\/tiktok(?:\/index\.html|\/)?$/.test(window.location.pathname) ? <TikTokPromo /> : /^\/costa-rica\/?$/.test(window.location.pathname) ? <CostaRica /> : isHolidayPath(window.location.pathname) ? <TruckLanding holiday /> : isTruckPath(window.location.pathname) ? <TruckLanding /> : <Hub />}
   </Suspense></>;
 }
