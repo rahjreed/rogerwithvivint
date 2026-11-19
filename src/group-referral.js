@@ -1,0 +1,3 @@
+export const REFERRAL_MESSAGE = "Hey! Roger just installed my Vivint system, and I thought of you. He mentioned that while he’s here helping me, he may be able to get you a great deal like mine. I wanted to introduce you two so you can ask him about it!";
+export function normalizePhone(value){const n=String(value).replace(/\D/g,'');return /^\d{10}$/.test(n)?'+1'+n:/^1\d{10}$/.test(n)?'+'+n:null;}
+export function referralDraft(friend,roger,message,ua=''){const a=normalizePhone(friend),b=normalizePhone(roger);if(!a||!b||a===b)throw Error('Invalid recipients');const ios=/iPhone|iPad|iPod/.test(ua);return 'sms:'+a+','+b+(ios?'&':'?')+'body='+encodeURIComponent(message);}
