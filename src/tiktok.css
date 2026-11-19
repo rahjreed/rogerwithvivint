@@ -113,3 +113,9 @@
 @keyframes tok-burst{0%{opacity:1;transform:rotate(var(--angle)) translateX(0)}75%{opacity:1}100%{opacity:0;transform:rotate(var(--angle)) translateX(var(--distance)) rotate(180deg)}}
 @media(max-width:480px){.tok-reward-card{padding:7px 7px 22px}.tok-reward-stage{padding:22px 5px}.tok-reward-card>form,.tok-reward-card>small{width:calc(100% - 18px)}.tok-reward-stage .tok-price{font-size:clamp(46px,13.5vw,76px)}}
 @media(prefers-reduced-motion:reduce){.tok-reward-stage:after,.tok-reward-rays,.tok-reward-stars span,.is-spinning .tok-price-number,.is-celebrating .tok-price-reel,.tok-reward-confetti i{animation:none!important}}
+
+/* Audio controls remain unobtrusive and accessible. */
+.tok-sound-row{display:flex;justify-content:flex-end;margin:0 4px 9px}
+.tok-sound-toggle{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;min-height:44px;border:1px solid #8bedd96b;border-radius:999px;background:#062d29bb;color:#d9fff2;font-size:12px;line-height:1.2;font-weight:650;cursor:pointer}
+.tok-sound-toggle:hover{background:#185d4e}
+.tok-page .tok-sound-toggle:focus-visible{outline:2px solid #ffdf86;outline-offset:3px}
