@@ -9,6 +9,7 @@ import PanelTutorial from './PanelTutorial.jsx';
 import TravelPerks from './TravelPerks.jsx';
 import InsuranceForm from './InsuranceForm.jsx';
 import './customer-updates.css';
+import './hub-premium.css';
 import InstallApp from './InstallApp.jsx';
 
 const AREAS = [['home', 'Customer Hub'], ['refer', 'Refer Friends & Family'], ['resources', 'How It Works'], ['insurance', 'Save on Home Insurance'], ['meet', 'Meet Roger'], ['explore', 'Explore Vivint'], ['partners', 'Partner Portal']];
