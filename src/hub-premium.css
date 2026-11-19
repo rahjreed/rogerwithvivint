@@ -1,0 +1,78 @@
+
+/* Customer hub only. Match the 317 premium light palette without touching campaign routes. */
+.hub-shell{--hub-ink:#102521;--hub-muted:#465d56;--hub-accent:#08765b;--hub-line:#cbded6;--hub-surface:linear-gradient(145deg,#fff,#f5faf8 55%,#eaf3ef);--hub-shadow:0 14px 36px #204e3d12,0 3px 8px #183e3210,inset 0 1px 0 #fff;min-height:100vh;background:radial-gradient(ellipse at 75% 4%,#d7f8ec 0,transparent 22%),linear-gradient(155deg,#fff 12%,#f4f8f7 52%,#fff);color:var(--hub-ink);color-scheme:light}
+.hub-shell .hub-header{background:linear-gradient(120deg,#080b0d,#202c2b 52%,#080b0d);color:white;border-bottom:1px solid #29413b;box-shadow:0 6px 24px #172f2926}
+.hub-shell .contact-link{background:linear-gradient(180deg,#85ffe0,#16e4b1 39%,#00c997);color:#082e24;border-color:#00b989;box-shadow:inset 0 1px 1px #ffffffb3,0 5px 14px #00aa7b28}
+.hub-shell .welcome-copy h1{color:#102521;text-shadow:0 2px 0 #fff}
+.hub-shell .welcome-copy h1>span{color:#08765b}
+.hub-shell :is(.welcome-badge,.eyebrow,.campaign-number,.campaign-link,.shortcut>span,.text-button,.referral-selected,.step-icon,.form-notice){color:var(--hub-accent)}
+.hub-shell :is(.welcome-copy>p,.hero-footnote,.campaign-intro p,.campaign-way p,.campaign-disclosure,.shortcut p,.shortcut-heading p,.intro-banner p,.page-lead>p,.section-intro>p,.resource-card p,.connection-strip p,.partner-note p,.field-hint,.privacy-note,.form-grid small,.form-actions p,.form-actions p span,.review-details dt,.script-preview p,.email-card p,.dialog-content>p,.product-features li,.panel-tutorial p,.insurance-disclosure p,.install-card p,.install-card p.install-platform-note,.install-card p.install-status,.referral-rewards>p,.referral-rewards>small,.referral-social p){color:var(--hub-muted)}
+.hub-shell :is(.primary-button,.secondary-button){border-radius:999px;min-height:52px;transition:background .18s,box-shadow .18s,transform .18s}
+.hub-shell .primary-button{background:linear-gradient(180deg,#85ffe0 0%,#16e4b1 39%,#00c997 100%);border:1px solid #00b989;color:#062c22;box-shadow:inset 0 1px 1px #ffffffb3,0 4px 0 #008a6726,0 9px 20px #00aa7b25}
+.hub-shell .primary-button:hover{background:linear-gradient(180deg,#a3ffe7,#1ae5b2 45%,#00c392);transform:translateY(-1px);box-shadow:inset 0 1px 1px #fff,0 7px 22px #00aa7b40}
+.hub-shell .primary-button:active{transform:translateY(1px)}
+.hub-shell .secondary-button{background:linear-gradient(180deg,#fff,#eaf3ef);border:1px solid #a8c4b9;color:#183e32;box-shadow:0 4px 12px #183e3210,inset 0 1px 0 #fff}
+.hub-shell .secondary-button:hover{background:#dff6ec}
+.hub-shell :is(.campaign-way,.shortcut,.resource-card,.intro-banner,.partner-note,.form-card,.email-card,.panel-tutorial,.insurance-disclosure,.install-card,.referral-rewards){background:var(--hub-surface);border:1px solid var(--hub-line);box-shadow:var(--hub-shadow)}
+.hub-shell :is(.campaign-way,.shortcut,.resource-card,.form-card){border-radius:22px}
+.hub-shell :is(.campaign-referrals,.insurance-shortcut,.support-card,.install-card,.partner-note,.intro-banner,.referral-rewards){background:radial-gradient(ellipse at top right,#d5faeb,transparent 70%),var(--hub-surface)}
+.hub-shell :is(.campaign-security,.tutorial-shortcut){background:linear-gradient(145deg,#fff,#edf4f8)}
+.hub-shell :is(.campaign-way,.shortcut):hover{border-color:#54b89c;box-shadow:0 14px 30px #16886a20;transform:translateY(-2px)}
+.hub-shell :is(.campaign-way>svg,.shortcut>svg,.resource-card>svg,.partner-note>svg){color:#08765b}
+.hub-shell .welcome-visual{background:radial-gradient(ellipse at 50% 26%,#acffe1,#e5fff4 55%,#d4eee5);border:1px solid #a9d9c8;box-shadow:0 20px 46px #16886a20,inset 0 1px 0 #fff}
+.hub-shell .orbit{border-color:#39b99532}
+.hub-shell .home-symbol{color:#08765b;background:linear-gradient(145deg,#ffffffb5,#d0f5e6a0);border-color:#fff;box-shadow:0 12px 30px #0f8a6925}
+.hub-shell .home-check{background:linear-gradient(145deg,#b2ffea,#00d5a1);color:#123d31;border-color:#d5faeb;box-shadow:0 0 18px #00dca555}
+.hub-shell .roger-card{background:linear-gradient(145deg,#fff,#ecf9f3);border-color:#c1dfd2;box-shadow:0 12px 30px #143c3229,inset 0 1px 0 #fff}
+.hub-shell :is(.roger-card>div>span,.roger-card p,.visual-caption,.visual-caption strong){color:#43685a}
+.hub-shell :is(.roger-card,.hub-dialog) .icon-button{background:#e5f5ee;color:#075d46;border-color:#b9ddcf}
+.hub-shell :is(.hub-shortcuts,.connection-strip,.step-bar,.script-preview,.install-guide,.photo-credits){border-color:var(--hub-line)}
+.hub-shell :is(.form-grid input,.form-grid select,.form-grid textarea,.email-preview textarea,.referral-quick-form input,.referral-quick-form textarea,.referral-quick-form select,.manual-travel-copy){background:linear-gradient(180deg,#f3f8f6,#fff);color:#132d26;border:1px solid #a6c2b6;box-shadow:inset 0 2px 4px #335e4e0b,0 1px 0 #fff}
+.hub-shell :is(input,textarea)::placeholder{color:#62766d}
+.hub-shell :is(.form-grid label,.form-card legend,.referral-quick-form>label,.referral-number-options label,.script-preview h4){color:#193c30}
+.hub-shell :is(.step-bar,.friend-toolbar>span,.email-preview summary,.script-preview summary){color:#506e62}
+.hub-shell :is(.step-bar .current,.text-button:hover){color:#07533f}
+.hub-shell .form-grid :is(input,select,textarea):focus,.hub-shell .referral-quick-form :is(input,textarea,select):focus{border-color:#08765b;box-shadow:0 0 0 3px #00ca9826}
+.hub-shell .add-friend{background:#e4f8ef;color:#075d46;border-color:#79bba3}
+.hub-shell .add-friend:hover{background:#d3f3e5}
+.hub-shell .email-card p.email-warning{color:#73510e}
+.hub-shell .hub-dialog{background:var(--hub-surface);color:var(--hub-ink);border-color:var(--hub-line);box-shadow:0 30px 90px #0005}
+.hub-shell .referral-rewards :is(h2,h3){color:#124637}
+.hub-shell .referral-rewards>a{color:#076047}
+.hub-shell .referral-credit-grid>div{background:linear-gradient(145deg,#fff,#ddf7eb);border-color:#a6d7c4;box-shadow:0 5px 12px #20463812,inset 0 1px 0 #fff}
+.hub-shell .referral-credit-grid strong{color:#075f47}
+.hub-shell .referral-credit-grid span{color:#45685a}
+.hub-shell :is(.referral-social-quote,.referral-quick-form .referral-group-line){background:#edf7f3;color:#254d3e;border-color:#bfdcd0}
+.hub-shell .travel-section{background:radial-gradient(ellipse at top right,#fff2d4,transparent 60%),linear-gradient(145deg,#fffdf7,#f4f6ef);border-color:#d8c9a5;box-shadow:var(--hub-shadow)}
+.hub-shell .travel-heading .eyebrow{color:#806027}
+.hub-shell :is(.travel-heading>p,.vegas-offer>p,.vegas-offer>p.vegas-terms-short,.vegas-inclusions>div,.travel-disclosure p,.photo-credits,.travel-status,.vegas-ended p){color:#505e51}
+.hub-shell .vegas-offer h3{color:#154638}
+.hub-shell .vegas-inclusions svg{color:#08765b}
+.hub-shell .vegas-image{border-color:#b9c6bb;box-shadow:0 12px 28px #243e3424}
+.hub-shell .vegas-countdown{background:radial-gradient(ellipse at top,#176b58,#092f29 70%,#092421);color:#fff;border-color:#35d3a8;box-shadow:0 10px 27px #00674d35,inset 0 1px 0 #6dffdc55}
+.hub-shell .vegas-time-grid>div{background:linear-gradient(180deg,#0e5144,#082e28);border-color:#57bd9d;box-shadow:inset 0 2px 9px #0004}
+.hub-shell .vegas-time-grid strong{color:#fff5c5;text-shadow:0 0 15px #ffe58555}
+.hub-shell .vegas-countdown p{color:#d0e6dc}
+.hub-shell .travel-disclosure{background:#fff8e8;border-color:#d9c59b;border-left-color:#bc9650}
+.hub-shell .travel-disclosure strong,.hub-shell .vegas-feature .travel-disclosure strong,.hub-shell .vegas-feature .travel-disclosure a{color:#6d5022}
+.hub-shell .vegas-ended{background:#f5f1df;border-color:#d8c9a5}
+.hub-shell .destination-card{background:#fff;border-color:var(--hub-line)}
+.hub-shell .destination-content>p:not(.travel-status){color:var(--hub-muted)}
+.hub-shell .destination-region{color:#806027}
+.hub-shell .hub-footer{border-color:var(--hub-line)}
+.hub-shell .hub-footer svg.text-white{color:#132521}
+.hub-shell :is(.footer-top p,.footer-social a,.support-disclaimer,.footer-bottom){color:#4a6359}
+.hub-shell .support-disclaimer a{color:#075f47}
+.hub-shell .footer-bottom{border-color:var(--hub-line)}
+.hub-shell .mobile-referral-bar{background:#f7fffcf5;border-top-color:#b2d6c8;box-shadow:0 -5px 22px #163d3018;backdrop-filter:blur(12px)}
+/* Explore product tiles are light; video and recommendation panels keep dark contrast. */
+.hub-shell .product-gallery>button{background:var(--hub-surface);border-color:var(--hub-line);box-shadow:var(--hub-shadow)}
+.hub-shell .product-gallery>button:hover{border-color:#54b89c}
+.hub-shell .product-gallery :is(.text-slate-300,.text-slate-400){color:#465d56}
+.hub-shell .product-gallery [class*="text-[#00D2B4]"]{color:#08765b}
+.hub-shell .product-gallery>button:hover .group-hover\:text-white{color:#07533f}
+.hub-shell .product-gallery>button img{filter:drop-shadow(0 6px 10px #193d3020)}
+.hub-shell main>div>section:not([class*="bg-"])>.text-center .text-white{color:var(--hub-ink)}
+.hub-shell main>div>section:not([class*="bg-"])>.text-center .text-slate-400{color:var(--hub-muted)}
+.hub-shell main>div>section:not([class*="bg-"])>.text-center [class*="text-[#00D2B4]"]{color:var(--hub-accent)}
+@media(prefers-reduced-motion:reduce){.hub-shell :is(.campaign-way,.shortcut,.primary-button){transition:none;transform:none}}
