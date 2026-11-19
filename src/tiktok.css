@@ -54,3 +54,32 @@
 .vip-progress-label{color:#12634e}.vip-next-steps li strong{color:#161616}.vip-next-steps li span{color:#555}.vip-next-steps li>svg{color:#087d60}
 .vip-success-note{border-top-color:#ddd}.vip-success .vip-preview-disclaimer{color:#666}
 @media(max-width:480px){.tok-main{width:calc(100% - 32px);padding-top:25px}.tok-card{padding:21px 16px;border-radius:22px}.tok-vegas{padding:0}.tok-vegas>div{padding:21px 17px}.tok-header{padding:18px 17px}.tok-digits b{font-size:28px}.tok-page .primary-button,.tok-page .secondary-button{white-space:normal;text-align:center}.vip-success-body{padding:16px}}
+
+/* Premium light finish: pearl surfaces, dimensional mint and restrained glow. */
+.tok-page{--tok-mint:#00dca5;--tok-paper:#f3f8f6;background:radial-gradient(ellipse at 50% 13%,#d9f8ed 0,transparent 32%),linear-gradient(155deg,#fff 10%,#f3f7f7 55%,#fff 100%)}
+.tok-header{background:linear-gradient(120deg,#080b0d,#202c2b 52%,#080b0d);box-shadow:0 6px 24px #172f2926;border-bottom:1px solid #29413b}
+.tok-city-mark{color:#194b42}.tok-city-mark svg{filter:drop-shadow(0 4px 8px #00b58a33)}
+.tok-main h1{color:#102521;text-shadow:0 2px 0 #fff}
+.tok-card{background:linear-gradient(155deg,#fff 0%,#f7faf9 55%,#eaf2ef 100%);border:1px solid #d0e0db;box-shadow:0 15px 40px #24483f13,0 3px 9px #183e3210,inset 0 1px 0 #fff}
+.tok-price-card{position:relative;border:1px solid #aad9c9;border-top:3px solid #20c7a0;background:radial-gradient(ellipse at 50% 26%,#bdffea 0%,#e4fff5 32%,transparent 70%),linear-gradient(155deg,#fff,#e6f4ee);box-shadow:0 18px 42px #13896b20,0 3px 8px #153e3610,inset 0 1px 0 #fff}
+.tok-price{color:#102e27;text-shadow:0 2px 0 #ffffffdd,0 8px 24px #00b58a2b}
+.tok-price small{color:#31584e;text-shadow:none}
+.tok-page .primary-button,.vip-dialog .primary-button{background:linear-gradient(180deg,#85ffe0 0%,#16e4b1 39%,#00c997 100%);border:1px solid #00b989;color:#062c22;box-shadow:inset 0 1px 1px #ffffffb3,0 5px 0 #008a6733,0 10px 22px #00aa7b29;transition:transform .18s,box-shadow .18s,background .18s}
+.tok-page .primary-button:hover,.vip-dialog .primary-button:hover{background:linear-gradient(180deg,#a3ffe7,#1ae5b2 45%,#00c392);border-color:#00b989;color:#062c22;transform:translateY(-1px);box-shadow:inset 0 1px 1px #fff,0 7px 22px #00aa7b40}
+.tok-page .primary-button:active,.vip-dialog .primary-button:active{transform:translateY(1px)}
+.tok-page .secondary-button{background:linear-gradient(180deg,#fff,#eaf3ef);border:1px solid #a8c4b9;color:#183e32;box-shadow:0 4px 12px #183e3210,inset 0 1px 0 #fff}
+.tok-page .secondary-button:hover{background:#e0f5ed;color:#183e32}
+.tok-card input:not([type=checkbox]),.vip-card input:not([type=checkbox]),.vip-dialog input:not([type=checkbox]){background:linear-gradient(180deg,#f5f8f7,#fff);border-color:#a4beb5;box-shadow:inset 0 2px 4px #335e4e0b,0 1px 0 #fff}
+.tok-local-pill{background:linear-gradient(180deg,#eafff6,#c8f2e3);border:1px solid #a6d9c5;box-shadow:inset 0 1px 0 #fff,0 3px 9px #006b4910}
+.tok-digits>div{background:linear-gradient(155deg,#fff,#f1f8f5);border:1px solid #b9d8cc;box-shadow:0 5px 12px #20463812,inset 0 1px 0 #fff}
+.tok-digits b{color:#143d34;text-shadow:0 1px 0 #fff}
+.tok-vegas{background:linear-gradient(150deg,#fff,#f0f6f3)}
+.tok-vegas>img{border-bottom:3px solid #35d3a8}
+.tok-bonus{background:linear-gradient(145deg,#eafff4,#d4f3e8);box-shadow:inset 0 1px 0 #fff,0 4px 13px #14785c10}
+.vip-card{background:linear-gradient(145deg,#fff,#eff7f3)}
+.vip-dialog{background:radial-gradient(ellipse at top,#e0fff3,transparent 55%),linear-gradient(160deg,#fff,#f2f8f5);border:1px solid #c1dfd2;box-shadow:0 30px 90px #0005,inset 0 1px 0 #fff}
+.vip-success{background:linear-gradient(145deg,#fff,#f2f8f5);border-color:#c4ded3;box-shadow:0 8px 23px #194f3d16}
+.vip-vegas-hero:after{background:linear-gradient(180deg,#0001 0%,#071b21c9 75%,#071b21ef)}
+.vip-success-icon{background:linear-gradient(150deg,#b2ffea,#00d5a1);box-shadow:0 0 24px #00dca566,inset 0 1px 1px #fff}
+.vip-progress>span.done{background:linear-gradient(90deg,#00bb8d,#6af3cb);box-shadow:0 1px 5px #00b98a35}
+@media(prefers-reduced-motion:reduce){.tok-page .primary-button,.vip-dialog .primary-button{transition:none;transform:none}}
