@@ -5,3 +5,117 @@
 
 /* Vegas congratulations / completion state */
 .vip-success{margin-top:18px;overflow:hidden;border:1px solid #527962;border-radius:18px;background:#10241e}.vip-vegas-hero{position:relative;min-height:260px;display:grid;align-items:end;isolation:isolate;background:#132c32;overflow:hidden}.vip-vegas-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}.vip-vegas-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#081a2155,#081a21ed);z-index:-1}.vip-vegas-overlay{padding:28px 16px 24px}.vip-success-icon{display:grid;place-items:center;margin:0 auto 14px;width:58px;height:58px;border-radius:50%;background:#a5e4b9;color:#153d2b;box-shadow:0 0 28px #a5e4b966}.vip-vegas-overlay>span{font-size:11px;letter-spacing:.16em;color:#b6f4c8;font-weight:700}.vip-vegas-overlay h2{font-size:clamp(27px,6vw,44px);color:#fff;line-height:1.14;margin:12px 0 0;text-wrap:balance;overflow-wrap:anywhere}.vip-success-body{padding:22px}.vip-progress{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-bottom:10px}.vip-progress>span{height:6px;border-radius:6px;background:#3d5c50}.vip-progress>span.done{background:#a5e4b9}.vip-progress-label{font-size:10px;letter-spacing:.13em;color:#b6f4c8}.vip-next-steps{display:grid;gap:16px;text-align:left;list-style:none;margin:24px 0;padding:0}.vip-next-steps li{display:flex;align-items:flex-start;gap:11px}.vip-next-steps li>svg{flex:none;margin-top:2px;color:#a5e4b9}.vip-next-steps li strong{display:block;color:#f1faf5;font-size:14px}.vip-next-steps li span{display:block;font-size:12px;line-height:1.5;color:#b4c9c0;margin-top:4px}.vip-success-note{padding-top:14px;border-top:1px solid #36584a}.vip-success .vip-preview-disclaimer{font-size:11px;color:#adc4b7;line-height:1.6;margin-top:16px}.vip-success h2:focus{outline:none}@media(max-width:480px){.vip-success-body{padding:16px}.vip-vegas-hero{min-height:235px}}
+
+/* 317 light design — scoped to this campaign, including its signup dialog. */
+.tok-page{--tok-mint:#00dca5;--tok-ink:#101010;--tok-muted:#505050;--tok-line:#dedede;--tok-paper:#f4f4f4;min-height:100vh;background:#fff;color:var(--tok-ink);color-scheme:light}
+.tok-header{background:#000;color:#fff;border:0;padding:22px max(22px,calc((100% - 760px)/2));gap:18px}
+.tok-header>svg{flex:none}.tok-header>span{font-size:11px;letter-spacing:.13em}
+.tok-main{padding-top:32px}.tok-city-mark{color:#111;opacity:1;margin-bottom:15px}.tok-city-mark svg{filter:none;height:78px}.tok-city-mark span{color:#555}
+.tok-label,.tok-kicker{color:#12634e;letter-spacing:.12em;font-weight:750}
+.tok-main h1{color:#101010;font-size:clamp(38px,7vw,62px);margin:18px 0 12px;line-height:1.04;text-wrap:balance}
+.tok-intro,.tok-card p,.vip-dialog p{color:var(--tok-muted);font-size:15px;line-height:1.65}
+.tok-card{background:var(--tok-paper);border:1px solid #ededed;border-radius:26px;box-shadow:none;padding:28px;margin:22px 0}
+.tok-price-card{background:#f4f4f4;border-top:5px solid var(--tok-mint);padding-top:26px}
+.tok-price{color:#080808;font-weight:800;font-size:clamp(76px,15vw,120px);letter-spacing:-.08em}
+.tok-price small{color:#333;font-size:24px;margin:0;display:inline}
+.tok-card small,.tok-note,.vip-dialog small{color:#595959}
+.tok-card form label,.vip-dialog form label{color:#202020;font-weight:600;font-size:14px}
+.tok-card input:not([type=checkbox]),.vip-card input:not([type=checkbox]),.vip-dialog input:not([type=checkbox]){background:#fff;color:#111;border:1px solid #b9b9b9;border-radius:12px;min-height:54px;box-shadow:none}
+.tok-card input::placeholder,.vip-dialog input::placeholder{color:#737373}
+.tok-card input:focus-visible,.vip-dialog input:focus-visible{outline:2px solid #087d60;outline-offset:2px}
+.tok-page .primary-button,.vip-dialog .primary-button{background:var(--tok-mint);color:#080808;border:1px solid var(--tok-mint);border-radius:999px;min-height:56px;font-weight:750;box-shadow:none;transition:background .15s}
+.tok-page .primary-button:hover,.vip-dialog .primary-button:hover{background:#00c493;border-color:#00c493;color:#080808}
+.tok-page .secondary-button{background:transparent;color:#111;border:1px solid #222;border-radius:999px;min-height:54px;box-shadow:none}
+.tok-page .secondary-button:hover{background:#ececec;color:#111}
+.tok-page :is(a,button):focus-visible,.vip-dialog :is(a,button):focus-visible{outline:2px solid #087d60;outline-offset:3px}
+.tok-local-pill{background:#d9faef;border-color:transparent;color:#07563f;font-weight:750}
+.tok-check{color:#145d47}
+.tok-digits>div{background:#fff;border:1px solid #d9d9d9;border-radius:16px;padding:15px 3px}
+.tok-digits b{color:#101010}.tok-digits span{color:#525252;font-weight:650}
+.tok-vegas{padding:0;background:#f4f4f4}.tok-vegas>div{padding:26px}
+.tok-bonus{background:#dff8ef;border:1px solid #bcebdd;color:#103a2c}
+.tok-bonus p{color:#34534a}.tok-card h2,.vip-dialog h2{color:#111}
+.tok-person p{color:#545454}.tok-person img{border:1px solid #dedede}
+.tok-card a:not(.primary-button):not(.secondary-button){color:#075e47}
+.tok-card p[role=alert]{color:#a51e28}
+.vip-card{background:#f6f6f6}
+.vip-consent,.tok-card form .vip-consent,.vip-dialog form .vip-consent{color:#535353;font-weight:400;font-size:12px}
+.tok-card .vip-consent input,.vip-dialog .vip-consent input{accent-color:#087d60}
+.vip-dialog{background:#fff;color:#111;border:1px solid #e2e2e2;box-shadow:0 24px 80px #0004}
+.vip-dialog::backdrop{background:#0008;backdrop-filter:blur(4px)}
+.vip-close,.vip-skip{color:#242424}
+.vip-dialog>svg{color:#087d60!important}
+.vip-success{background:#fff;border:1px solid #dedede}
+.vip-vegas-hero{background:#101010}
+.vip-vegas-hero:after{background:linear-gradient(180deg,#0002,#000e)}
+.vip-success-icon{background:var(--tok-mint);color:#111;box-shadow:none}
+.vip-vegas-overlay>span{color:#8ef0d4}.vip-vegas-overlay h2{color:#fff}
+.vip-progress>span{background:#e2e2e2}.vip-progress>span.done{background:var(--tok-mint)}
+.vip-progress-label{color:#12634e}.vip-next-steps li strong{color:#161616}.vip-next-steps li span{color:#555}.vip-next-steps li>svg{color:#087d60}
+.vip-success-note{border-top-color:#ddd}.vip-success .vip-preview-disclaimer{color:#666}
+@media(max-width:480px){.tok-main{width:calc(100% - 32px);padding-top:25px}.tok-card{padding:21px 16px;border-radius:22px}.tok-vegas{padding:0}.tok-vegas>div{padding:21px 17px}.tok-header{padding:18px 17px}.tok-digits b{font-size:28px}.tok-page .primary-button,.tok-page .secondary-button{white-space:normal;text-align:center}.vip-success-body{padding:16px}}
+
+/* Premium light finish: pearl surfaces, dimensional mint and restrained glow. */
+.tok-page{--tok-mint:#00dca5;--tok-paper:#f3f8f6;background:radial-gradient(ellipse at 50% 13%,#d9f8ed 0,transparent 32%),linear-gradient(155deg,#fff 10%,#f3f7f7 55%,#fff 100%)}
+.tok-header{background:linear-gradient(120deg,#080b0d,#202c2b 52%,#080b0d);box-shadow:0 6px 24px #172f2926;border-bottom:1px solid #29413b}
+.tok-city-mark{color:#194b42}.tok-city-mark svg{filter:drop-shadow(0 4px 8px #00b58a33)}
+.tok-main h1{color:#102521;text-shadow:0 2px 0 #fff}
+.tok-card{background:linear-gradient(155deg,#fff 0%,#f7faf9 55%,#eaf2ef 100%);border:1px solid #d0e0db;box-shadow:0 15px 40px #24483f13,0 3px 9px #183e3210,inset 0 1px 0 #fff}
+.tok-price-card{position:relative;border:1px solid #aad9c9;border-top:3px solid #20c7a0;background:radial-gradient(ellipse at 50% 26%,#bdffea 0%,#e4fff5 32%,transparent 70%),linear-gradient(155deg,#fff,#e6f4ee);box-shadow:0 18px 42px #13896b20,0 3px 8px #153e3610,inset 0 1px 0 #fff}
+.tok-price{color:#102e27;text-shadow:0 2px 0 #ffffffdd,0 8px 24px #00b58a2b}
+.tok-price small{color:#31584e;text-shadow:none}
+.tok-page .primary-button,.vip-dialog .primary-button{background:linear-gradient(180deg,#85ffe0 0%,#16e4b1 39%,#00c997 100%);border:1px solid #00b989;color:#062c22;box-shadow:inset 0 1px 1px #ffffffb3,0 5px 0 #008a6733,0 10px 22px #00aa7b29;transition:transform .18s,box-shadow .18s,background .18s}
+.tok-page .primary-button:hover,.vip-dialog .primary-button:hover{background:linear-gradient(180deg,#a3ffe7,#1ae5b2 45%,#00c392);border-color:#00b989;color:#062c22;transform:translateY(-1px);box-shadow:inset 0 1px 1px #fff,0 7px 22px #00aa7b40}
+.tok-page .primary-button:active,.vip-dialog .primary-button:active{transform:translateY(1px)}
+.tok-page .secondary-button{background:linear-gradient(180deg,#fff,#eaf3ef);border:1px solid #a8c4b9;color:#183e32;box-shadow:0 4px 12px #183e3210,inset 0 1px 0 #fff}
+.tok-page .secondary-button:hover{background:#e0f5ed;color:#183e32}
+.tok-card input:not([type=checkbox]),.vip-card input:not([type=checkbox]),.vip-dialog input:not([type=checkbox]){background:linear-gradient(180deg,#f5f8f7,#fff);border-color:#a4beb5;box-shadow:inset 0 2px 4px #335e4e0b,0 1px 0 #fff}
+.tok-local-pill{background:linear-gradient(180deg,#eafff6,#c8f2e3);border:1px solid #a6d9c5;box-shadow:inset 0 1px 0 #fff,0 3px 9px #006b4910}
+.tok-digits>div{background:linear-gradient(155deg,#fff,#f1f8f5);border:1px solid #b9d8cc;box-shadow:0 5px 12px #20463812,inset 0 1px 0 #fff}
+.tok-digits b{color:#143d34;text-shadow:0 1px 0 #fff}
+.tok-vegas{background:linear-gradient(150deg,#fff,#f0f6f3)}
+.tok-vegas>img{border-bottom:3px solid #35d3a8}
+.tok-bonus{background:linear-gradient(145deg,#eafff4,#d4f3e8);box-shadow:inset 0 1px 0 #fff,0 4px 13px #14785c10}
+.vip-card{background:linear-gradient(145deg,#fff,#eff7f3)}
+.vip-dialog{background:radial-gradient(ellipse at top,#e0fff3,transparent 55%),linear-gradient(160deg,#fff,#f2f8f5);border:1px solid #c1dfd2;box-shadow:0 30px 90px #0005,inset 0 1px 0 #fff}
+.vip-success{background:linear-gradient(145deg,#fff,#f2f8f5);border-color:#c4ded3;box-shadow:0 8px 23px #194f3d16}
+.vip-vegas-hero:after{background:linear-gradient(180deg,#0001 0%,#071b21c9 75%,#071b21ef)}
+.vip-success-icon{background:linear-gradient(150deg,#b2ffea,#00d5a1);box-shadow:0 0 24px #00dca566,inset 0 1px 1px #fff}
+.vip-progress>span.done{background:linear-gradient(90deg,#00bb8d,#6af3cb);box-shadow:0 1px 5px #00b98a35}
+@media(prefers-reduced-motion:reduce){.tok-page .primary-button,.vip-dialog .primary-button{transition:none;transform:none}}
+
+/* The reward reveal is the theatrical centerpiece; the rest stays premium light. */
+.tok-reward-card{padding:9px 9px 25px;border:2px solid transparent;background:linear-gradient(150deg,#fff,#f2fff9) padding-box, conic-gradient(from 35deg,#04a982,#b5ffe5,#fff3b0,#25e4b3,#07856e,#b5ffe5,#04a982) border-box;box-shadow:0 16px 45px #007d6340,0 0 24px #27d9ae50,inset 0 1px 0 #fff}
+.tok-reward-stage{position:relative;isolation:isolate;overflow:hidden;border-radius:20px;padding:24px 8px 23px;background:radial-gradient(ellipse at 50% 48%,#126c59 0%,#073c33 54%,#061c1e 100%);border:1px solid #57edc1;box-shadow:inset 0 0 30px #00dfa62b,0 7px 18px #164a3d25;color:#fff}
+.tok-reward-stage:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(112deg,transparent 30%,#baffed20 45%,#fff9 49%,#baffed20 53%,transparent 68%);transform:translateX(-120%);animation:tok-shine 4.8s ease-in-out infinite}
+.tok-reward-rays{position:absolute;inset:-80%;z-index:-2;pointer-events:none;background:repeating-conic-gradient(from 0deg at 50% 50%,#6bffcf22 0deg 11deg,transparent 11deg 25deg);mask-image:radial-gradient(circle,#000 0%,transparent 48%);animation:tok-rays 35s linear infinite}
+.tok-reward-stars{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.tok-reward-stars span{position:absolute;top:50%;left:50%;color:#c4ffea;font-size:calc(10px + mod(var(--i),3)*5px);text-shadow:0 0 12px #7afedb;transform:rotate(var(--angle)) translateX(clamp(116px,34vw,245px)) rotate(calc(-1 * var(--angle)));opacity:.65;animation:tok-twinkle 2.6s ease-in-out infinite;animation-delay:calc(var(--i)*-190ms)}
+.tok-reward-badge{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:30px;border-radius:99px;background:linear-gradient(180deg,#fff2c4,#f8c96e);color:#392807;letter-spacing:.1em;font-size:11px;font-weight:800;padding:7px 13px;box-shadow:0 3px 12px #eab64855,inset 0 1px 0 #fff}
+.tok-reward-stage .tok-kicker{color:#bfffe9;font-size:10px;margin:17px 4px 8px;line-height:1.5;text-wrap:balance}
+.tok-price-reel{position:relative;margin:8px auto;width:min(92%,460px);padding:12px 3px;border-radius:16px;background:linear-gradient(180deg,#03221fd9,#0c5345aa 48%,#042925cc);border:1px solid #76fbdc8c;box-shadow:0 0 25px #23e3b44a,inset 0 3px 15px #001e1d95;overflow:hidden}
+.tok-reward-stage .tok-price{color:#fff7dc;font-size:clamp(62px,14vw,110px);letter-spacing:-.075em;line-height:1.12;text-shadow:0 2px 0 #70551b,0 0 19px #fff0b97a;position:relative;white-space:nowrap}
+.tok-reward-stage .tok-price small{color:#d5fff0;font-size:clamp(15px,4vw,24px);text-shadow:none;vertical-align:baseline}
+.tok-reference-price{color:#d4fff0;font-size:13px;margin:7px 0}.tok-reference-price s{font-weight:700}
+.tok-savings-chip{display:inline-flex;gap:6px;align-items:center;justify-content:center;color:#ffedaa;font-size:13px;font-weight:750;margin-top:9px}
+.tok-reward-card>form,.tok-reward-card>small{margin-left:auto;margin-right:auto;width:calc(100% - 26px)}
+.tok-reward-card>p,.tok-reward-card>.tok-check{margin-left:12px;margin-right:12px}
+.is-spinning .tok-price-number{display:inline-block;animation:tok-reel .13s linear infinite}
+.is-unlocked .tok-reward-stage .tok-price{color:#fff5c5;text-shadow:0 3px 0 #886629,0 0 24px #ffe585a0}
+.is-celebrating .tok-price-reel{animation:tok-reward-pop .65s cubic-bezier(.2,.75,.3,1.2) both}
+.tok-reward-confetti{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.tok-reward-confetti i{position:absolute;top:55%;left:50%;height:12px;width:6px;border-radius:2px;background:var(--hue);opacity:0;animation:tok-burst .95s ease-out var(--delay) both}
+@keyframes tok-shine{0%,20%{transform:translateX(-120%)}58%,100%{transform:translateX(120%)}}
+@keyframes tok-rays{to{transform:rotate(360deg)}}
+@keyframes tok-twinkle{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes tok-reel{0%,100%{transform:translateY(-2px)}50%{transform:translateY(2px)}}
+@keyframes tok-reward-pop{0%{transform:scale(.95)}40%{transform:scale(1.045);box-shadow:0 0 40px #f8dc8c9c}100%{transform:scale(1)}}
+@keyframes tok-burst{0%{opacity:1;transform:rotate(var(--angle)) translateX(0)}75%{opacity:1}100%{opacity:0;transform:rotate(var(--angle)) translateX(var(--distance)) rotate(180deg)}}
+@media(max-width:480px){.tok-reward-card{padding:7px 7px 22px}.tok-reward-stage{padding:22px 5px}.tok-reward-card>form,.tok-reward-card>small{width:calc(100% - 18px)}.tok-reward-stage .tok-price{font-size:clamp(46px,13.5vw,76px)}}
+@media(prefers-reduced-motion:reduce){.tok-reward-stage:after,.tok-reward-rays,.tok-reward-stars span,.is-spinning .tok-price-number,.is-celebrating .tok-price-reel,.tok-reward-confetti i{animation:none!important}}
+
+/* Audio controls remain unobtrusive and accessible. */
+.tok-sound-row{display:flex;justify-content:flex-end;margin:0 4px 9px}
+.tok-sound-toggle{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;min-height:44px;border:1px solid #8bedd96b;border-radius:999px;background:#062d29bb;color:#d9fff2;font-size:12px;line-height:1.2;font-weight:650;cursor:pointer}
+.tok-sound-toggle:hover{background:#185d4e}
+.tok-page .tok-sound-toggle:focus-visible{outline:2px solid #ffdf86;outline-offset:3px}
