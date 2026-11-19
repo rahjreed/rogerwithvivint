@@ -226,3 +226,72 @@
   .holiday-contact .primary-button, .holiday-contact > a { font-size: 11px; padding-inline: 10px; }
   .holiday-reassurance { justify-content: flex-start; }
 }
+
+
+/* Premium light campaign system, scoped to promotional pages only. */
+.truck-page{--promo-ink:#102521;--promo-muted:#465d56;--promo-accent:#08765b;--promo-line:#c9ded5;--promo-surface:linear-gradient(155deg,#fff,#f7faf9 55%,#eaf2ef);--promo-shadow:0 15px 40px #24483f13,0 3px 9px #183e3210,inset 0 1px 0 #fff;min-height:100vh;background:radial-gradient(ellipse at 50% 8%,#d9f8ed,transparent 29%),linear-gradient(155deg,#fff 10%,#f3f7f7 55%,#fff);color:var(--promo-ink);color-scheme:light}
+.truck-page .primary-button{border-radius:999px;background:linear-gradient(180deg,#85ffe0 0%,#16e4b1 39%,#00c997 100%);border:1px solid #00b989;color:#062c22;box-shadow:inset 0 1px 1px #ffffffb3,0 5px 0 #008a6733,0 10px 22px #00aa7b29;transition:transform .18s,box-shadow .18s,background .18s}
+.truck-page .primary-button:hover{background:linear-gradient(180deg,#a3ffe7,#1ae5b2 45%,#00c392);color:#062c22;border-color:#00b989;transform:translateY(-1px);box-shadow:inset 0 1px 1px #fff,0 7px 22px #00aa7b40}
+.truck-page .primary-button:active{transform:translateY(1px)}
+.truck-page .secondary-button{border-radius:999px;background:linear-gradient(180deg,#fff,#eaf3ef);border:1px solid #a8c4b9;color:#183e32;box-shadow:0 4px 12px #183e3210,inset 0 1px 0 #fff}
+.truck-page .secondary-button:hover{background:#e0f5ed;color:#183e32}
+.truck-page :focus-visible{outline-color:#08765b}
+@media(prefers-reduced-motion:reduce){.truck-page .primary-button{transition:none;transform:none}}
+
+.truck-page .truck-header{background:linear-gradient(120deg,#080b0d,#202c2b 52%,#080b0d);color:#fff;border-bottom:1px solid #29413b;box-shadow:0 6px 24px #172f2926}
+.truck-page .truck-call{background:linear-gradient(180deg,#85ffe0,#16e4b1 39%,#00c997);color:#062c22;border-color:#00b989;box-shadow:inset 0 1px 1px #ffffffb3,0 4px 12px #00aa7b29}
+.truck-page :is(.truck-eyebrow,.truck-hero h1>span,.truck-meet-link,.truck-benefit-number,.truck-options-card li>svg,.truck-advantage-grid article>svg,.truck-advantage-grid a,.truck-final h2>span,.truck-direct-number,.truck-contact-status,.text-button){color:var(--promo-accent)}
+.truck-page :is(.truck-hero-copy>h2,.truck-hero-copy>p,.truck-hero-copy>p.truck-discovery,.truck-personal-note,.truck-section-heading p,.truck-difference-grid p,.truck-options-copy p,.truck-options-copy>small,.truck-options-card li,.truck-options-card-footer,.truck-advantage-grid p,.truck-advantage-note,.truck-equipment-note,.truck-final>p,.truck-final>p.truck-send-note,.holiday-award-heading p,.holiday-contact>p,.holiday-contact small,.holiday-reassurance span){color:var(--promo-muted)}
+.truck-page :is(.truck-hero h1,.holiday-award-heading h1){text-shadow:0 2px 0 #fff}
+.truck-page :is(.truck-difference,.truck-footer,.truck-options-card-footer){border-color:var(--promo-line)}
+.truck-page :is(.truck-difference-grid>article,.truck-options-card,.truck-advantage-grid>article,.truck-mobile-identity){background:var(--promo-surface);border:1px solid var(--promo-line);box-shadow:var(--promo-shadow)}
+.truck-page :is(.truck-options,.truck-final){background:radial-gradient(ellipse at 20% 0%,#c7f8e6,transparent 65%),var(--promo-surface);border-color:#aad9c9;box-shadow:var(--promo-shadow)}
+.truck-page .truck-options-copy p.truck-promo-highlight{color:#124637;border-left-color:#0caf87}
+.truck-page .truck-options-icon{background:linear-gradient(145deg,#d8fff0,#b9edda);color:#08765b;box-shadow:inset 0 1px 0 #fff,0 5px 12px #16886a15}
+.truck-page :is(.truck-benefit-number>span,.truck-card-label,.truck-options-card-footer strong){color:#43685a}
+.truck-page .truck-advantage-grid article.truck-independent{background:linear-gradient(145deg,#fffdf7,#f6efdf);border-color:#e0d0aa}
+.truck-page .truck-independent .truck-card-label,.truck-page .truck-advantage-grid p.truck-perk-note{color:#76581d}
+.truck-page .truck-independent>svg{color:#93702e!important}
+.truck-page .truck-portrait{background:radial-gradient(ellipse at 50% 42%,#b0fbe1,#e3faf0 65%,#d2e9df);border-color:#a9d9c8;box-shadow:0 20px 46px #16886a20,inset 0 1px 0 #fff}
+.truck-page .truck-portrait-label{color:#315e50}
+.truck-page .truck-portrait-caption{background:linear-gradient(135deg,#fff,#eef7f2);border-color:#c1dfd2;color:#102521}
+.truck-page .truck-portrait-caption span{color:#43685a}
+.truck-page .truck-portrait-caption .icon-button{background:#e5f5ee;color:#075d46;border-color:#b9ddcf}
+.truck-page .truck-install-stat{background:linear-gradient(145deg,#eafff5,#d4f3e8);border-color:#c1dfd2}
+.truck-page .truck-install-stat strong{color:#075f47}
+.truck-page .truck-install-stat>span{color:#43685a}
+.truck-page .truck-mobile-identity strong{color:#102521}
+.truck-page .truck-mobile-identity span{color:#465d56}
+.truck-page :is(.truck-mobile-identity small,.truck-mobile-identity>svg){color:#08765b}
+.truck-page .product-gallery>button{background:var(--promo-surface);border-color:var(--promo-line);box-shadow:var(--promo-shadow)}
+.truck-page .product-gallery>button:hover{border-color:#54b89c}
+.truck-page .product-gallery :is(.text-slate-300,.text-slate-400){color:#465d56}
+.truck-page .product-gallery [class*="text-[#00D2B4]"]{color:#08765b}
+.truck-page .product-gallery>button:hover .group-hover\:text-white{color:#07533f}
+.truck-page .product-gallery img{filter:drop-shadow(0 6px 10px #193d3020)}
+.truck-page .truck-video{border-color:#b5d2c5;box-shadow:0 12px 28px #193d3025}
+.truck-page .truck-copy-fallback{background:#fff;color:#132d26;border-color:#a6c2b6}
+.truck-page :is(.truck-footer>div,.truck-footer nav a,.truck-footer>p,.truck-footer>small){color:#465d56}
+.truck-page .truck-footer>p a{color:#075f47}
+.truck-page .truck-footer svg.text-white{color:#132521}
+.truck-page .truck-mobile-bar{background:#f7fffcf5;border-top-color:#b2d6c8;box-shadow:0 -5px 22px #163d3018;backdrop-filter:blur(12px)}
+.truck-page .hub-dialog{background:var(--promo-surface);border-color:var(--promo-line);color:var(--promo-ink);box-shadow:0 30px 90px #0005}
+.truck-page .hub-dialog :is(.dialog-content>p,.product-features li,.field-hint){color:var(--promo-muted)}
+.truck-page .hub-dialog .icon-button{background:#e5f5ee;color:#075d46;border-color:#b9ddcf}
+.truck-page .pwa-unavailable{background:#eff8f3;color:var(--promo-ink);border-color:var(--promo-line)}
+/* Holiday spotlight: retain the original price and deadline, with the 317 reward-stage treatment. */
+.truck-page .holiday-award-icon{background:linear-gradient(145deg,#b2ffea,#00d5a1);color:#07533f;border-color:#5bdcb5;box-shadow:0 0 26px #00dca544,inset 0 1px 1px #fff}
+.truck-page .holiday-award-heading h1 span{color:#08765b}
+.truck-page .holiday-prize-panel{isolation:isolate;border:2px solid transparent;background:radial-gradient(ellipse at 50% 36%,#126c59,#073c33 60%,#061c1e) padding-box,conic-gradient(from 35deg,#04a982,#b5ffe5,#fff3b0,#25e4b3,#07856e,#b5ffe5,#04a982) border-box;color:#fff;box-shadow:0 16px 45px #007d6338,0 0 24px #27d9ae40,inset 0 0 30px #00dfa62b}
+.truck-page .holiday-prize-panel:not(.holiday-expired)::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(112deg,transparent 30%,#baffed18 45%,#fff5 49%,#baffed18 53%,transparent 68%);transform:translateX(-120%);animation:promo-gleam 5s ease-in-out infinite}
+@keyframes promo-gleam{0%,20%{transform:translateX(-120%)}58%,100%{transform:translateX(120%)}}
+.truck-page .holiday-prize-label{display:inline-flex;padding:8px 15px;border-radius:99px;background:linear-gradient(180deg,#fff2c4,#f8c96e);color:#392807;box-shadow:0 3px 12px #eab64855,inset 0 1px 0 #fff}
+.truck-page .holiday-price{color:#fff5c5;text-shadow:0 3px 0 #886629,0 0 24px #ffe58580}
+.truck-page .holiday-price span{color:#d5fff0;text-shadow:none}
+.truck-page .holiday-countdown{background:var(--promo-surface);border-color:#b9d8cc;box-shadow:var(--promo-shadow)}
+.truck-page .holiday-countdown-label{color:#08765b}
+.truck-page .holiday-countdown-grid>div{background:linear-gradient(155deg,#fff,#eaf6f0);border-color:#b9d8cc;box-shadow:0 5px 12px #20463812,inset 0 1px 0 #fff}
+.truck-page .holiday-countdown-grid strong{color:#143d34}
+.truck-page .holiday-countdown-grid span,.truck-page .holiday-countdown>p{color:#465d56}
+.truck-page .holiday-reassurance strong{color:#102521}
+@media(prefers-reduced-motion:reduce){.truck-page .holiday-prize-panel::after{animation:none!important}}
