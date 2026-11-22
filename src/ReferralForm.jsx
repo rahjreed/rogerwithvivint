@@ -12,12 +12,7 @@ export default function ReferralForm(){
  const input=useRef(null);
  const isIphone=/iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
  const [socialNotice,setSocialNotice]=useState('');
- const [socialType,setSocialType]=useState('installed');
- const socialPosts={
-  installed:"Just got my Vivint system installed, and I’m excited to share it! 🏡📷 Roger helped me get everything set up and walked me through how it works. If you’ve been thinking about smart-home security, reach out to Roger at https://rogerwithvivint.com and let him know I sent you! I may qualify for referral credits if someone I refer gets installed.",
-  credit:"A little win worth sharing! 🙌 I recently earned a Vivint referral credit just by introducing someone to Roger. It's nice knowing that sharing my experience can help with my monitoring bill. If you’re curious about Vivint, check out https://rogerwithvivint.com and tell Roger I sent you! I may receive bill credits for qualifying referrals."
- };
- const socialPost=socialPosts[socialType];
+ const socialPost="Just got my Vivint system installed, and I’m excited to share it! 🏡📷 Roger helped me get everything set up and walked me through how it works. If you’ve been thinking about smart-home security, reach out to Roger at https://rogerwithvivint.com and let him know I sent you! I may qualify for referral credits if someone I refer gets installed.";
  async function copySocial(){setSocialNotice(await copyText(socialPost)?'Post copied! Add a photo of your camera, doorbell or smart hub, then paste it into Facebook and personalize it.':'Copy unavailable. Select and copy the post manually.');}
  async function shareSocial(){try{if(navigator.share){await navigator.share({text:socialPost});setSocialNotice('Share sheet opened. Add your own device photo in Facebook if it was not attached automatically.');}else await copySocial();}catch(e){if(e?.name!=='AbortError')await copySocial();}}
  function send(e){e.preventDefault();if(isIphone){copy();return;}if(!message.trim()){setNotice('Enter an introduction before opening your group text.');return;}const normalized=normalizePhone(phone);if(!normalized||normalized===normalizePhone(PHONE_NUMBER)){setNotice('Enter your friend’s valid US phone number, different from Roger’s.');return;}const url=referralDraft(PHONE_NUMBER,normalized,message.trim(),navigator.userAgent);setOpened(true);setNotice('Before sending, check for TWO recipients: your friend AND Roger ('+PHONE_NUMBER+'). Some messaging apps drop the second number. If either number is missing, add it to the To field in Messages. Nothing has been sent yet.');window.location.href=url;}
@@ -36,13 +31,9 @@ export default function ReferralForm(){
  {online&&!contentOutdated&&<section className="form-card referral-social">
  <span className="eyebrow">YOUR EXPERIENCE CAN HELP A FRIEND</span>
  <h2>Share your Vivint experience on Facebook</h2>
- <p>Your recommendation means more when it sounds like you. Choose the post that fits your experience, add a real photo of your new equipment, and share it with friends.</p>
+ <p>Your recommendation means more when it sounds like you. Add a real photo of your new equipment and share your installation experience with friends.</p>
  <div className="referral-social-example"><strong>4 referrals in 4 months = $1,200 in potential bill credits</strong><p>Roger received four referrals through social media over four months. At the current advertised $300 credit per qualified referral, four qualifying referrals could represent $1,200 toward monitoring bills for an eligible referring customer. Credit amounts, eligibility, approval and stacking are subject to Vivint's official terms; this isn't a guaranteed payout.</p></div>
- <div className="referral-social-switch" role="group" aria-label="Choose a social post">
- <button type="button" className={socialType==='installed'?'selected':''} aria-pressed={socialType==='installed'} onClick={()=>{setSocialType('installed');setSocialNotice('');}}>JUST GOT INSTALLED</button>
- <button type="button" className={socialType==='credit'?'selected':''} aria-pressed={socialType==='credit'} onClick={()=>{setSocialType('credit');setSocialNotice('');}}>EARNED A REFERRAL CREDIT</button>
- </div>
- <p className="field-hint">{socialType==='installed'?'Use this after your system is installed. Make it your own, especially the details about your installation.':'Only share this version after a referral credit has actually been earned.'}</p>
+ <p className="field-hint">Use this after your system is installed. Personalize it to reflect your own experience.</p>
  <div className="referral-social-quote">{socialPost}</div>
  <div className="referral-photo-tip"><strong>📸 Add a photo of your setup</strong><p>Take a clear photo of the camera, video doorbell, or smart hub Roger installed. Pair it with your post so friends see a real example—not a generic advertisement. Avoid showing access codes, passwords, addresses, camera views or other sensitive details.</p></div>
  <div className="referral-social-actions"><button type="button" className="primary-button" onClick={shareSocial}><Share2 size={18}/> SHARE MY POST</button><button type="button" className="secondary-button" onClick={copySocial}><Copy size={18}/> COPY FACEBOOK POST</button></div>
