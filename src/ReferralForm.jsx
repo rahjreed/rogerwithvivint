@@ -12,7 +12,7 @@ export default function ReferralForm(){
  const [now,setNow]=useState(()=>Date.now());
  useEffect(()=>{const timer=setInterval(()=>setNow(Date.now()),1000);return ()=>clearInterval(timer);},[]);
  const credit=currentReferralCredit(now),promoActive=referralPromoActive(now);
- const credits=[1,2,3].map(n=>[n,'
+ const credits=[1,2,3].map(n=>[n,`${(credit*n).toLocaleString('en-US')}`,`${Math.floor(credit*n/75)}–${Math.floor(credit*n/50)} months`]);
  const [phone,setPhone]=useState(''),[message,setMessage]=useState(REFERRAL_MESSAGE),[notice,setNotice]=useState(''),[opened,setOpened]=useState(false);
  const input=useRef(null);
  const isIphone=/iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
