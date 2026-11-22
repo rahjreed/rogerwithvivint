@@ -40,7 +40,7 @@
 .marketing-hero p{color:#d0eee1;font-size:13px;line-height:1.8;max-width:530px}
 .marketing-hero a{display:inline-block;margin-top:20px;background:#31efb3;padding:13px 17px;border-radius:11px;font-size:12px;font-weight:800;color:#09352a}
 .marketing-hero-icon{padding:20px;color:#92f5c8;opacity:.6}
-.marketing-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px 0 34px}
+.marketing-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0 34px}
 .marketing-stats>div{display:grid;grid-template-columns:24px auto;column-gap:8px;align-items:center;background:#fff;border:1px solid var(--mo-stroke);padding:19px 22px;border-radius:15px}
 .marketing-stats svg{color:#0ba67c}.marketing-stats strong{font-size:27px;line-height:1;color:#1b4033;font-weight:800}.marketing-stats span{grid-column:2;color:#667a72;font-size:11px;margin-top:5px}
 .marketing-library-head h2{font-size:26px;font-weight:800;letter-spacing:-.03em;color:#16352b;margin:5px 0}
@@ -122,3 +122,8 @@
 .marketing-card-bottom .marketing-use-template{background:#0d7050;border-color:#0d7050;color:#fff}
 .marketing-card-bottom .marketing-use-template:hover{background:#095d43}
 @media(max-width:700px){.marketing-group-tool{padding:21px 17px;scroll-margin-top:105px}.marketing-group-heading h2{font-size:21px}.marketing-sidebar-referral{margin-top:0;width:100%;justify-content:center}.marketing-card-bottom span{width:100%;margin-bottom:3px}.marketing-card-bottom button{flex:1;justify-content:center;min-width:135px}}
+
+/* Distinct Nextdoor category within the customer marketing library. */
+.marketing-type-nextdoor{background:#e4f6e7;color:#276d3f}
+@media(max-width:1050px){.marketing-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.marketing-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.marketing-stats>div{min-height:92px}.marketing-stats span{font-size:10px}}
