@@ -1,0 +1,14 @@
+/* Limited-time referral credit countdown, scoped to the referral rewards card. */
+.referral-countdown{padding:20px;margin:18px 0 22px;border:1px solid #61cba0;border-radius:17px;background:linear-gradient(130deg,#0a3f34,#125c47 68%,#0f4b47);color:#f1fff7;box-shadow:0 10px 25px #093e311e}
+.referral-countdown-heading{display:flex;align-items:flex-start;gap:12px;margin-bottom:17px}
+.referral-countdown-heading>svg{flex:0 0 21px;color:#8dfbd0;margin-top:2px}
+.referral-countdown-heading strong{display:block;color:#d1ffeb;font-size:14px;line-height:1.45;font-weight:850;letter-spacing:.025em}
+.referral-countdown-heading span{display:block;color:#dcf2e6;font-size:12px;line-height:1.7;margin-top:6px}
+.referral-countdown-units{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.referral-countdown-unit{padding:12px 5px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border:1px solid #83e9b762;border-radius:12px;background:#012c2470}
+.referral-countdown-unit strong{font-size:clamp(20px,4.5vw,31px);line-height:1.1;font-variant-numeric:tabular-nums;font-weight:850;color:#fff;letter-spacing:-.03em}
+.referral-countdown-unit span{font-size:9px;color:#aae4ca;letter-spacing:.1em;font-weight:850}
+.referral-countdown>small{display:block;margin-top:14px;color:#c7e2d4;font-size:10px;line-height:1.65}
+.referral-countdown-ended{background:linear-gradient(120deg,#124b3a,#22614a)}
+.referral-countdown-ended .referral-countdown-heading{margin-bottom:4px}
+@media(max-width:420px){.referral-countdown{padding:16px 13px}.referral-countdown-units{gap:6px}.referral-countdown-unit{padding:10px 2px}.referral-countdown-unit strong{font-size:22px}.referral-countdown-unit span{font-size:8px}}
