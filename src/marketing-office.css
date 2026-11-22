@@ -1,0 +1,155 @@
+.marketing-office{--mo-ink:#102a25;--mo-muted:#657671;--mo-mint:#06be90;--mo-stroke:#dbe8e3;color:var(--mo-ink);min-height:calc(100vh - 130px);background:#f5f9f7;font-family:inherit}
+.marketing-office button,.marketing-office a,.marketing-office input,.marketing-office select{font:inherit}
+.marketing-locked{display:grid;place-items:center;background:radial-gradient(circle at 15% 20%,#c8f3e5,transparent 40%),radial-gradient(circle at 85% 80%,#e2f5ee,transparent 35%),#f7fbf9;padding:55px 22px}
+.marketing-gate{background:#fff;border:1px solid #d0e8dc;box-shadow:0 32px 110px #194b3821;padding:44px;width:min(100%,510px);border-radius:27px;text-align:left}
+.marketing-gate-icon{height:58px;width:58px;display:grid;place-items:center;border-radius:18px;background:#e0fbf0;color:#006e53;margin-bottom:20px}
+.marketing-eyebrow{font-size:10px;letter-spacing:.15em;color:#027455;font-weight:800}
+.marketing-gate h1{font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-.045em;margin:14px 0;color:#142f29;font-weight:800}
+.marketing-gate>p{font-size:14px;line-height:1.8;color:#64756e;margin-bottom:25px}
+.marketing-gate form label{font-size:12px;font-weight:800;color:#24433a;display:block;margin-bottom:9px}
+.marketing-password{display:flex;align-items:center;gap:11px;background:#f5faf8;border:1px solid #b9d6c9;border-radius:13px;padding:0 15px;color:#487968}
+.marketing-password input{width:100%;height:52px;outline:none;border:0!important;background:transparent!important;color:#13392c!important;box-shadow:none!important;font-size:16px!important}
+.marketing-action{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:14px;padding:16px;width:100%;border:0;border-radius:13px;background:linear-gradient(120deg,#00dba4,#09b68a);font-size:12px!important;font-weight:850!important;color:#082e24;cursor:pointer;min-height:50px}
+.marketing-arrow-right{transform:rotate(180deg)}
+.marketing-error{font-size:12px;color:#b0442e;margin:8px 0;min-height:19px}
+.marketing-gate>a{display:inline-block;color:#116e52;text-decoration:underline;font-size:12px;margin:12px 0}
+.marketing-gate>small{display:block;font-size:10px;color:#6b7e76;line-height:1.6;margin-top:10px}
+.marketing-dashboard{display:grid;grid-template-columns:255px minmax(0,1fr);background:#f5f9f7}
+.marketing-sidebar{padding:30px 19px;background:linear-gradient(175deg,#102e27,#09261f 70%,#071e1c);color:#fff;min-height:100%;display:flex;flex-direction:column;gap:20px}
+.marketing-logo{display:flex;align-items:center;gap:11px;padding:4px 7px 30px;border-bottom:1px solid #ffffff24}
+.marketing-logo-mark{border-radius:14px;height:42px;width:42px;display:grid;place-items:center;background:#3af1b0;color:#063426;font-size:23px;font-weight:900}
+.marketing-logo-mark span{color:#fff}
+.marketing-logo strong{font-size:11px;line-height:1.4;display:block;letter-spacing:.08em}
+.marketing-logo small{font-size:10px;color:#b4dbcc}
+.marketing-sidebar-label{font-size:10px;letter-spacing:.15em;color:#78b29e;font-weight:750;margin:16px 10px 0}
+.marketing-sidebar nav{display:grid;gap:5px}
+.marketing-sidebar nav button{border:0;text-align:left;display:flex;align-items:center;gap:12px;border-radius:11px;padding:14px 12px;color:#d1e4dc;background:transparent;cursor:pointer;font-size:12px;font-weight:650}
+.marketing-sidebar nav button.active{background:#2d5a49;color:#d2ffe9}
+.marketing-sidebar nav button:hover{background:#245040}
+.marketing-sidebar-bottom{display:flex;gap:10px;align-items:center;margin-top:auto;padding:18px 8px 0;border-top:1px solid #ffffff21}
+.marketing-sidebar-bottom img{width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid #73e9b8}
+.marketing-sidebar-bottom strong{font-size:12px;display:block}.marketing-sidebar-bottom small{color:#9fccbd;font-size:10px}
+.marketing-main{min-width:0}
+.marketing-topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:28px clamp(20px,4vw,52px);border-bottom:1px solid #dcebe4;background:#fff}
+.marketing-topbar span{color:#15906c;font-size:10px;font-weight:850;letter-spacing:.12em}.marketing-topbar h1{font-size:22px;font-weight:800;letter-spacing:-.025em;margin:3px 0;color:#16342b}
+.marketing-topbar a{display:flex;gap:7px;align-items:center;font-size:12px;color:#136b52;font-weight:700;white-space:nowrap}
+.marketing-content{padding:28px clamp(20px,4vw,52px) 48px;max-width:1450px}
+.marketing-hero{border-radius:22px;padding:32px 36px;background:radial-gradient(circle at 80% 30%,#377862,transparent 36%),linear-gradient(115deg,#0b3328,#15483a);color:white;display:flex;align-items:center;justify-content:space-between;overflow:hidden}
+.marketing-hero>div:first-child{max-width:650px}.marketing-hero span{font-size:10px;letter-spacing:.14em;color:#8cf2c6;font-weight:800}
+.marketing-hero h2{font-size:clamp(25px,3.5vw,37px);font-weight:800;letter-spacing:-.04em;line-height:1.17;margin:12px 0}
+.marketing-hero p{color:#d0eee1;font-size:13px;line-height:1.8;max-width:530px}
+.marketing-hero a{display:inline-block;margin-top:20px;background:#31efb3;padding:13px 17px;border-radius:11px;font-size:12px;font-weight:800;color:#09352a}
+.marketing-hero-icon{padding:20px;color:#92f5c8;opacity:.6}
+.marketing-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:22px 0 34px}
+.marketing-stats>div{display:grid;grid-template-columns:24px auto;column-gap:8px;align-items:center;background:#fff;border:1px solid var(--mo-stroke);padding:19px 22px;border-radius:15px}
+.marketing-stats svg{color:#0ba67c}.marketing-stats strong{font-size:27px;line-height:1;color:#1b4033;font-weight:800}.marketing-stats span{grid-column:2;color:#667a72;font-size:11px;margin-top:5px}
+.marketing-library-head h2{font-size:26px;font-weight:800;letter-spacing:-.03em;color:#16352b;margin:5px 0}
+.marketing-library-head p{font-size:12px;color:#60736a;line-height:1.8}
+.marketing-filters{display:flex;gap:12px;margin:22px 0 15px}
+.marketing-search,.marketing-filters>label{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #cbdfd5;border-radius:12px;padding:0 13px;color:#158062}
+.marketing-search{flex:1;min-width:0}.marketing-search input{width:100%;border:0!important;outline:none;min-height:45px;color:#203a30!important;background:transparent!important;box-shadow:none!important;font-size:13px!important}
+.marketing-filters select{border:0;outline:none;background:transparent;color:#244839;font-size:12px;font-weight:650;min-height:45px;max-width:145px}
+.marketing-chip-row{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
+.marketing-chip-row button{border:1px solid #d4e7df;background:white;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:700;color:#517266;cursor:pointer}
+.marketing-chip-row button.active{background:#0d664f;color:#fff;border-color:#0d664f}
+.marketing-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.marketing-template-card{display:flex;flex-direction:column;background:#fff;border:1px solid #dbe9e2;border-radius:18px;padding:23px;min-width:0;box-shadow:0 5px 20px #154b3010}
+.marketing-card-top{display:flex;gap:9px;align-items:center;justify-content:space-between}
+.marketing-type{font-size:9px;letter-spacing:.1em;font-weight:800;padding:7px 10px;border-radius:7px;background:#d5f7eb;color:#087a59}
+.marketing-type-text{background:#e3efff;color:#2c658f}.marketing-type-group{background:#f4eafa;color:#7c498c}
+.marketing-season{font-size:10px;color:#71857a}.marketing-template-card h3{font-size:19px;color:#143529;font-weight:800;line-height:1.35;margin:17px 0 10px}
+.marketing-card-copy{color:#55685f;font-size:12px;line-height:1.85;white-space:pre-line;flex:1}
+.marketing-card-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid #e5eee9;margin-top:19px;padding-top:15px}
+.marketing-card-bottom span{font-size:10px;color:#778c81}.marketing-card-bottom button{border:1px solid #0fa67d;background:#e4fbf2;color:#086747;padding:10px 12px;border-radius:9px;display:flex;align-items:center;gap:7px;font-size:10px;font-weight:850;cursor:pointer}
+.marketing-card-bottom button:hover{background:#c8f8e4}.marketing-empty{background:#fff;padding:40px;border-radius:12px;text-align:center;color:#45665a}
+.marketing-clipboard-notice{font-size:12px;color:#116a4d;min-height:20px;margin:12px 0}
+.marketing-instructions{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.marketing-instructions>div{border-radius:15px;padding:24px;background:#e7f7f0;border:1px solid #c9e8d9}
+.marketing-instructions svg{color:#078964}.marketing-instructions h3{font-size:16px;color:#173b2d;font-weight:800;margin:10px 0}.marketing-instructions p{font-size:12px;line-height:1.8;color:#466459}
+.marketing-instructions a{display:inline-block;margin-top:12px;color:#087355;font-size:12px;font-weight:800}
+.marketing-foot{margin-top:26px;color:#768980;font-size:10px;line-height:1.75}
+.marketing-office :focus-visible{outline:3px solid #05c996;outline-offset:2px}
+@media(max-width:1050px){.marketing-dashboard{grid-template-columns:205px minmax(0,1fr)}.marketing-sidebar{padding:21px 11px}.marketing-card-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.marketing-dashboard{display:block}.marketing-sidebar{min-height:0;padding:13px 15px}.marketing-logo{padding:2px 4px 13px}.marketing-sidebar-label,.marketing-sidebar-bottom{display:none}.marketing-sidebar nav{display:none}.marketing-topbar{padding:20px}.marketing-topbar h1{font-size:19px}.marketing-topbar a{font-size:10px}.marketing-content{padding:20px 16px 36px}.marketing-hero{padding:24px}.marketing-hero-icon{display:none}.marketing-stats{gap:7px}.marketing-stats>div{padding:12px 10px;display:flex;flex-direction:column;gap:6px;text-align:center}.marketing-stats strong{font-size:23px}.marketing-stats span{font-size:9px}.marketing-filters{flex-direction:column}.marketing-filters>label{justify-content:space-between}.marketing-filters select{flex:1;max-width:none}.marketing-instructions{grid-template-columns:1fr}.marketing-gate{padding:28px 24px}}
+
+/* On-device personalized checklist; no backend or remote customer profile. */
+.marketing-pass-label{margin-top:17px}
+.marketing-top-actions{display:flex;gap:16px;align-items:center}
+.marketing-top-actions button{background:#e7f8ee;color:#10684b;border:1px solid #b2dac4;padding:9px 13px;border-radius:999px;font-size:11px;font-weight:750;cursor:pointer}
+.marketing-checklist{background:#fff;border:1px solid #cfe5d9;border-radius:19px;padding:25px;margin:0 0 32px;box-shadow:0 8px 28px #16493412}
+.marketing-checklist-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:17px}
+.marketing-checklist-head h2{font-size:23px;font-weight:800;letter-spacing:-.035em;color:#143b2b;margin:6px 0}
+.marketing-checklist-head p{font-size:12px;line-height:1.75;color:#5d7869}
+.marketing-checklist-count{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:88px;padding:12px;background:#e5f9ef;border:1px solid #b9e5cf;border-radius:14px}
+.marketing-checklist-count strong{font-size:24px;color:#08704e;line-height:1;font-weight:850}
+.marketing-checklist-count span{font-size:10px;color:#3b7660;margin-top:5px}
+.marketing-progress-track{height:9px;border-radius:999px;background:#e4efe8;overflow:hidden;margin:12px 0 20px}
+.marketing-progress-track>div{height:100%;background:linear-gradient(90deg,#1bbf90,#52e9b5);border-radius:inherit;transition:width .2s ease}
+.marketing-checklist-items{display:grid;gap:8px}
+.marketing-checklist-item{display:flex;gap:12px;align-items:flex-start;border:1px solid #dfebe4;border-radius:13px;padding:15px 14px;background:#fbfdfb;cursor:pointer}
+.marketing-checklist-item.done{background:#e7fbf1;border-color:#a7dec2}
+.marketing-checklist-item>input{position:absolute;opacity:0;width:1px;height:1px}
+.marketing-check-icon{display:grid;place-items:center;width:24px;height:24px;flex:0 0 24px;border:2px solid #7bb99d;border-radius:7px;background:#fff;color:#fff}
+.marketing-checklist-item.done .marketing-check-icon{background:#0b9c70;border-color:#0b9c70}
+.marketing-checklist-item:focus-within{outline:3px solid #00b885;outline-offset:2px}
+.marketing-checklist-item strong{display:block;font-size:13px;color:#164131;font-weight:800;margin:0 0 4px}
+.marketing-checklist-item small{display:block;font-size:11px;color:#5b7667;line-height:1.7}
+.marketing-storage-note{font-size:12px;color:#b14431;margin:9px 0}
+.marketing-local-disclosure{display:block;color:#698375;font-size:10px;line-height:1.7;margin-top:10px}
+@media(max-width:700px){.marketing-top-actions{gap:8px}.marketing-top-actions button{font-size:10px;padding:8px}.marketing-checklist{padding:19px}.marketing-checklist-head h2{font-size:20px}.marketing-checklist-count{min-width:70px}}
+
+/* Native phone group referral, embedded inside the marketing dashboard. */
+.marketing-group-tool{scroll-margin-top:110px;background:linear-gradient(145deg,#fff,#f7fdf9);border:1px solid #b8dfcb;border-radius:20px;padding:28px;margin:0 0 32px;box-shadow:0 12px 35px #16493413}
+.marketing-group-heading{display:flex;gap:15px;align-items:flex-start;margin-bottom:20px}
+.marketing-group-icon{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;color:#0b7652;background:#dff8eb;border-radius:14px}
+.marketing-group-heading h2{font-size:23px;font-weight:800;letter-spacing:-.035em;color:#123c2e;margin:5px 0 8px}
+.marketing-group-heading p{color:#617c6e;font-size:12px;line-height:1.8;max-width:570px}
+.marketing-group-field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.marketing-group-field label{color:#1c4938;font-size:12px;font-weight:800}
+.marketing-group-field input,.marketing-group-field textarea{display:block;width:100%;min-height:50px;border:1px solid #bddbc9!important;border-radius:12px;background:#fff!important;color:#174131!important;padding:12px 14px;font-size:15px!important;line-height:1.65;resize:vertical;box-shadow:none!important}
+.marketing-group-field input:focus,.marketing-group-field textarea:focus{outline:2px solid #45ce9a;outline-offset:1px}
+.marketing-group-field small{font-size:11px;color:#648273;line-height:1.65}
+.marketing-group-action{display:inline-flex;justify-content:center;align-items:center;gap:10px;width:100%;min-height:51px;background:linear-gradient(180deg,#8cf6cf,#24db9d);border:1px solid #10ad7b;color:#073c2a;border-radius:999px;font-size:12px;font-weight:850;cursor:pointer}
+.marketing-group-action:hover{background:linear-gradient(180deg,#9cffdf,#18d296)}
+.marketing-group-notice{font-size:12px;color:#116b4e;line-height:1.75;margin:10px 0;min-height:10px}
+.marketing-group-privacy{font-size:10px;color:#758e80;line-height:1.75;border-top:1px solid #e1eee7;padding-top:13px;margin-top:6px}
+.marketing-group-iphone{background:#e6f8f0;border:1px solid #b7e0ce;border-radius:12px;padding:15px 17px;margin-bottom:18px}
+.marketing-group-iphone strong{font-size:13px;color:#116849}
+.marketing-group-iphone p{font-size:12px;color:#416b56;line-height:1.75;margin-top:7px}
+.marketing-sidebar-referral{display:flex;align-items:center;gap:11px;padding:13px 12px;margin-top:6px;border-radius:11px;background:#28d499;color:#063826;font-size:12px;font-weight:800;text-decoration:none}
+.marketing-sidebar-referral:hover{background:#61eabd;color:#062e23}
+.marketing-card-bottom{flex-wrap:wrap}
+.marketing-card-bottom .marketing-use-template{background:#0d7050;border-color:#0d7050;color:#fff}
+.marketing-card-bottom .marketing-use-template:hover{background:#095d43}
+@media(max-width:700px){.marketing-group-tool{padding:21px 17px;scroll-margin-top:105px}.marketing-group-heading h2{font-size:21px}.marketing-sidebar-referral{margin-top:0;width:100%;justify-content:center}.marketing-card-bottom span{width:100%;margin-bottom:3px}.marketing-card-bottom button{flex:1;justify-content:center;min-width:135px}}
+
+/* Distinct Nextdoor category within the customer marketing library. */
+.marketing-type-nextdoor{background:#e4f6e7;color:#276d3f}
+@media(max-width:1050px){.marketing-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.marketing-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.marketing-stats>div{min-height:92px}.marketing-stats span{font-size:10px}}
+
+/* A deliberate posting cadence across Facebook and Nextdoor. */
+.marketing-cadence{margin:0 0 32px;background:#fff;border:1px solid #d1e8dc;border-radius:20px;padding:27px;box-shadow:0 11px 30px #16493413}
+.marketing-cadence-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px}
+.marketing-cadence-header h2{font-size:clamp(22px,3vw,28px);font-weight:800;letter-spacing:-.035em;color:#123d2e;margin:7px 0}
+.marketing-cadence-header p{font-size:12px;color:#62776a;line-height:1.8;max-width:690px}
+.marketing-cadence-header>svg{color:#0c946b;flex:none}
+.marketing-cadence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.marketing-cadence-card{border:1px solid #d4e9df;background:linear-gradient(150deg,#fbfefd,#f0f9f4);border-radius:15px;padding:19px;min-width:0}
+.marketing-cadence-top{display:flex;gap:12px;align-items:center;margin-bottom:13px}
+.marketing-cadence-number{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;background:#dcf9ea;color:#0c7655;border-radius:50%;font-size:15px;font-weight:850}
+.marketing-cadence-top h3{font-size:16px;color:#174333;font-weight:850;line-height:1.2}
+.marketing-cadence-top strong{display:block;font-size:12px;color:#087551;margin-top:3px}
+.marketing-cadence-tone{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.04em;color:#29674f;background:#dff6e9;border-radius:999px;padding:6px 10px;margin-bottom:9px}
+.marketing-cadence-card>p{font-size:12px;line-height:1.8;color:#557064;margin-bottom:13px}
+.marketing-cadence-card details{border-top:1px solid #d9e9df;padding-top:11px}
+.marketing-cadence-card summary{cursor:pointer;color:#087351;font-size:12px;font-weight:800;padding:7px 0}
+.marketing-cadence-card blockquote{font-size:12px;line-height:1.85;color:#244e3b;background:white;border:1px solid #d7e9de;padding:15px;margin:10px 0;border-radius:10px;white-space:pre-line}
+.marketing-cadence-card button{display:inline-flex;align-items:center;gap:8px;border:1px solid #0f9b70;border-radius:9px;background:#e0f8ed;color:#056644;font-size:11px;font-weight:850;padding:10px 12px;cursor:pointer}
+.marketing-cadence-notice{font-size:12px;color:#106f4e;line-height:1.6;min-height:6px}
+.marketing-cadence-disclosure{display:flex;align-items:flex-start;gap:11px;border:1px solid #b7dfca;background:#e9f7f1;border-radius:12px;padding:16px;margin-top:15px}
+.marketing-cadence-disclosure svg{color:#13855e;flex:0 0 20px}
+.marketing-cadence-disclosure p{font-size:11px;line-height:1.8;color:#3c6751}
+.marketing-cadence-disclosure strong{color:#15543a}
+@media(max-width:800px){.marketing-cadence-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.marketing-cadence{padding:19px}.marketing-cadence-header>svg{display:none}}

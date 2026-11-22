@@ -1,0 +1,24 @@
+/* Referral-only social sharing cards; no effect on promotional landing pages. */
+.referral-social-example{padding:18px 20px;margin:18px 0 24px;border-radius:16px;border:1px solid #3d7667;background:linear-gradient(135deg,#15392e,#152f3d);box-shadow:inset 0 1px 0 #8fffc61d}
+.referral-social-example strong{display:block;color:#b9f7da;font-size:17px;line-height:1.4}
+.referral-social-example p{font-size:13px;color:#d2e6dd;line-height:1.75;margin:9px 0 0}
+.referral-photo-tip{border:1px solid #47685e;border-radius:14px;padding:16px 18px;margin:18px 0;background:linear-gradient(145deg,#193b3c,#172c3b)}
+.referral-photo-tip strong{display:block;color:#d9f7e9;font-size:15px;margin-bottom:7px}
+.referral-photo-tip p{font-size:13px;color:#ccdfd7;line-height:1.75;margin:0}
+@media(max-width:420px){.referral-social-example{padding:16px}.referral-social-example strong{font-size:15px}}
+
+/* First-person testimonial with the existing real Vivint headshot. */
+.referral-testimonial-author{display:flex;align-items:center;gap:13px;margin-bottom:16px}
+.referral-testimonial-author img{width:62px;height:62px;flex:0 0 62px;object-fit:cover;object-position:center 20%;border-radius:50%;border:3px solid #9ef1cd;background:#245c4a;box-shadow:0 0 0 3px #95f0cb24,0 5px 15px #04181055}
+.referral-testimonial-author>div{display:flex;flex-direction:column;gap:3px}
+.referral-testimonial-author .referral-testimonial-label{color:#90edc2;font-size:10px;font-weight:800;letter-spacing:.13em}
+.referral-testimonial-author strong{font-size:18px;color:#fff}
+.referral-testimonial-author small{font-size:11px;color:#c5ddd2}
+.referral-social-example blockquote{margin:0 0 16px;padding:0;color:#eaf8f0;font-size:15px;line-height:1.75}
+.referral-social-example blockquote strong{color:#c7ffdf;font-size:inherit;display:inline}
+.referral-testimonial-stat{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;background:linear-gradient(120deg,#08291f,#164b3c);border:1px solid #63b992;border-radius:12px;padding:15px 12px;text-align:center}
+.referral-testimonial-stat strong{display:inline;color:#b2ffd8;font-size:clamp(20px,4.8vw,28px);font-weight:850;letter-spacing:-.04em}
+.referral-testimonial-stat strong:last-child{color:#fff2c2}
+.referral-testimonial-stat span{color:#d1eadc;font-size:15px;font-weight:800}
+.referral-social-example .referral-testimonial-footnote{font-size:11px;line-height:1.7;color:#bdd9cb;margin:13px 0 0}
+@media(max-width:420px){.referral-testimonial-stat{gap:7px}.referral-testimonial-stat strong{font-size:21px}.referral-testimonial-stat span{font-size:12px}}
