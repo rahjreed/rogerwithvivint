@@ -1,0 +1,48 @@
+/* Light theme ONLY for the referral area. Other hub tabs retain original dark theme. */
+.referral-light-section{--rl-ink:#14362d;--rl-muted:#58736a;--rl-border:#c9e2d6;--rl-shadow:0 15px 44px #204b3b16,0 2px 9px #234c3910;background:radial-gradient(ellipse at 48% 0%,#d7f9eb,transparent 38%),linear-gradient(145deg,#fff 5%,#f5faf8 55%,#fff);color:var(--rl-ink);color-scheme:light}
+.referral-light-section .narrow-width{width:min(860px,calc(100% - 40px))}
+.referral-light-section .section-intro h2,.referral-light-section .section-intro h1{color:#0d3126}
+.referral-light-section .section-intro>p,.referral-light-section .field-hint,.referral-light-section .privacy-note{color:#526f61}
+.referral-light-section .eyebrow{color:#087f5e}
+.referral-light-section .form-card{background:linear-gradient(145deg,#fff,#fbfefd);color:#17392d;border:1px solid #c7e2d4;box-shadow:var(--rl-shadow);border-radius:21px}
+.referral-light-section .form-card h2,.referral-light-section .form-card h3{color:#103c2c}
+.referral-light-section .form-card label{color:#184736}
+.referral-light-section .form-card input,.referral-light-section .form-card textarea{background:#f7fbf9;color:#1d4536;border:1px solid #b9d9c9;border-radius:12px}
+.referral-light-section .form-card input:focus,.referral-light-section .form-card textarea:focus{border-color:#06bd8d;outline:2px solid #06bd8d44}
+.referral-light-section .referral-rewards{background:radial-gradient(ellipse at 100% 0%,#d9ffed,transparent 62%),linear-gradient(155deg,#fff,#edf8f2);color:#14382c;border:1px solid #a7dabe;box-shadow:var(--rl-shadow)}
+.referral-light-section .referral-rewards h2{color:#0c553a}
+.referral-light-section .referral-rewards h3{color:#1b583e}
+.referral-light-section .referral-rewards>p{color:#435f51}
+.referral-light-section .referral-rewards>small{color:#597567}
+.referral-light-section .referral-rewards>a{color:#066d49}
+.referral-light-section .referral-rewards .referral-credit-grid>div{background:#fff;border:1px solid #c7e9d8;color:#21533b}
+.referral-light-section .referral-rewards .referral-credit-grid>div *{color:#1e5b3d}
+.referral-light-section .primary-button{background:linear-gradient(180deg,#9affdf,#25dfab 60%,#06c38d);color:#053a29;border:1px solid #00ad81;box-shadow:0 7px 18px #04bb872d;font-weight:800;border-radius:999px}
+.referral-light-section .primary-button:hover{background:linear-gradient(180deg,#acffe6,#15e2ad,#0db88c);color:#043b2b}
+.referral-light-section .secondary-button{background:#fff;color:#166848;border:1px solid #a2d2ba;border-radius:999px}
+.referral-light-section .secondary-button:hover{background:#e4f9ee;color:#0b583c}
+.referral-light-section .referral-social-quote{background:#f5faf7;color:#1c4433;border:1px solid #c8e2d5;border-radius:14px;line-height:1.85}
+.referral-light-section .referral-social-example{background:linear-gradient(135deg,#e7fff2,#ecf8f4);border:1px solid #a6d8c4;box-shadow:0 9px 22px #144f3217}
+.referral-light-section .referral-social-example .referral-testimonial-label{color:#0b7651}
+.referral-light-section .referral-testimonial-author strong{color:#183f2e}
+.referral-light-section .referral-testimonial-author small{color:#5b786a}
+.referral-light-section .referral-social-example blockquote{color:#1e4836}
+.referral-light-section .referral-social-example blockquote strong{color:#096e4c}
+.referral-light-section .referral-social-example .referral-testimonial-footnote{color:#5a786a}
+.referral-light-section .referral-photo-tip{background:#e9f9f2;border:1px solid #b7dfca}
+.referral-light-section .referral-photo-tip strong{color:#0d6445}
+.referral-light-section .referral-photo-tip p{color:#4c6e5d}
+.referral-light-section .iphone-referral-simple{background:linear-gradient(135deg,#e5fff3,#f1fcf8);border-color:#a2d9be}
+.referral-light-section .iphone-referral-simple>strong{color:#0b6b46}
+.referral-light-section .iphone-referral-simple p,.referral-light-section .iphone-referral-simple p:last-child{color:#385e4c}
+.referral-light-section .iphone-referral-simple p strong{color:#0d5c3f}
+.referral-light-section .script-preview{border-top-color:#d2e6db}
+.referral-light-section .script-preview summary{color:#0b7351}
+.referral-light-section .script-preview p,.referral-light-section .script-preview h4{color:#4a705d}
+.referral-light-section .referral-workspace .form-notice{color:#0b7451}
+.referral-office-invite{padding:25px 28px;background:linear-gradient(105deg,#0c3128,#174d3b);border:1px solid #417e65;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:20px;margin:22px 0 28px;box-shadow:0 15px 32px #123e2c18}
+.referral-office-invite span{display:block;font-size:10px;font-weight:800;letter-spacing:.15em;color:#99f0cb;margin-bottom:8px}
+.referral-office-invite h2{font-size:22px;color:#fff;line-height:1.25;font-weight:800;margin:0 0 7px}
+.referral-office-invite p{font-size:12px;color:#d3e9db;line-height:1.7;max-width:480px}
+.referral-office-invite>a{display:flex;align-items:center;justify-content:center;white-space:nowrap;gap:8px;background:linear-gradient(180deg,#9effdf,#20dca8);color:#063b2c;padding:15px 19px;border-radius:999px;font-weight:850;font-size:11px;min-height:48px}
+@media(max-width:650px){.referral-office-invite{flex-direction:column;align-items:stretch;padding:22px}.referral-office-invite>a{width:100%}.referral-light-section .section-padding{padding-block:35px}.referral-light-section .narrow-width{width:calc(100% - 28px)}}
