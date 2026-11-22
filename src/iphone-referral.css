@@ -1,0 +1,7 @@
+/* iPhone-only SMS instructions; the Android workflow is unchanged. */
+.iphone-referral-simple{margin:18px 0 4px;padding:19px 20px;border:1px solid #548e79;border-radius:16px;background:linear-gradient(140deg,#164139,#102c34);box-shadow:inset 0 1px 0 #9af0c922}
+.iphone-referral-simple>strong{display:block;color:#b7ffe4;font-size:17px;line-height:1.35;margin-bottom:11px}
+.iphone-referral-simple p{color:#e2f3eb;font-size:14px;line-height:1.75;margin:0 0 10px}
+.iphone-referral-simple p:last-child{color:#b4d6c8;font-size:12px;margin-bottom:0}
+.iphone-referral-simple p strong{color:#fff}
+@media(max-width:440px){.iphone-referral-simple{padding:16px}.iphone-referral-simple p{font-size:13px}}
