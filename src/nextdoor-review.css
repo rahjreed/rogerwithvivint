@@ -1,0 +1,9 @@
+.nextdoor-review-page>.eyebrow{display:flex;align-items:center;gap:10px;color:#7fe3aa;font-weight:800}
+.nextdoor-review-page>h1{font-size:clamp(31px,4.5vw,48px);line-height:1.15;font-weight:900;margin:16px 0;color:#f0fff7;letter-spacing:-.035em}
+.nextdoor-review-page>p{font-size:16px;line-height:1.85;color:#c4d7cc}
+.nextdoor-review-card{margin-top:26px;padding:clamp(23px,4vw,38px);background:linear-gradient(135deg,#133a2c,#112b31);border:1px solid #529f77;border-radius:23px}
+.nextdoor-review-card>svg{color:#8eeac0}.nextdoor-review-card h2{font-size:clamp(24px,3vw,32px);color:#eefcf2;font-weight:900;margin:12px 0}
+.nextdoor-review-card p{color:#c3d7cd;font-size:15px;line-height:1.8;margin-bottom:23px}
+.nextdoor-review-card a{display:inline-flex;align-items:center;justify-content:center;gap:9px;max-width:100%;text-decoration:none}
+.nextdoor-review-card small{display:block;font-size:12px;line-height:1.7;color:#a8cbbb;margin-top:17px}
+@media(max-width:650px){.nextdoor-review-card a{width:100%;font-size:12px}}

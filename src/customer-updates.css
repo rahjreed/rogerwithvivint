@@ -10,7 +10,7 @@
 .home-resource-grid .shortcut { padding: 30px; }
 .home-resource-grid .shortcut h2 { font-size: 23px; }
 .home-resource-grid .shortcut p { font-size: 14px; }
-.insurance-shortcut { background: linear-gradient(135deg, #1a4033, #192b37); border-color: #315344; }
+.nextdoor-review-shortcut { background: linear-gradient(135deg, #1a4033, #192b37); border-color: #315344; }
 .tutorial-shortcut { background: linear-gradient(135deg, #203448, #192b38); }
 .panel-tutorial { padding: 28px; margin-block: 32px; background: #1b3440; border: 1px solid #315448; border-radius: 20px; }
 .panel-tutorial h2 { font-size: clamp(23px, 3vw, 30px); font-weight: 600; margin-bottom: 12px; }
@@ -19,7 +19,7 @@
 .tutorial-player iframe { width: 100%; height: 100%; display: block; border: 0; }
 .panel-tutorial > a { margin-top: 12px; }
 .travel-section { border: 1px solid #554932; border-radius: 24px; background: linear-gradient(150deg, #302b26, #1c2a35 50%); padding: 36px; margin-bottom: 54px; }
-.travel-heading .eyebrow, .insurance-workspace .eyebrow { display: flex; align-items: center; gap: 10px; }
+.travel-heading .eyebrow, .nextdoor-review-page .eyebrow { display: flex; align-items: center; gap: 10px; }
 .travel-heading .eyebrow { color: #e9c991; }
 .travel-heading > h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.3; font-weight: 600; margin-bottom: 12px; letter-spacing: -.035em; }
 .travel-heading > p { color: #c7bca9; font-size: 15px; line-height: 1.8; }
