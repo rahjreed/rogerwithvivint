@@ -153,3 +153,66 @@
 .marketing-cadence-disclosure strong{color:#15543a}
 @media(max-width:800px){.marketing-cadence-grid{grid-template-columns:1fr}}
 @media(max-width:700px){.marketing-cadence{padding:19px}.marketing-cadence-header>svg{display:none}}
+
+/* Referral Adventure: stronger hierarchy, easy-to-scan missions and a playful travel accent. */
+.marketing-office{--mo-adventure-ink:#10382c;--mo-adventure-purple:#51419a}
+.marketing-office h1,.marketing-office h2,.marketing-office h3{font-weight:950!important;text-wrap:balance;letter-spacing:-.045em}
+.marketing-office h1{line-height:1.1!important}
+.marketing-office h2{line-height:1.17!important}
+.marketing-office h3{line-height:1.25!important}
+.marketing-gate h1{font-size:clamp(33px,5.5vw,48px)!important}
+.marketing-topbar{background:linear-gradient(115deg,#ffffff,#effaf4)}
+.marketing-topbar h1{font-size:clamp(24px,3.1vw,34px)!important;color:#0c4b38}
+.marketing-topbar span{color:#15785a;font-weight:900}
+.marketing-hero{position:relative;border:2px solid #5fe3af;background:radial-gradient(circle at 95% 10%,#437c64,transparent 42%),linear-gradient(120deg,#092f2a,#0a6650);box-shadow:0 17px 36px #16493426}
+.marketing-hero h2{font-size:clamp(30px,3.8vw,43px)!important;max-width:650px}
+.marketing-hero span{font-weight:900!important;letter-spacing:.12em}
+.marketing-hero a{font-size:13px;font-weight:950;border:2px solid #bef8dc;box-shadow:0 5px 0 #095942}
+.marketing-stats>div{border-width:2px;border-color:#c6e8d7;background:linear-gradient(135deg,#ffffff,#f0faf4)}
+.marketing-stats strong{font-weight:950;font-size:31px;color:#096b50}
+.marketing-stats span{font-weight:800;color:#3a6e58}
+.marketing-checklist{border-width:2px;border-color:#91dfb8;box-shadow:0 15px 35px #16493418}
+.marketing-checklist-head h2{font-size:clamp(24px,3.1vw,32px)!important;color:#0a513b}
+.marketing-checklist-count{border:2px solid #77d8aa;background:linear-gradient(145deg,#e3fff1,#d5f7e5);transform:rotate(2deg)}
+.marketing-checklist-count strong{font-size:30px;font-weight:950}
+.marketing-level-line{display:flex;gap:9px;align-items:center;flex-wrap:wrap;background:#f1fbf6;border:1px dashed #86cda8;border-radius:12px;padding:12px 14px;margin-bottom:13px;color:#1b684d}
+.marketing-level-line>span{font-size:24px}
+.marketing-level-line strong{font-size:14px;font-weight:900;color:#0c6145}
+.marketing-level-line small{margin-left:auto;font-size:11px;color:#3d8264;font-weight:700}
+.marketing-progress-track{height:13px;background:#e4f1e9;border:1px solid #bbddcb}
+.marketing-progress-track>div{background:linear-gradient(90deg,#15b780,#87edb0)}
+.marketing-checklist-item{border-width:2px;transition:background-color .15s ease,border-color .15s ease,transform .15s ease}
+.marketing-checklist-item:hover{transform:translateY(-1px);border-color:#75d8a7}
+.marketing-checklist-item.done{border-color:#5cc995}
+.marketing-checklist-item strong{font-size:14px!important;color:#143f2e;line-height:1.4}
+.marketing-mission-number{display:block;font-size:10px;letter-spacing:.13em;color:#138459;margin-bottom:3px;font-weight:950}
+.marketing-cadence{border-width:2px;border-color:#c5decf}
+.marketing-cadence-header h2,.marketing-library-head h2,.marketing-group-heading h2{font-size:clamp(25px,3.2vw,34px)!important;color:#0e4936}
+.marketing-cadence-card{border-width:2px;border-color:#d1e7da;box-shadow:0 5px 15px #18553a0a}
+.marketing-cadence-number{border:2px solid #9ae6bc;width:39px;height:39px;flex-basis:39px;font-weight:950}
+.marketing-cadence-top h3{font-size:19px!important}
+.marketing-cadence-top strong{font-weight:900}
+.marketing-cadence-card summary{font-weight:950;color:#065f43}
+.marketing-group-tool{border-width:2px;border-color:#a9dbbc}
+.marketing-group-icon{background:#ddf7e7;color:#046d4a}
+.marketing-group-action{font-weight:950!important;font-size:13px!important;box-shadow:0 4px 0 #147251}
+.marketing-library-head{border-left:5px solid #33ca90;padding-left:16px;margin:4px 0 12px}
+.marketing-template-card{border-width:2px;border-color:#d8e7dc}
+.marketing-template-card h3{font-size:21px!important;color:#123d2c;margin-top:14px}
+.marketing-type{font-weight:950;letter-spacing:.1em}
+.marketing-chip-row button{font-weight:900}
+.marketing-sidebar nav button{font-weight:850}
+.marketing-instructions h3{font-size:19px!important;color:#124b35}
+@media(max-width:700px){
+ .marketing-topbar h1{font-size:24px!important}
+ .marketing-hero h2{font-size:31px!important}
+ .marketing-checklist{padding:18px}
+ .marketing-checklist-head{align-items:flex-start}
+ .marketing-checklist-head h2{font-size:23px!important}
+ .marketing-checklist-count{min-width:75px}
+ .marketing-level-line small{margin-left:0;flex-basis:100%;padding-left:35px}
+ .marketing-checklist-item strong{font-size:13px!important}
+ .marketing-cadence-header h2,.marketing-library-head h2,.marketing-group-heading h2{font-size:25px!important}
+ .marketing-template-card h3{font-size:20px!important}
+}
+@media(prefers-reduced-motion:reduce){.marketing-checklist-item{transition:none}.marketing-checklist-item:hover{transform:none}}
