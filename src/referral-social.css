@@ -2,11 +2,7 @@
 .referral-social-example{padding:18px 20px;margin:18px 0 24px;border-radius:16px;border:1px solid #3d7667;background:linear-gradient(135deg,#15392e,#152f3d);box-shadow:inset 0 1px 0 #8fffc61d}
 .referral-social-example strong{display:block;color:#b9f7da;font-size:17px;line-height:1.4}
 .referral-social-example p{font-size:13px;color:#d2e6dd;line-height:1.75;margin:9px 0 0}
-.referral-social-switch{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0 12px}
-.referral-social-switch button{border-radius:12px;min-height:52px;padding:11px 10px;border:1px solid #426658;background:#203643;color:#d8e8e2;line-height:1.4;font-size:12px;font-weight:750;letter-spacing:.02em}
-.referral-social-switch button.selected{border-color:#81efbe;background:linear-gradient(140deg,#1a6146,#144b48);color:#fff;box-shadow:inset 0 1px 0 #a4f4d35c}
-.referral-social-switch button:focus-visible{outline:3px solid #93f8cf;outline-offset:2px}
 .referral-photo-tip{border:1px solid #47685e;border-radius:14px;padding:16px 18px;margin:18px 0;background:linear-gradient(145deg,#193b3c,#172c3b)}
 .referral-photo-tip strong{display:block;color:#d9f7e9;font-size:15px;margin-bottom:7px}
 .referral-photo-tip p{font-size:13px;color:#ccdfd7;line-height:1.75;margin:0}
-@media(max-width:420px){.referral-social-switch{gap:7px}.referral-social-switch button{font-size:10px;min-height:58px;padding-inline:7px}.referral-social-example{padding:16px}.referral-social-example strong{font-size:15px}}
+@media(max-width:420px){.referral-social-example{padding:16px}.referral-social-example strong{font-size:15px}}
