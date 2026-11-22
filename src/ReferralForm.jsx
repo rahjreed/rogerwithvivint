@@ -1,6 +1,7 @@
 import React,{useState,useRef} from 'react';
 import {MessageSquare,Copy,Users,Plus,Share2} from 'lucide-react';
 import './iphone-referral.css';
+import './referral-social.css';
 import {PHONE_NUMBER} from './brand.jsx';
 import {copyText} from './clipboard.js';
 import {usePwaState} from './usePwaState.js';
