@@ -11,11 +11,11 @@ export default function MarketingPostingPlan(){
  const [notice,setNotice]=useState('');
  async function copy(item){const ok=await copyText(item.sample);setNotice(ok?'Copied the '+item.stage+' example. Personalize it and check your posting frequency before sharing.':'Copy unavailable. Select and copy the example manually.')}
  return <section className="marketing-cadence" aria-labelledby="marketing-cadence-heading">
-  <div className="marketing-cadence-header"><div><span className="marketing-eyebrow">YOUR SOCIAL SHARING PLAN</span><h2 id="marketing-cadence-heading">Post with purpose, not too often.</h2><p>This schedule applies to all your Vivint promotional posts combined—including Facebook and Nextdoor. It is a maximum, not a requirement. Only post when you have something authentic to share.</p></div><CalendarDays size={34} aria-hidden="true"/></div>
+  <div className="marketing-cadence-header"><div><span className="marketing-eyebrow">🗓️ YOUR POSTING ROAD MAP</span><h2 id="marketing-cadence-heading">4 Stops on Your Referral Journey! 🌴</h2><p>This schedule applies to all your Vivint promotional posts combined—including Facebook and Nextdoor. It is a maximum, not a requirement. Only post when you have something authentic to share.</p></div><CalendarDays size={34} aria-hidden="true"/></div>
   <div className="marketing-cadence-grid">{campaign.map((item,index)=><article className="marketing-cadence-card" key={item.stage}>
-   <div className="marketing-cadence-top"><span className="marketing-cadence-number">{index+1}</span><div><h3>{item.stage}</h3><strong>{item.limit}</strong></div></div>
+   <div className="marketing-cadence-top"><span className="marketing-cadence-number">{index+1}</span><div><h3>{['🏡','🌟','🏆','✈️'][index]} {item.stage}</h3><strong>{item.limit}</strong></div></div>
    <span className="marketing-cadence-tone">{item.tone}</span><p>{item.description}</p>
-   <details><summary>View a sample post</summary><blockquote>{item.sample}</blockquote><button type="button" onClick={()=>copy(item)}><Copy size={15}/> COPY SAMPLE</button></details>
+   <details><summary>🎁 Unlock a sample post</summary><blockquote>{item.sample}</blockquote><button type="button" onClick={()=>copy(item)}><Copy size={15}/> COPY SAMPLE</button></details>
   </article>)}</div>
   <p role="status" className="marketing-cadence-notice">{notice}</p>
   <div className="marketing-cadence-disclosure"><ShieldCheck size={20}/><p><strong>Be clear about referral incentives.</strong> Only say that someone can earn a free camera, or that both people receive one, if Roger verifies a current promotion that offers those rewards. Otherwise use a general qualifying-credit disclosure. No result is guaranteed, and customers should follow each social platform's posting rules.</p></div>
