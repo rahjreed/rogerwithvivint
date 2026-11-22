@@ -44,5 +44,5 @@ export default function ReferralForm(){
  <div className="referral-social-actions"><button type="button" className="primary-button" onClick={shareSocial}><Share2 size={18}/> SHARE MY POST</button><button type="button" className="secondary-button" onClick={copySocial}><Copy size={18}/> COPY FACEBOOK POST</button></div>
  <p className="field-hint">Sharing is optional. Keep it truthful to your own experience and disclose that you may receive referral bill credits. Posting alone doesn't earn a credit; official eligibility and approval apply.</p>
  <p role="status" className="form-notice">{socialNotice}</p>
- </section>}<p className="privacy-note">Your friend’s number stays in this page until you open your texting app. Roger can confirm your account details and referral eligibility afterward.</p></div>;
+ </section>}<section className="referral-office-invite"><div><span>EXCLUSIVE CUSTOMER MARKETING TOOLKIT</span><h2>Your Marketing Back Office</h2><p>Fresh Facebook ideas, personal texts and group introductions for holidays and every season. Copy a message, make it your own and connect more friends with Roger.</p></div><a href="#marketing">OPEN BACK OFFICE →</a></section><p className="privacy-note">Your friend’s number stays in this page until you open your texting app. Roger can confirm your account details and referral eligibility afterward.</p></div>;
 }
