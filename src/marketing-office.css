@@ -97,3 +97,28 @@
 .marketing-storage-note{font-size:12px;color:#b14431;margin:9px 0}
 .marketing-local-disclosure{display:block;color:#698375;font-size:10px;line-height:1.7;margin-top:10px}
 @media(max-width:700px){.marketing-top-actions{gap:8px}.marketing-top-actions button{font-size:10px;padding:8px}.marketing-checklist{padding:19px}.marketing-checklist-head h2{font-size:20px}.marketing-checklist-count{min-width:70px}}
+
+/* Native phone group referral, embedded inside the marketing dashboard. */
+.marketing-group-tool{scroll-margin-top:110px;background:linear-gradient(145deg,#fff,#f7fdf9);border:1px solid #b8dfcb;border-radius:20px;padding:28px;margin:0 0 32px;box-shadow:0 12px 35px #16493413}
+.marketing-group-heading{display:flex;gap:15px;align-items:flex-start;margin-bottom:20px}
+.marketing-group-icon{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;color:#0b7652;background:#dff8eb;border-radius:14px}
+.marketing-group-heading h2{font-size:23px;font-weight:800;letter-spacing:-.035em;color:#123c2e;margin:5px 0 8px}
+.marketing-group-heading p{color:#617c6e;font-size:12px;line-height:1.8;max-width:570px}
+.marketing-group-field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.marketing-group-field label{color:#1c4938;font-size:12px;font-weight:800}
+.marketing-group-field input,.marketing-group-field textarea{display:block;width:100%;min-height:50px;border:1px solid #bddbc9!important;border-radius:12px;background:#fff!important;color:#174131!important;padding:12px 14px;font-size:15px!important;line-height:1.65;resize:vertical;box-shadow:none!important}
+.marketing-group-field input:focus,.marketing-group-field textarea:focus{outline:2px solid #45ce9a;outline-offset:1px}
+.marketing-group-field small{font-size:11px;color:#648273;line-height:1.65}
+.marketing-group-action{display:inline-flex;justify-content:center;align-items:center;gap:10px;width:100%;min-height:51px;background:linear-gradient(180deg,#8cf6cf,#24db9d);border:1px solid #10ad7b;color:#073c2a;border-radius:999px;font-size:12px;font-weight:850;cursor:pointer}
+.marketing-group-action:hover{background:linear-gradient(180deg,#9cffdf,#18d296)}
+.marketing-group-notice{font-size:12px;color:#116b4e;line-height:1.75;margin:10px 0;min-height:10px}
+.marketing-group-privacy{font-size:10px;color:#758e80;line-height:1.75;border-top:1px solid #e1eee7;padding-top:13px;margin-top:6px}
+.marketing-group-iphone{background:#e6f8f0;border:1px solid #b7e0ce;border-radius:12px;padding:15px 17px;margin-bottom:18px}
+.marketing-group-iphone strong{font-size:13px;color:#116849}
+.marketing-group-iphone p{font-size:12px;color:#416b56;line-height:1.75;margin-top:7px}
+.marketing-sidebar-referral{display:flex;align-items:center;gap:11px;padding:13px 12px;margin-top:6px;border-radius:11px;background:#28d499;color:#063826;font-size:12px;font-weight:800;text-decoration:none}
+.marketing-sidebar-referral:hover{background:#61eabd;color:#062e23}
+.marketing-card-bottom{flex-wrap:wrap}
+.marketing-card-bottom .marketing-use-template{background:#0d7050;border-color:#0d7050;color:#fff}
+.marketing-card-bottom .marketing-use-template:hover{background:#095d43}
+@media(max-width:700px){.marketing-group-tool{padding:21px 17px;scroll-margin-top:105px}.marketing-group-heading h2{font-size:21px}.marketing-sidebar-referral{margin-top:0;width:100%;justify-content:center}.marketing-card-bottom span{width:100%;margin-bottom:3px}.marketing-card-bottom button{flex:1;justify-content:center;min-width:135px}}
