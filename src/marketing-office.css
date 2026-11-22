@@ -127,3 +127,29 @@
 .marketing-type-nextdoor{background:#e4f6e7;color:#276d3f}
 @media(max-width:1050px){.marketing-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.marketing-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.marketing-stats>div{min-height:92px}.marketing-stats span{font-size:10px}}
+
+/* A deliberate posting cadence across Facebook and Nextdoor. */
+.marketing-cadence{margin:0 0 32px;background:#fff;border:1px solid #d1e8dc;border-radius:20px;padding:27px;box-shadow:0 11px 30px #16493413}
+.marketing-cadence-header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px}
+.marketing-cadence-header h2{font-size:clamp(22px,3vw,28px);font-weight:800;letter-spacing:-.035em;color:#123d2e;margin:7px 0}
+.marketing-cadence-header p{font-size:12px;color:#62776a;line-height:1.8;max-width:690px}
+.marketing-cadence-header>svg{color:#0c946b;flex:none}
+.marketing-cadence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.marketing-cadence-card{border:1px solid #d4e9df;background:linear-gradient(150deg,#fbfefd,#f0f9f4);border-radius:15px;padding:19px;min-width:0}
+.marketing-cadence-top{display:flex;gap:12px;align-items:center;margin-bottom:13px}
+.marketing-cadence-number{width:34px;height:34px;flex:0 0 34px;display:grid;place-items:center;background:#dcf9ea;color:#0c7655;border-radius:50%;font-size:15px;font-weight:850}
+.marketing-cadence-top h3{font-size:16px;color:#174333;font-weight:850;line-height:1.2}
+.marketing-cadence-top strong{display:block;font-size:12px;color:#087551;margin-top:3px}
+.marketing-cadence-tone{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.04em;color:#29674f;background:#dff6e9;border-radius:999px;padding:6px 10px;margin-bottom:9px}
+.marketing-cadence-card>p{font-size:12px;line-height:1.8;color:#557064;margin-bottom:13px}
+.marketing-cadence-card details{border-top:1px solid #d9e9df;padding-top:11px}
+.marketing-cadence-card summary{cursor:pointer;color:#087351;font-size:12px;font-weight:800;padding:7px 0}
+.marketing-cadence-card blockquote{font-size:12px;line-height:1.85;color:#244e3b;background:white;border:1px solid #d7e9de;padding:15px;margin:10px 0;border-radius:10px;white-space:pre-line}
+.marketing-cadence-card button{display:inline-flex;align-items:center;gap:8px;border:1px solid #0f9b70;border-radius:9px;background:#e0f8ed;color:#056644;font-size:11px;font-weight:850;padding:10px 12px;cursor:pointer}
+.marketing-cadence-notice{font-size:12px;color:#106f4e;line-height:1.6;min-height:6px}
+.marketing-cadence-disclosure{display:flex;align-items:flex-start;gap:11px;border:1px solid #b7dfca;background:#e9f7f1;border-radius:12px;padding:16px;margin-top:15px}
+.marketing-cadence-disclosure svg{color:#13855e;flex:0 0 20px}
+.marketing-cadence-disclosure p{font-size:11px;line-height:1.8;color:#3c6751}
+.marketing-cadence-disclosure strong{color:#15543a}
+@media(max-width:800px){.marketing-cadence-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.marketing-cadence{padding:19px}.marketing-cadence-header>svg{display:none}}
