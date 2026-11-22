@@ -216,3 +216,13 @@
  .marketing-template-card h3{font-size:20px!important}
 }
 @media(prefers-reduced-motion:reduce){.marketing-checklist-item{transition:none}.marketing-checklist-item:hover{transform:none}}
+
+/* Customer review invitations are voluntary and separate from the referral checklist. */
+.marketing-nextdoor-review{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:linear-gradient(120deg,#083c2e,#0e5b43);border:2px solid #65d5a4;color:#f2fff7;border-radius:19px;padding:25px;margin-bottom:32px;box-shadow:0 12px 28px #113e301b}
+.marketing-nextdoor-review>div{flex:1;min-width:230px}
+.marketing-nextdoor-review .marketing-eyebrow{color:#97ffcd}
+.marketing-nextdoor-review h2{font-size:clamp(23px,3vw,29px)!important;color:#fff;line-height:1.2;margin:7px 0}
+.marketing-nextdoor-review p{font-size:12px;line-height:1.8;color:#d2f0df;max-width:640px}
+.marketing-nextdoor-review>a{display:inline-flex;align-items:center;justify-content:center;min-height:52px;background:#a7f5ca;color:#08452e;border:1px solid #d7ffe7;border-radius:12px;padding:12px 18px;text-decoration:none;font-size:12px;font-weight:900;white-space:normal;text-align:center}
+.marketing-nextdoor-review>a:hover{background:#ddffed}
+@media(max-width:700px){.marketing-nextdoor-review{padding:21px 18px}.marketing-nextdoor-review>a{width:100%}}
