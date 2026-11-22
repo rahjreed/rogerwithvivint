@@ -2,7 +2,7 @@ import React,{useState,useRef} from 'react';
 import {MessageSquare,Copy,Users,Plus,Share2} from 'lucide-react';
 import './iphone-referral.css';
 import './referral-social.css';
-import {PHONE_NUMBER} from './brand.jsx';
+import {PHONE_NUMBER,IMG_RAHJ_PROFILE} from './brand.jsx';
 import {copyText} from './clipboard.js';
 import {usePwaState} from './usePwaState.js';
 import {referralDraft,normalizePhone,REFERRAL_MESSAGE} from './group-referral.js';
@@ -32,7 +32,12 @@ export default function ReferralForm(){
  <span className="eyebrow">YOUR EXPERIENCE CAN HELP A FRIEND</span>
  <h2>Share your Vivint experience on Facebook</h2>
  <p>Your recommendation means more when it sounds like you. Add a real photo of your new equipment and share your installation experience with friends.</p>
- <div className="referral-social-example"><strong>4 referrals in 4 months = $1,200 in potential bill credits</strong><p>Roger received four referrals through social media over four months. At the current advertised $300 credit per qualified referral, four qualifying referrals could represent $1,200 toward monitoring bills for an eligible referring customer. Credit amounts, eligibility, approval and stacking are subject to Vivint's official terms; this isn't a guaranteed payout.</p></div>
+ <div className="referral-social-example" aria-label="Roger Reed's referral testimonial">
+ <div className="referral-testimonial-author"><img src={IMG_RAHJ_PROFILE} alt="Roger Reed" width="62" height="62" loading="lazy"/><div><span className="referral-testimonial-label">ROGER’S REAL RESULTS</span><strong>Roger Reed</strong><small>Vivint Smart Home Expert</small></div></div>
+ <blockquote>“I personally received <strong>4 referrals from social media in 4 months.</strong> That’s why I encourage customers to share their experience and post a real photo of the Vivint equipment I installed.”</blockquote>
+ <div className="referral-testimonial-stat"><strong>4 referrals</strong><span>× $300</span><strong>= $1,200</strong></div>
+ <p className="referral-testimonial-footnote">At the current advertised $300 credit per qualified referral, four eligible referrals could mean $1,200 in bill credits for a referring customer. My four social media referrals are an example of referral activity, not a claim that I received $1,200 in credits. Actual credits depend on Vivint’s eligibility, approval, stacking limits and official terms.</p>
+ </div>
  <p className="field-hint">Use this after your system is installed. Personalize it to reflect your own experience.</p>
  <div className="referral-social-quote">{socialPost}</div>
  <div className="referral-photo-tip"><strong>📸 Add a photo of your setup</strong><p>Take a clear photo of the camera, video doorbell, or smart hub Roger installed. Pair it with your post so friends see a real example—not a generic advertisement. Avoid showing access codes, passwords, addresses, camera views or other sensitive details.</p></div>
