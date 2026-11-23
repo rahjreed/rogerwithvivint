@@ -1,9 +1,7 @@
 export const TRUCK_CLAIM_KEY='roger-truck-qr-claim-v1';
 export const TRUCK_CLAIM_MS=7*86400000;
-export const validTruckCode=value=>['317','463'].includes(String(value).trim());
 export function readTruckClaim(storage){try{const raw=storage.getItem(TRUCK_CLAIM_KEY);const n=Number(raw);return raw&&Number.isFinite(n)&&n>0?n:null;}catch{return null;}}
-export function unlockTruckClaim(storage,code,now=Date.now()){
- if(!validTruckCode(code))return null;
+export function unlockTruckClaim(storage,now=Date.now()){
  const existing=readTruckClaim(storage);
  if(existing)return existing;
  storage.setItem(TRUCK_CLAIM_KEY,String(now));
