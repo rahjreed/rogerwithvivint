@@ -74,3 +74,26 @@
 .qr-reveal-action{width:min(445px,calc(100% - 26px));margin:21px auto 0;display:grid;gap:10px;text-align:center}
 .qr-reveal-action>.qr-primary{width:100%;font-size:14px;min-height:59px}
 .qr-reveal-action>p{font-size:12px;color:#4e745f;line-height:1.6}
+
+/* Lead capture is step 2. Roger contact options appear only after server-confirmed delivery. */
+.qr-header-progress{font-size:10px!important;letter-spacing:.06em!important;color:#a7efd4!important;font-weight:850}
+.qr-lead{position:relative;background:linear-gradient(148deg,#fff,#eafaf2);border:2px solid #9bddbf;border-radius:24px;margin:22px 0;padding:clamp(20px,4vw,33px);box-shadow:0 14px 34px #1767481d}
+.qr-lead-heading{text-align:center;max-width:590px;margin:0 auto 23px}
+.qr-lead-heading h2{font-size:clamp(27px,4.5vw,36px);line-height:1.15;letter-spacing:-.04em;font-weight:950;color:#0c4736;margin:12px 0}
+.qr-lead-heading p{font-size:13px;color:#466b5b;line-height:1.8}
+.qr-lead form{display:grid;gap:17px}
+.qr-lead-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.qr-lead-fields label{display:grid;gap:7px;font-size:12px;color:#214b37;font-weight:850}
+.qr-lead-fields label span{color:#ad3c35}
+.qr-lead-fields input{background:#fff;color:#0e3c2e;border:1px solid #a5cbb9;border-radius:11px;width:100%;min-width:0;min-height:53px;padding:12px 14px;font-size:16px;font-weight:550}
+.qr-checkbox{display:flex;align-items:flex-start;gap:11px;font-size:12px;line-height:1.65;color:#365b49;cursor:pointer}
+.qr-checkbox input{flex:0 0 20px;width:20px;height:20px;margin:1px 0 0;accent-color:#0c9f70}
+.qr-checkbox strong{font-weight:800;color:#1c4f3b}
+.qr-lead .qr-primary{width:100%;max-width:490px;margin:2px auto 0;font-size:13px}
+.qr-lead .qr-primary:disabled{opacity:.66;cursor:wait;box-shadow:none}
+.qr-lead-error{padding:12px 14px;border:1px solid #e6b7a8;background:#fff1eb;color:#a33728;font-size:12px;font-weight:750;border-radius:10px;text-align:center}
+.qr-lead-fineprint{display:flex;gap:8px;align-items:flex-start;color:#678173;font-size:11px;line-height:1.65;margin:0}
+.qr-lead-fineprint svg{flex-shrink:0;color:#147655}
+.qr-honeypot{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.qr-convert{border:2px solid #69cca0}
+@media(max-width:550px){.qr-lead-fields{grid-template-columns:1fr}.qr-lead{padding:20px 17px}.qr-header-progress{font-size:8px!important}}
