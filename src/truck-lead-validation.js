@@ -8,7 +8,7 @@ export function normalizeTruckLead(input){
   contactPermission:body.contactPermission===true,
   marketingConsent:body.marketingConsent===true,
   website:String(body.website||'').trim().slice(0,100),
-  claimStartedAt:Number(body.claimStartedAt)||null
+  claimStartedAt:Number.isFinite(Number(body.claimStartedAt))&&Number(body.claimStartedAt)>0&&Number(body.claimStartedAt)<8640000000000000?Number(body.claimStartedAt):null
  };
 }
 export function validateTruckLead(raw){
