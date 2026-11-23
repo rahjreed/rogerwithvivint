@@ -69,3 +69,8 @@
 .qr-pop{animation:qr-pop .68s ease-out both}
 @media(max-width:550px){.qr-header>span{font-size:9px}.qr-main{padding-top:24px}.qr-main>h1{font-size:clamp(34px,9vw,44px)}.qr-intro{font-size:13px}.qr-offer{border-radius:20px}.qr-offer-stage{min-height:210px;padding:24px 6px}.qr-reward-badge{font-size:9px;padding:8px 9px}.qr-stage-label{font-size:10px}.qr-mystery{font-size:20px}.qr-timer{padding:19px 13px}.qr-timer-grid{gap:6px}.qr-timer-grid>div{padding:11px 2px}.qr-timer-grid strong{font-size:29px}.qr-vegas-body,.qr-convert{padding:23px 18px}.qr-trust{grid-template-columns:105px 1fr;gap:13px;padding:15px}.qr-trust>img{height:160px}.qr-trust h2{font-size:25px}.qr-trust p{font-size:12px}.qr-trust .qr-overline{font-size:9px}.qr-trust-links{gap:10px}}
 @media(prefers-reduced-motion:reduce){.qr-offer-rays,.qr-pop{animation:none!important}}
+
+/* One-tap reveal replaces the area-code input while preserving the same premium reward stage. */
+.qr-reveal-action{width:min(445px,calc(100% - 26px));margin:21px auto 0;display:grid;gap:10px;text-align:center}
+.qr-reveal-action>.qr-primary{width:100%;font-size:14px;min-height:59px}
+.qr-reveal-action>p{font-size:12px;color:#4e745f;line-height:1.6}
